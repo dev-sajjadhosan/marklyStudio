@@ -1,4 +1,4 @@
-import error from '../../../assets/error.webp'
+import error from '../../assets/error.webp'
 
 const ErrorPage = () => {
   return (

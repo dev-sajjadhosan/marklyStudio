@@ -60,10 +60,10 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1" role="menubar">
             <li>
-              <a href="/studio" role="menuitem">
+              <Link to="/studio?home" role="menuitem">
                 <SiReasonstudios size={17} />
                 Studio
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/ai-generate" role="menuitem">
