@@ -1,7 +1,7 @@
 import { SiReasonstudios } from 'react-icons/si'
 import HeroImg from '../../assets/hero.webp'
 import { Link } from 'react-router-dom'
-import { TbClick, TbTags, TbUsersGroup } from 'react-icons/tb'
+import { TbClick, TbUsersGroup } from 'react-icons/tb'
 
 const Banner = () => {
   return (

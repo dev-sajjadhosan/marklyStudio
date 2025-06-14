@@ -1,7 +1,7 @@
 import useAuth from '../../../hooks/useAuth'
 
 const WordPanel = () => {
-  const { panel, setPanel } = useAuth()
+  const { panel } = useAuth()
   return (
     <>
       <div

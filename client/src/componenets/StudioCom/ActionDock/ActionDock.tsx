@@ -11,7 +11,6 @@ import {
   TbInputSpark,
 } from 'react-icons/tb'
 import useAuth from '../../../hooks/useAuth'
-import { useState } from 'react'
 
 const ActionDock = () => {
   const { bottom } = useAuth()

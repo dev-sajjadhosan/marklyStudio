@@ -1,8 +1,6 @@
-
-import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const StudioApp = () => {
-
   return (
     <>
       <Outlet />

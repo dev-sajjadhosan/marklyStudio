@@ -1,7 +1,7 @@
 import useAuth from '../../../hooks/useAuth'
 
 const AIChat = () => {
-  const { ai, setAi } = useAuth()
+  const { ai } = useAuth()
   return (
     <>
       <div

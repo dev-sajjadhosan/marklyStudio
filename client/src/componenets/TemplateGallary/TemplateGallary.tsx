@@ -1,5 +1,5 @@
 import { SiReasonstudios } from 'react-icons/si'
-import { TbArrowBearRight, TbBookmarkPlus, TbCategory, TbShare3 } from 'react-icons/tb'
+import { TbArrowBearRight, TbBookmarkPlus, TbShare3 } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 
 const TemplateGallery = () => {

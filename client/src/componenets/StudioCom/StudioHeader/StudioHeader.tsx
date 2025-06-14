@@ -11,7 +11,7 @@ import {
 import useAuth from '../../../hooks/useAuth'
 
 const StudioHeader = () => {
-  const { header, setHeader } = useAuth()
+  const { header } = useAuth()
   return (
     <>
       <header

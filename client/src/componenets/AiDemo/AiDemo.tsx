@@ -2,21 +2,21 @@ import { TbClick } from 'react-icons/tb'
 import ai from '../../assets/ai.webp'
 
 const AIDemo = () => {
-  const fakePrompts = [
-    { user: '🧑‍💻', text: '....' },
-    {
-      bot: '🤖',
-      text: '"Welcome to Markly. A blazing fast, modern solution for developers."',
-    },
-    {
-      bot: '🤖',
-      text: 'I am currently making this. So, wait untell it is coming!',
-    },
-    {
-      bot: '🤖',
-      text: 'I hope you will came again and give us some feedback.',
-    },
-  ]
+  // const fakePrompts = [
+  //   { user: '🧑‍💻', text: '....' },
+  //   {
+  //     bot: '🤖',
+  //     text: '"Welcome to Markly. A blazing fast, modern solution for developers."',
+  //   },
+  //   {
+  //     bot: '🤖',
+  //     text: 'I am currently making this. So, wait untell it is coming!',
+  //   },
+  //   {
+  //     bot: '🤖',
+  //     text: 'I hope you will came again and give us some feedback.',
+  //   },
+  // ]
 
   return (
     <section id="ai-demo" className="py-20 text-base-content">

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { SiReasonstudios } from 'react-icons/si'
 import {
-  TbBrandStrava,
   TbCategory,
   TbClick,
   TbSquares,
