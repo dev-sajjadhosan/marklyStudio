@@ -103,11 +103,12 @@ const StudioEditor = () => {
             } transition-all duration-200 ${header ? 'pt-9' : 'p-0'}`}
           >
             <CodeMirror
-              // value={markdownText}
-              defaultValue={markdownText}
+              value={markdownText}
+              // defaultValue={markdownText}
               height="100%"
               style={{ height: '100%', textWrap: 'wrap' }}
               theme={oneDark}
+              autoFocus={false}
               // extensions={[markdown(), EditorView.lineWrapping]}
               extensions={editorExtensions}
               basicSetup={basicSetupOptions}

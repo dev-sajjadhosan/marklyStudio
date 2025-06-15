@@ -47,11 +47,11 @@ export default function useHeaderActions() {
   }, [setMarkdownText, setExample])
 
   const handleExport = useCallback(() => {
-    const blob = new Blob([editorValue], {
+    const blob = new Blob([markdownText], {
       type: 'text/markdown;charset=utf-8',
     })
     saveAs(blob, 'readme.md')
-  }, [editorValue])
+  }, [markdownText])
 
   const handleFeedback = useCallback(() => {
     // openModal(true)
