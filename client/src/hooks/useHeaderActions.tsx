@@ -9,9 +9,8 @@ export default function useHeaderActions() {
     setMarkdownText,
     markdownText,
     pushHistory,
-    isEditing,
+
     setExample,
-    setIsEditing,
   } = useContexts()
 
   const handleOpen = useCallback(() => {
@@ -64,6 +63,5 @@ export default function useHeaderActions() {
     handleSave,
     handleExport,
     handleFeedback,
-    handleSave,
   }
 }

@@ -62,7 +62,7 @@ const StudioEditor = () => {
   )
 
   /* ③ Use the wrapper’s onChange */
-  const handleChange = useCallback((val /* string */) => {
+  const handleChange = useCallback((val: string) => {
     setMarkdownText(val)
   }, [])
 
