@@ -1,4 +1,3 @@
-
 import {
   TbBoxAlignBottom,
   TbBoxAlignBottomFilled,
@@ -13,8 +12,10 @@ import {
   TbInputSpark,
   TbTags,
   TbTagsFilled,
+  TbTransitionRight,
 } from 'react-icons/tb'
-import useAuth from '../../../hooks/useAuth'
+import useContexts from '../../../hooks/useContexts'
+import { Link } from 'react-router-dom'
 
 const StudioSideBar = () => {
   const {
@@ -33,11 +34,11 @@ const StudioSideBar = () => {
     handleAllBars,
     all,
     setAll,
-  } = useAuth()
+  } = useContexts()
   return (
     <>
       <div
-        className={` bg-base-200 rounded-xl z-50 py-6 px-5.5 transition-all duration-300 ${
+        className={` z-50 transition-all duration-300 ${
           right
             ? 'fixed right-5 top-1/3 -translate-y-1/2 opacity-100'
             : 'fixed -right-1/2 top-1/3 -translate-y-1/2 opacity-20'
@@ -132,6 +133,17 @@ const StudioSideBar = () => {
             >
               <TbInputSpark size={17} />
             </button>
+          </li>
+          <li>
+            <Link
+              className={`btn btn-sm  tooltip ${
+                ai ? 'btn-primary' : 'btn-soft btn-primary'
+              }`}
+              data-tip="Home"
+              to="/"
+            >
+              <TbTransitionRight size={17} />
+            </Link>
           </li>
         </ul>
       </div>

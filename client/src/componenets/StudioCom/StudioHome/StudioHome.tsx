@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   TbBrandGithub,
   TbCancel,
@@ -7,15 +7,37 @@ import {
   TbFileImport,
 } from 'react-icons/tb'
 import { useNavigate } from 'react-router-dom'
+import useHeaderActions from '../../../hooks/useHeaderActions'
+import useContexts from '../../../hooks/useContexts'
+import { enqueueSnackbar } from 'notistack'
 
 const StudioHome = () => {
   const nav = useNavigate()
-
+  const { handleOpen } = useHeaderActions()
+  const { markdownText, setMarkdownText, setIsEditing } = useContexts()
   const [c, setC] = useState(false) // create input toggle
+  const [filename, setFilename] = useState('readME.md')
 
-  const handleNavEditor = () => {
-    nav('/studio/editor')
+  const handleImport = () => {
+    handleOpen()
+    if (markdownText) {
+      nav('/studio/editor')
+    }
   }
+  const handleGoToEditor = () => {
+    if (!filename.trim()) {
+      enqueueSnackbar('Please enter a file name.', { variant: 'error' })
+      return
+    }
+    // Reset editor with blank content or default content
+    const defaultContent = `# ${filename}\n\nStart editing here...`
+
+    setMarkdownText(defaultContent)
+    setIsEditing(true) // toggle to show editor UI (if you have conditional rendering)
+    nav('/studio/editor')
+    enqueueSnackbar('Edit. Style. Export. Repeat. 🔁', { variant: 'success' })
+  }
+
   return (
     <>
       <div className="flex justify-center items-center h-screen">
@@ -34,13 +56,19 @@ const StudioHome = () => {
                 <TbFile size={17} />
                 Create New File
               </button>
-              <button className="btn btn-sm btn-soft btn-accent" disabled>
+              <button
+                className="btn btn-sm btn-soft btn-accent"
+                onClick={handleImport}
+              >
                 <TbFileImport size={17} />
                 Import File
               </button>
               <button className="btn btn-sm btn-soft btn-primary" disabled>
                 <TbBrandGithub size={17} />
                 From Github
+              </button>
+              <button onClick={() => enqueueSnackbar('That was easy!')}>
+                Show snackbar
               </button>
             </div>
           </div>
@@ -53,7 +81,8 @@ const StudioHome = () => {
                   type="text"
                   placeholder="readme.md"
                   className="input text-white w-full mt-1.5"
-                  defaultValue="readME.md"
+                  value={filename}
+                  onChange={(e) => setFilename(e.target.value)}
                 />
               </label>
               <div className="mt-2.5 flex items-center gap-1.5 self-end">
@@ -68,7 +97,7 @@ const StudioHome = () => {
                 <button
                   type="button"
                   className="btn btn-sm btn-soft btn-warning px-5 "
-                  onClick={handleNavEditor}
+                  onClick={handleGoToEditor}
                 >
                   <TbEditCircle size={17} />
                   Go to Editor

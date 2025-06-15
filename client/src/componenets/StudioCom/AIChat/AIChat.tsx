@@ -1,7 +1,7 @@
-import useAuth from '../../../hooks/useAuth'
+import useContexts from '../../../hooks/useContexts'
 
 const AIChat = () => {
-  const { ai } = useAuth()
+  const { ai } = useContexts()
   return (
     <>
       <div

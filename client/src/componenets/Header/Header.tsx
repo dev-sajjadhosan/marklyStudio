@@ -59,7 +59,7 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1" role="menubar">
             <li>
-              <Link to="/studio?home" role="menuitem">
+              <Link to="/studio/editor" role="menuitem">
                 <SiReasonstudios size={17} />
                 Studio
               </Link>
@@ -110,7 +110,7 @@ const Header = () => {
         {/* right: CTA */}
         <div className="navbar-end gap-1.5">
           <a
-            href="/studio"
+            href="/studio/editor"
             className="btn btn-sm btn-soft btn-warning"
             rel="noopener noreferrer"
           >
@@ -136,7 +136,7 @@ const Header = () => {
           role="menu"
         >
           <li>
-            <a href="/studio" role="menuitem">
+            <a href="/studio/home" role="menuitem">
               <SiReasonstudios size={17} />
               Studio
             </a>

@@ -1,0 +1,187 @@
+{
+  "project": [
+    {
+      "title": "Title And Description",
+      "description": "This section covers: Title And Description.",
+      "example": "## Project Title\nA brief description of your project goes here."
+    },
+    {
+      "title": "Acknowledgements",
+      "description": "This section covers: Acknowledgements.",
+      "example": "- Hat tip to anyone whose code was used\n- Inspiration\n- etc."
+    },
+    {
+      "title": "Authors",
+      "description": "This section covers: Authors.",
+      "example": "- [@yourgithubusername](https://github.com/yourgithubusername)"
+    },
+    {
+      "title": "Badges",
+      "description": "This section covers: Badges.",
+      "example": "![Build Status](https://img.shields.io/badge/build-passing-brightgreen)"
+    },
+    {
+      "title": "Color Reference",
+      "description": "This section covers: Color Reference.",
+      "example": "| Color | Hex |\n|-------|-----|\n| Primary | #3498db |"
+    },
+    {
+      "title": "Contributing",
+      "description": "This section covers: Contributing.",
+      "example": "Contributions are always welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines."
+    },
+    {
+      "title": "Demo",
+      "description": "This section covers: Demo.",
+      "example": "![Demo](https://link-to-your-demo.gif)"
+    },
+    {
+      "title": "Features",
+      "description": "This section covers: Features.",
+      "example": "- Feature 1\n- Feature 2\n- Feature 3"
+    },
+    {
+      "title": "Feedback",
+      "description": "This section covers: Feedback.",
+      "example": "If you have any feedback, please reach out at example@example.com"
+    },
+    {
+      "title": "Installation",
+      "description": "This section covers: Installation.",
+      "example": "Install my-project with npm:\n```bash\nnpm install my-project\n```"
+    },
+    {
+      "title": "License",
+      "description": "This section covers: License.",
+      "example": "Distributed under the MIT License. See LICENSE for more information."
+    },
+    {
+      "title": "Logo",
+      "description": "This section covers: Logo.",
+      "example": "![Logo](https://example.com/logo.png)"
+    },
+    {
+      "title": "Related",
+      "description": "This section covers: Related.",
+      "example": "- [Another Awesome Project](https://github.com/user/repo)"
+    },
+    {
+      "title": "Roadmap",
+      "description": "This section covers: Roadmap.",
+      "example": "- [ ] Feature 1\n- [x] Feature 2"
+    },
+    {
+      "title": "Used By",
+      "description": "This section covers: Used By.",
+      "example": "- Company 1\n- Project 2"
+    },
+    {
+      "title": "Usage/Examples",
+      "description": "This section covers: Usage/Examples.",
+      "example": "```js\nimport Component from 'my-library';\n<Component />\n```"
+    },
+    {
+      "title": "Tech",
+      "description": "This section covers: Tech.",
+      "example": "- React\n- Node.js\n- MongoDB"
+    },
+    {
+      "title": "Changelog",
+      "description": "This section covers: Changelog.",
+      "example": "### Changelog\n- v1.0.0: Initial release."
+    },
+    {
+      "title": "Screenshots",
+      "description": "This section covers: Screenshots.",
+      "example": "## Screenshots\n![Screenshot](https://example.com/screenshot.png)"
+    }
+  ],
+  "documentation": [
+    {
+      "title": "Api Reference",
+      "description": "This section covers: Api Reference.",
+      "example": "### API Reference\n```http\nGET /api/items\n```\nReturns a list of items."
+    },
+    {
+      "title": "Appendix",
+      "description": "This section covers: Appendix.",
+      "example": "## Appendix\nAdditional information like data tables, charts, etc."
+    },
+    {
+      "title": "Documentation",
+      "description": "This section covers: Documentation.",
+      "example": "Full documentation is available at [docs.example.com](https://docs.example.com)"
+    },
+    {
+      "title": "Faq",
+      "description": "This section covers: Faq.",
+      "example": "### FAQ\n**Q:** Question?\n**A:** Answer."
+    }
+  ],
+  "app": [
+    {
+      "title": "Deployment",
+      "description": "This section covers: Deployment.",
+      "example": "To deploy this project run:\n```bash\nnpm run deploy\n```"
+    },
+    {
+      "title": "Environment",
+      "description": "This section covers: Environment.",
+      "example": "To run this project, you will need to add the following environment variables to your .env file."
+    },
+    {
+      "title": "Optimizations",
+      "description": "This section covers: Optimizations.",
+      "example": "## Optimizations\n- Lazy loading\n- Memoization\n- Code splitting"
+    },
+    {
+      "title": "Running Tests",
+      "description": "This section covers: Running Tests.",
+      "example": "To run tests, run the following command:\n```bash\nnpm run test\n```"
+    }
+  ],
+  "other": [
+    {
+      "title": "Lessons",
+      "description": "This section covers: Lessons.",
+      "example": "### What I Learned\n- Lesson 1\n- Lesson 2"
+    },
+    {
+      "title": "Support",
+      "description": "This section covers: Support.",
+      "example": "## Support\nFor support, open an issue or contact me at email@example.com"
+    }
+  ],
+  "profile": [
+    {
+      "title": "Github Profile- About Me",
+      "description": "This section covers: Github Profile- About Me.",
+      "example": "Hi, I'm Sajjad \ud83d\udc4b\nI'm a MERN Stack Developer passionate about building cool stuff."
+    },
+    {
+      "title": "Github Profile - Introduction",
+      "description": "This section covers: Github Profile - Introduction.",
+      "example": "## Introduction\nThis is my GitHub profile where I showcase my projects and skills."
+    },
+    {
+      "title": "Github Profile - Links",
+      "description": "This section covers: Github Profile - Links.",
+      "example": "[![Portfolio](https://img.shields.io/badge/portfolio-visit-brightgreen)](https://example.com)"
+    },
+    {
+      "title": "Github Profile - Others",
+      "description": "This section covers: Github Profile - Others.",
+      "example": "## Fun Facts\n- I love anime\n- I build in public"
+    },
+    {
+      "title": "Github Profile - Skills",
+      "description": "This section covers: Github Profile - Skills.",
+      "example": "![Skills](https://skillicons.dev/icons?i=js,react,nodejs,mongodb)"
+    },
+    {
+      "title": "Contact",
+      "description": "This section covers: Contact.",
+      "example": "## Contact Me\n\ud83d\udce7 email@example.com\n\ud83d\udcbc [LinkedIn](https://linkedin.com/in/devsajjadhosan)"
+    }
+  ]
+}

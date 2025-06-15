@@ -10,10 +10,10 @@ import {
   TbEyeClosed,
   TbInputSpark,
 } from 'react-icons/tb'
-import useAuth from '../../../hooks/useAuth'
+import useContexts from '../../../hooks/useContexts'
 
 const ActionDock = () => {
-  const { bottom } = useAuth()
+  const { bottom } = useContexts()
 
   const {
     preview,
@@ -28,7 +28,7 @@ const ActionDock = () => {
     setAi,
     theme,
     setTheme,
-  } = useAuth()
+  } = useContexts()
 
   return (
     <>
@@ -42,16 +42,16 @@ const ActionDock = () => {
         <ul className="flex items-center gap-1.5">
           <li>
             <button
-              className="btn btn-sm btn-soft btn-warning tooltip"
+              className="btn btn-xs btn-soft btn-warning tooltip"
               data-tip="Preview"
               onClick={() => setPreview(!preview)}
             >
-              {preview ? <TbEye size={19} /> : <TbEyeClosed size={19} />}
+              {preview ? <TbEye size={20} /> : <TbEyeClosed size={19} />}
             </button>
           </li>
           <li>
             <button
-              className={`btn btn-sm  tooltip ${
+              className={`btn btn-xs  tooltip ${
                 split ? 'btn-secondary' : 'btn-secondary btn-soft'
               }`}
               data-tip="Split View"
@@ -62,8 +62,9 @@ const ActionDock = () => {
           </li>
           <li>
             <button
-              className="btn btn-sm btn-soft btn-warning tooltip"
+              className="btn btn-xs btn-soft btn-warning tooltip"
               data-tip="Mobile View"
+              disabled
               onClick={() => setMobile(!mobile)}
             >
               {mobile ? (
@@ -75,7 +76,7 @@ const ActionDock = () => {
           </li>
           <li>
             <button
-              className="btn btn-sm btn-soft btn-warning tooltip"
+              className="btn btn-xs btn-soft btn-warning tooltip"
               data-tip="Templates"
               onClick={() => setTemplate(!template)}
             >
@@ -88,7 +89,7 @@ const ActionDock = () => {
           </li>
           <li>
             <button
-              className={`btn btn-sm  tooltip ${
+              className={`btn btn-xs  tooltip ${
                 ai ? 'btn-accent' : 'btn-soft btn-accent'
               }`}
               data-tip="ai"
@@ -99,8 +100,9 @@ const ActionDock = () => {
           </li>
           <li>
             <button
-              className={`btn btn-sm btn-soft btn-warning tooltip`}
+              className={`btn btn-xs btn-soft btn-warning tooltip`}
               data-tip="Theme"
+              disabled
               onClick={() => setTheme(!theme)}
             >
               {theme ? <TbBulb size={19} /> : <TbBulbFilled size={19} />}

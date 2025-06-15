@@ -7,7 +7,7 @@ const NewsletterAndOSS = () => {
     <section id="updates-opensource" className="py-20 text-base-content">
       <div className="container mx-auto px-4 flex flex-col items-center justify-between gap-10">
         {/* Left: Newsletter Signup */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-col md:flex-row">
           <div className="max-w-md">
             <img src={email} alt="" />
           </div>
@@ -32,7 +32,7 @@ const NewsletterAndOSS = () => {
         </div>
 
         {/* Right: Open Source Callout */}
-        <div className="flex flex-row-reverse justify-between items-center">
+        <div className="flex flex-col md:flex-row-reverse justify-between items-center mt-15">
           <div className="max-w-md">
             <img src={open} alt="" />
           </div>

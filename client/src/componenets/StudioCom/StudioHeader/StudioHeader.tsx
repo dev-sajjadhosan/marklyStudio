@@ -1,4 +1,5 @@
 import { LuHistory, LuRedo2, LuUndo2 } from 'react-icons/lu'
+import { undo, redo } from '@codemirror/commands'
 import { PiCoffeeDuotone } from 'react-icons/pi'
 import {
   TbBrandGithub,
@@ -8,10 +9,14 @@ import {
   TbPencilUp,
   TbSettings,
 } from 'react-icons/tb'
-import useAuth from '../../../hooks/useAuth'
+import useContexts from '../../../hooks/useContexts'
+import useHeaderActions from '../../../hooks/useHeaderActions'
 
 const StudioHeader = () => {
-  const { header } = useAuth()
+  const { header, editorRef, setSetting } = useContexts()
+  const { handleOpen, handleExport, handleReset, handleSave } =
+    useHeaderActions()
+
   return (
     <>
       <header
@@ -27,6 +32,7 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Open"
+                onClick={handleOpen}
               >
                 <TbFolderOpen size={15} />
               </button>
@@ -35,6 +41,10 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Undo"
+                onClick={() => {
+                  const view = editorRef.current?.view
+                  if (view) undo({ state: view.state, dispatch: view.dispatch })
+                }}
               >
                 <LuUndo2 size={15} />
               </button>
@@ -43,6 +53,10 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Redo"
+                onClick={() => {
+                  const view = editorRef.current?.view
+                  if (view) redo({ state: view.state, dispatch: view.dispatch })
+                }}
               >
                 <LuRedo2 size={15} />
               </button>
@@ -51,6 +65,7 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Reset"
+                onClick={handleReset}
               >
                 <TbFileX size={15} />
               </button>
@@ -58,6 +73,7 @@ const StudioHeader = () => {
             <li>
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
+                disabled
                 data-tip="History"
               >
                 <LuHistory size={15} />
@@ -70,6 +86,7 @@ const StudioHeader = () => {
             <li>
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
+                disabled
                 data-tip="Github Connect"
               >
                 <TbBrandGithub size={15} />
@@ -79,6 +96,7 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Save"
+                onClick={handleSave}
               >
                 <TbPencilCheck size={15} />
               </button>
@@ -87,6 +105,7 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Export"
+                onClick={handleExport}
               >
                 <TbPencilUp size={15} />
               </button>
@@ -95,6 +114,7 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Setting"
+                onClick={() => setSetting(true)}
               >
                 <TbSettings size={15} />
               </button>
@@ -103,6 +123,7 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Feedback"
+                disabled
               >
                 <PiCoffeeDuotone size={15} />
               </button>

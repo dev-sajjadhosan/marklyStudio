@@ -25,7 +25,7 @@ const Banner = () => {
             </p>
             <div className="mt-5 flex items-center gap-1">
               <Link
-                to="/studio"
+                to="/studio/editor"
                 className="btn btn-sm btn-soft btn-warning px-5"
               >
                 <SiReasonstudios size={17} />

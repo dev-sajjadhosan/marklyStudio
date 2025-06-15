@@ -1,4 +1,4 @@
-import { SiReasonstudios } from "react-icons/si";
+import { SiReasonstudios } from 'react-icons/si'
 
 const DemoAndCTA = () => {
   return (
@@ -7,16 +7,19 @@ const DemoAndCTA = () => {
         {/* Left: Text & CTA */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h2 className="text-4xl font-light mb-4">
-            Fast, Simple, and <span className="text-primary font-bold">100% Free</span>
+            Fast, Simple, and{' '}
+            <span className="text-primary font-bold">100% Free</span>
           </h2>
           <p className="text-lg text-gray-500 mb-6">
             Completely free. <br />
-            For the @dev.community 💖  
-            No logins, no paywalls — just Markdown magic ✨
+            For the @dev.community 💖 No logins, no paywalls — just Markdown
+            magic ✨
           </p>
-          <a href="/editor" className="btn btn-sm btn-soft btn-warning px-5">
+          <a
+            href="/studio/editor"
+            className="btn btn-sm btn-soft btn-warning px-5"
+          >
             <SiReasonstudios size={17} />
-
             Try Studio
           </a>
         </div>
@@ -36,7 +39,7 @@ const DemoAndCTA = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default DemoAndCTA;
+export default DemoAndCTA
