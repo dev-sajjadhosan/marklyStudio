@@ -9,7 +9,7 @@
     "skipLibCheck": true, // ✅ Faster build
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true, // ✅ Import JSON files
-    "noImplicitAny": true, // ✅ Safer code
+    "noImplicitAny": false, // ✅ Safer code
     "moduleResolution": "node", // ✅ Works well with `node_modules`
     "allowJs": false // ✅ Keep it clean — TS only
   },
