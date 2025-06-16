@@ -1,4 +1,4 @@
-import { LuHistory, LuRedo2, LuUndo2 } from 'react-icons/lu'
+import { LuRedo2, LuUndo2 } from 'react-icons/lu'
 import { undo, redo } from '@codemirror/commands'
 import { PiCoffeeDuotone } from 'react-icons/pi'
 import {

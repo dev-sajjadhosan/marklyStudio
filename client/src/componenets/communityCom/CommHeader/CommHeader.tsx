@@ -1,23 +1,8 @@
-import { useState } from 'react'
 import { SiReasonstudios } from 'react-icons/si'
-import {
-  TbCategory,
-  TbClick,
-  TbMenu3,
-  TbSquares,
-  TbTags,
-  TbTemplate,
-  TbTransitionLeft,
-  TbUsersGroup,
-  TbUsersPlus,
-  TbUserSquareRounded,
-  TbWorld,
-} from 'react-icons/tb'
-import { Link } from 'react-router-dom'
+import { TbClick, TbTemplate, TbTransitionLeft, TbUsersPlus } from 'react-icons/tb'
+
 // If you’re in React Router or Next.js, import Link instead of <a>.
 const CommHeader = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <header className="bg-base-100 sticky top-0 z-90 w-full">
       <nav className="navbar container mx-auto">

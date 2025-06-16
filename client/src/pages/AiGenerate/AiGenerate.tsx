@@ -5,7 +5,7 @@ import { TbClick, TbCopy, TbCopyCheck } from 'react-icons/tb'
 import useAxios from '../../hooks/useAxios'
 import useContexts from '../../hooks/useContexts'
 import { SiReasonstudios } from 'react-icons/si'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const AiGenerate = () => {
   const axios = useAxios()
@@ -34,7 +34,9 @@ const AiGenerate = () => {
     )?.value
 
     if (context === '')
-      return enqueueSnackbar('Write something to Generate code ??', { variant: 'warning' })
+      return enqueueSnackbar('Write something to Generate code ??', {
+        variant: 'warning',
+      })
 
     setLoading(true)
     try {

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import useContexts from '../../../hooks/useContexts'
 
 const FLAVORS = [
