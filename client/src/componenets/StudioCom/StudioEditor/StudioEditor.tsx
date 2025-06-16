@@ -39,9 +39,9 @@ const StudioEditor = () => {
 
   useEffect(() => {
     const saved = localStorage.getItem(import.meta.env.VITE_CODE_SAVE_NAME)
-    const markly = saved ? JSON.parse(saved) : ''
+    const markly = saved ? saved : ''
     setMarkdownText(markly)
-  }, [])
+  }, [setMarkdownText])
 
   /* ① memoise things that otherwise change reference every render */
   const editorExtensions = useMemo(

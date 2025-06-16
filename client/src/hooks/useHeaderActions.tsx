@@ -31,10 +31,7 @@ export default function useHeaderActions() {
   }, [editorValue, pushHistory, setMarkdownText])
 
   const handleSave = useCallback(() => {
-    localStorage.setItem(
-      import.meta.env.VITE_CODE_SAVE_NAME,
-      JSON.stringify(markdownText),
-    )
+    localStorage.setItem(import.meta.env.VITE_CODE_SAVE_NAME, markdownText)
     enqueueSnackbar('File Saved! ✔️', {
       variant: 'success',
       anchorOrigin: { horizontal: 'right', vertical: 'bottom' },

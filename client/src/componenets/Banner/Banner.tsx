@@ -33,6 +33,7 @@ const Banner = () => {
               </Link>
               <Link
                 to="/ai-generate"
+                onClick={() => localStorage.removeItem('ai-gen')}
                 className="btn btn-sm btn-soft btn-accent px-5"
               >
                 <TbClick size={17} />

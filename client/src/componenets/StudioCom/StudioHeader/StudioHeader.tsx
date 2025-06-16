@@ -8,6 +8,7 @@ import {
   TbPencilCheck,
   TbPencilUp,
   TbSettings,
+  TbWorldShare,
 } from 'react-icons/tb'
 import useContexts from '../../../hooks/useContexts'
 import useHeaderActions from '../../../hooks/useHeaderActions'
@@ -72,11 +73,17 @@ const StudioHeader = () => {
             </li>
             <li>
               <button
-                className="btn btn-xs btn-ghost tooltip tooltip-bottom"
-                disabled
-                data-tip="History"
+                onClick={() =>
+                  (
+                    document.getElementById(
+                      'publish_modal',
+                    ) as HTMLDialogElement
+                  )?.showModal()
+                }
+                className="btn btn-xs btn-info btn-soft tooltip tooltip-bottom"
+                data-tip="Publish Doc"
               >
-                <LuHistory size={15} />
+                <TbWorldShare size={15} />
               </button>
             </li>
           </ul>

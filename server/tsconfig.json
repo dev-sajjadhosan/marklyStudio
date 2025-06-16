@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Modern enough for Node 14+
+    "module": "CommonJS", // For Node.js require/module.exports
+    "outDir": "./dist", // Compiled JS output folder
+    "rootDir": "./", // Your TS source root (adjust if needed)
+    "strict": true, // All strict checks ON for safer code
+    "esModuleInterop": true, // Allows import of commonjs modules
+    "skipLibCheck": true, // Skip checking node_modules for speed
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true, // To import JSON if needed
+    "noImplicitAny": true,
+    "moduleResolution": "node", // Helps TS find node modules
+    "allowJs": false // Only TS files, no JS allowed
+  },
+  "include": ["**/*.ts"], // Compile all TS files in your project
+  "exclude": ["node_modules", "dist"] // Don’t compile these folders
+}

@@ -44,6 +44,8 @@ export interface AuthContextType {
   setExample: Dispatch<SetStateAction<string[]>>
   isEditing: boolean
   setIsEditing: Dispatch<SetStateAction<boolean>>
+  selected: string
+  setSelected: Dispatch<SetStateAction<string>>
 }
 
 export interface HeaderProviderProps {

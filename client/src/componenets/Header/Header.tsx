@@ -3,6 +3,7 @@ import { SiReasonstudios } from 'react-icons/si'
 import {
   TbCategory,
   TbClick,
+  TbMenu3,
   TbSquares,
   TbTags,
   TbUsersGroup,
@@ -23,27 +24,14 @@ const Header = () => {
           {/* Mobile hamburger */}
           <button
             id="mobile-nav-toggle"
-            className="btn btn-ghost lg:hidden"
+            className="btn btn-sm btn-ghost lg:hidden"
             aria-label="Toggle navigation"
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
             onClick={() => setIsOpen(!isOpen)}
           >
             {/* icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+            <TbMenu3 size={17} />
           </button>
 
           {/* Brand / home link */}
@@ -64,7 +52,7 @@ const Header = () => {
                 Studio
               </Link>
             </li>
-            <li>
+            <li onClick={() => localStorage.removeItem('ai-gen')}>
               <a href="/ai-generate" role="menuitem">
                 <TbClick size={17} />
                 Ai Generate
@@ -82,7 +70,7 @@ const Header = () => {
                   <Link to="/templates">Templates</Link>
                   <TbCategory size={17} />
                 </summary>
-                <ul className="w-xs bg-base-100 p-11 flex flex-col gap-1.5">
+                <ul className="w-full bg-base-200 p-3 flex flex-col gap-1.5">
                   <li>
                     <Link to={`/templates?c=all`} role="menuitem">
                       <TbWorld size={17} />
@@ -132,7 +120,7 @@ const Header = () => {
       {isOpen && (
         <ul
           id="mobile-nav"
-          className="menu menu-sm gap-1.5 dropdown-content bg-base-100 rounded-box shadow mt-2 p-2 lg:hidden w-xs"
+          className="menu menu-sm gap-1.5 dropdown-content bg-base-200 rounded-box shadow mt-2 p-2 lg:hidden w-xs absolute top-15 right-1/2 translate-x-1/2 transition-all duration-150"
           role="menu"
         >
           <li>

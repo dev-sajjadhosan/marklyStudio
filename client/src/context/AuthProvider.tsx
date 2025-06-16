@@ -51,9 +51,10 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [col, setCol] = useState(0)
   const [example, setExample] = useState<string[]>([])
   const [isEditing, setIsEditing] = useState(false)
-
-  // 📝 Editor content
   const [markdownText, setMarkdownText] = useState(``)
+
+  // 📝 community content
+  const [selected, setSelected] = useState<string>('')
 
   useEffect(() => {
     const isVisit = JSON.parse(localStorage.getItem('visit') ?? 'false')
@@ -262,6 +263,8 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       setCol,
       example,
       setExample,
+      selected,
+      setSelected,
     }),
     [
       all,
@@ -290,6 +293,8 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       setExample,
       isEditing,
       setIsEditing,
+      selected,
+      setSelected,
     ],
   )
 
