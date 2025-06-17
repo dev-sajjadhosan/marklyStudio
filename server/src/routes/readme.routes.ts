@@ -7,9 +7,6 @@ const hello: RequestHandler = async (req, res) => {
   res.json('The Readme is working')
 }
 
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
-
 const createReadme: RequestHandler = async (req, res, next) => {
   const { description, style } = req.body
 
@@ -29,6 +26,7 @@ const createReadme: RequestHandler = async (req, res, next) => {
   }
 
   try {
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
     /** Build the full prompt */
     const prompt = `
@@ -50,8 +48,6 @@ Use clean markdown syntax.
       .replace(/^```markdown\s*/, '') // Remove opening block
       .replace(/```$/, '')
 
-
-      
     console.log(text)
     // /** Persist to MongoDB */
     const saved = await Readme.create({

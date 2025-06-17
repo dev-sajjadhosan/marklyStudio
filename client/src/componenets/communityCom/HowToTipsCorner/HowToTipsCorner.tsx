@@ -1,5 +1,5 @@
 import React from 'react'
-import { TbBulb, TbCircuitBulb } from 'react-icons/tb'
+import { TbBulb } from 'react-icons/tb'
 import Pagination from '../../Shared/Pagination/Pagination'
 
 type Tip = {

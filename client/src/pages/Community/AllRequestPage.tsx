@@ -1,7 +1,6 @@
 import type { RequestTypes } from '../../../types/community.types'
 import { TbMessage2Plus } from 'react-icons/tb'
 import { RequestCard } from '../../componenets/communityCom/TemplateRequests/TemplateRequests'
-import { useState } from 'react'
 import BackBtn from '../../componenets/Shared/BackBtn/BackBtn'
 import Pagination from '../../componenets/Shared/Pagination/Pagination'
 
@@ -99,7 +98,6 @@ const dummyRequests: RequestTypes[] = [
 ]
 
 const AllRequestPage = () => {
-  const [current, setCurrent] = useState(0)
   return (
     <>
       <section className="p-5">

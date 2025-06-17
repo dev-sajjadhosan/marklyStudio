@@ -167,21 +167,37 @@ import { Button } from 'react-component-library';
 \`\`\`
     `,
   },
+  {
+    id: '7',
+    title: 'Docker Project README',
+    description: 'Includes Docker build and run instructions.',
+    author: 'dockMaster',
+    downloadUrl: '#',
+    image: 'https://picsum.photos/id/1076/600/400',
+    exampleCode: `
+# Docker Project
+
+## Build Image
+
+\`\`\`bash
+docker build -t my-app .
+\`\`\`
+
+## Run Container
+
+\`\`\`bash
+docker run -p 3000:3000 my-app
+\`\`\`
+    `,
+  },
 ]
 
-const FeaturedTemplatesShowcase: React.FC<{
-  title?: string
-  data?: string[]
-}> = ({ title }) => {
+const ProfileTemplates: React.FC = () => {
   const [temFeature, seTemFeature] = useState('hot')
   return (
-    <section className="p-5 w-full flex flex-col my-15">
+    <section className="p-5 w-full">
       <div className="flex items-center justify-between w-full">
-        <h2 className="text-3xl">
-          {' '}
-          {title}
-          <sup className="badge badge-sm badge-soft badge-info m-1">aaa</sup>
-        </h2>
+        <h2 className="text-3xl"> Templates</h2>
         <div className="join">
           <button
             className={`btn btn-sm join-item px-5 ${
@@ -249,11 +265,11 @@ const FeaturedTemplatesShowcase: React.FC<{
           </div>
         ))}
       </div>
-      <button className="btn btn-sm btn-soft btn-success px-5 mt-7 self-center">
+      <button className="btn btn-sm btn-soft btn-success px-5 mt-7">
         More Templates
       </button>
     </section>
   )
 }
 
-export default FeaturedTemplatesShowcase
+export default ProfileTemplates

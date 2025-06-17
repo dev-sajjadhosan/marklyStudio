@@ -1,5 +1,4 @@
 // Update the import path below to the correct relative path where RequestTypes is defined
-import type { RequestTypes } from '../../../../types/community.types'
 import { TbBookmarkPlus, TbCheck } from 'react-icons/tb'
 
 const RequestViewModal = () => {

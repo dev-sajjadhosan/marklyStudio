@@ -2,65 +2,54 @@ import { Typewriter } from 'react-simple-typewriter'
 import { enqueueSnackbar } from 'notistack'
 import { useEffect, useRef, useState } from 'react'
 import { TbClick, TbCopy, TbCopyCheck, TbTransitionLeft } from 'react-icons/tb'
-import useAxios from '../../hooks/useAxios'
+// import useAxios from '../../hooks/useAxios'
 import useContexts from '../../hooks/useContexts'
 import { SiReasonstudios } from 'react-icons/si'
 import { Link, useNavigate } from 'react-router-dom'
+import useAiGenerate from '../../hooks/useAiGenerate'
 
 const AiGenerate = () => {
-  const axios = useAxios()
+  // const axios = useAxios()
   const nav = useNavigate()
+  const { context, loading, generateCode, message, setContext } =
+    useAiGenerate()
   const { setMarkdownText } = useContexts()
 
-  const [readme, setReadme] = useState('')
-  const [loading, setLoading] = useState(false)
   const [cp, setCP] = useState(false)
   const textRef = useRef<HTMLTextAreaElement>(null)
   // Restore saved readme if returning from Studio
   useEffect(() => {
     const saved = localStorage.getItem(import.meta.env.VITE_AI_SAVE_NAME)
     if (saved) {
-      setReadme(saved)
+      setContext(saved)
     }
-  }, [])
+  }, [setContext])
 
   const handleGenerate = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.currentTarget
-    const context = (form.elements.namedItem('content') as HTMLInputElement)
+    const contextT = (form.elements.namedItem('content') as HTMLInputElement)
       ?.value
     const readmeStyle = (
       form.elements.namedItem('readmeStyle') as HTMLInputElement
     )?.value
 
-    if (context === '')
+    if (contextT === '')
       return enqueueSnackbar('Write something to Generate code ??', {
         variant: 'warning',
       })
 
-    setLoading(true)
-    try {
-      const sData = { description: context, style: readmeStyle }
-      const data = await axios.post('/readme/create', sData)
-      const content = data?.data?.content
-      setReadme(content)
-      localStorage.setItem(import.meta.env.VITE_CODE_SAVE_NAME, content)
-      localStorage.setItem(import.meta.env.VITE_AI_SAVE_NAME, content)
-      setMarkdownText(content)
-      enqueueSnackbar('README generated successfully!', { variant: 'success' })
-    } catch (err) {
-      console.error(err)
-      enqueueSnackbar('Something went wrong!', { variant: 'error' })
-    } finally {
-      setLoading(false)
+    generateCode({ text: contextT, readmeStyle })
+    if (message.message) {
+      enqueueSnackbar(message.message, { variant: message.variant })
     }
   }
 
   const handleCopy = () => {
-    if (!readme) return
+    if (!context) return
     setCP(true)
     window.navigator.clipboard
-      .writeText(readme)
+      .writeText(context)
       .then(() => {
         enqueueSnackbar('Copied!', { variant: 'success' })
       })
@@ -73,18 +62,18 @@ const AiGenerate = () => {
   }
 
   const handleGoEditor = () => {
-    setMarkdownText(readme)
+    setMarkdownText(context)
     nav('/studio/editor')
   }
 
   const handleNew = () => {
-    setReadme('')
+    setContext('')
     localStorage.removeItem(import.meta.env.VITE_AI_SAVE_NAME)
   }
 
   return (
     <>
-      {readme === '' ? (
+      {context === '' ? (
         <div className="flex justify-center items-center h-screen w-full">
           <div className="card text-center items-center">
             <h1 className="text-7xl text-gray-500 dancing">AI Generated</h1>
@@ -190,7 +179,7 @@ const AiGenerate = () => {
             <pre>
               <code className="text-wrap whitespace-pre-wrap">
                 <Typewriter
-                  words={[readme]}
+                  words={[context]}
                   typeSpeed={3}
                   cursor
                   cursorStyle="_"

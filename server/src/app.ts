@@ -1,7 +1,9 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
-dotenv.config()
+import dotenvExpand from 'dotenv-expand'
+dotenvExpand.expand(dotenv.config())
+
 import { connectDB } from './config/db'
 import userRoutes from './routes/user.routes'
 import readmeRoutes from './routes/readme.routes'
@@ -20,7 +22,6 @@ app.use('/readme', readmeRoutes)
 app.get('/', (_, res) => {
   res.send('🚀 Server up & running!')
 })
-
 ;(async () => {
   await connectDB(
     (process.env.MONGO_URI as string) ||

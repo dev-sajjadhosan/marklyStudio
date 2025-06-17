@@ -1,21 +1,9 @@
 // Update the import path below to the correct relative path where RequestTypes is defined
 import { useRef } from 'react'
-import {
-  TbBookmarkPlus,
-  TbCheck,
-  TbMessage2Plus,
-  TbMessage2X,
-} from 'react-icons/tb'
+import { TbMessage2Plus, TbMessage2X } from 'react-icons/tb'
 
 const CreateRequestView = () => {
   const isPictureRef = useRef<HTMLInputElement>(null)
-  const d = {
-    id: 'r1',
-    title: 'API Docs Template',
-    details:
-      'Looking for a template suited for API documentation.   Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore nam illum ducimus eaque tenetur nisi? Rerum unde quod dolorum, recusandae placeat molestiae nobis aspernatur voluptate, iste vel accusantium? Aliquid nulla excepturi recusandae distinctio omnis, eligendi dolorem ipsa, cupiditate dolore animi fuga autem eveniet voluptatibus nihil architecto ',
-    requester: 'user123',
-  }
 
   return (
     <>

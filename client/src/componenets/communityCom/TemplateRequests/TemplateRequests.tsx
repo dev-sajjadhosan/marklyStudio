@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   TbBookmarkPlus,
   TbCheck,
@@ -109,24 +109,24 @@ export const RequestCard = ({ req }: { req: RequestTypes }) => {
 }
 
 const TemplateRequests: React.FC = () => {
-  const [requests, setRequests] = useState(dummyRequests)
-  const [newTitle, setNewTitle] = useState('')
-  const [newDetails, setNewDetails] = useState('')
+  // const [requests, setRequests] = useState(dummyRequests)
+  // const [newTitle, setNewTitle] = useState('')
+  // const [newDetails, setNewDetails] = useState('')
 
-  const addRequest = () => {
-    if (!newTitle.trim()) return
-    setRequests([
-      ...requests,
-      {
-        id: `r${Date.now()}`,
-        title: newTitle,
-        details: newDetails,
-        requester: 'Anonymous',
-      },
-    ])
-    setNewTitle('')
-    setNewDetails('')
-  }
+  // const addRequest = () => {
+  //   if (!newTitle.trim()) return
+  //   setRequests([
+  //     ...requests,
+  //     {
+  //       id: `r${Date.now()}`,
+  //       title: newTitle,
+  //       details: newDetails,
+  //       requester: 'Anonymous',
+  //     },
+  //   ])
+  //   setNewTitle('')
+  //   setNewDetails('')
+  // }
 
   return (
     <section className="p-5 mt-15">
@@ -167,7 +167,7 @@ const TemplateRequests: React.FC = () => {
         </div>
       </div>
       <div className="items-center gap-5 grid grid-cols-2 w-full mt-5 px-5">
-        {requests.slice(0, 6).map((req) => (
+        {dummyRequests.slice(0, 6).map((req) => (
           <RequestCard req={req} key={req.id} />
         ))}
       </div>
