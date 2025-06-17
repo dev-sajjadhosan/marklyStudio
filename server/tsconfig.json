@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2020", // ✅ Modern Node.js support
-    "module": "CommonJS", // ✅ Standard for Node
-    "outDir": "./dist", // ✅ Output for compiled JS
-    "rootDir": "./", // ✅ TS entry point is root
-    "strict": true, // ✅ Strict type checks
-    "esModuleInterop": true, // ✅ CJS ↔ ES module support
-    "skipLibCheck": true, // ✅ Faster build
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true, // ✅ Import JSON files
-    "noImplicitAny": false, // ✅ Safer code
-    "moduleResolution": "node", // ✅ Works well with `node_modules`
-    "allowJs": false // ✅ Keep it clean — TS only
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "types": ["node"] // ✅ Explicit Node.js type support
   },
-  "include": ["**/*.ts"], // ✅ All TS files
-  "exclude": ["node_modules", "dist"] // ✅ Don’t recompile output or deps
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
