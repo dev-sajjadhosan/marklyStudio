@@ -4,25 +4,22 @@ import express, { Request, Response, NextFunction } from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+const app = express()
 
+// routes
 import readmeRouter from './routes/readme'
 
-
-const app = express()
 
 // Middleware
 app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 
-
-
-
 app.use('/readme', readmeRouter)
 
-
 // Connect to MongoDB
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/marklyStudio'
+const MONGO_URI =
+  process.env.MONGO_URI || 'mongodb://localhost:27017/marklyStudio'
 
 mongoose
   .connect(MONGO_URI)
@@ -34,12 +31,10 @@ mongoose
 
 // Sample Mongoose Schema & Model
 
-
 // Routes
 app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to your Mongoose + Express app!')
 })
-
 
 // Error handler middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
