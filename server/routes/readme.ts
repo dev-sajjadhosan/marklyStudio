@@ -1,22 +1,18 @@
 import { Router, RequestHandler } from 'express'
 import Readme from '../models/Readme'
 import { GoogleGenerativeAI } from '@google/generative-ai'
-
 const router = Router()
-/** Initialise Gemini 2 SDK */
+
 
 const hello: RequestHandler = async (req, res) => {
   res.json('The Readme ai is working')
 }
 
-console.log(process.env.GEMINI_API_KEY)
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 const createReadme: RequestHandler = async (req, res, next) => {
   const { description, style } = req.body
-
-  console.log(req.body)
 
   if (!description?.trim()) {
     res.status(400).json({ error: 'Description is required' })
