@@ -7,12 +7,19 @@ import StudioEditor from '../../componenets/StudioCom/StudioEditor/StudioEditor'
 import AiGenerate from '../../pages/AiGenerate/AiGenerate'
 import PublishModal from '../../componenets/communityCom/PublishModal/PublishModal'
 import CommunityPage from '../../pages/Community/Community'
+import AllRequestPage from '../../pages/Community/AllRequestPage'
+import RequestViewModal from '../../componenets/communityCom/TemplateRequests/RequestView'
+import CreateRequestView from '../../componenets/communityCom/TemplateRequests/CreateRequestView'
+import AcceptViewModal from '../../componenets/communityCom/TemplateRequests/AcceptView/AcceptView'
 
 const Layout = () => {
   return (
     <>
       <BrowserRouter>
         <PublishModal />
+        <RequestViewModal />
+        <CreateRequestView />
+        <AcceptViewModal />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/studio" element={<StudioApp />}>
@@ -21,6 +28,7 @@ const Layout = () => {
           </Route>
           <Route path="/ai-generate" element={<AiGenerate />} />
           <Route path="/community" element={<CommunityPage />} />
+          <Route path="/community/all-requests" element={<AllRequestPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

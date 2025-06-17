@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 import useContexts from '../../../hooks/useContexts'
+import { enqueueSnackbar } from 'notistack'
 
 const FLAVORS = [
   // 🛠 Project-style flavors
@@ -25,7 +27,15 @@ const FLAVORS = [
 ]
 
 const CommCategory = () => {
+  // when user choose anything from here then he will go to template page and see the result based on the click filter
   const { selected, setSelected } = useContexts()
+  const nav = useNavigate()
+
+  const handleFiter = (filter: string) => {
+    setSelected(filter)
+    nav(`/templates?f=${filter}`)
+    enqueueSnackbar(`Your Flavor is ${selected}`, { variant: 'warning' })
+  }
 
   return (
     <div className="flex justify-center items-center flex-col h-[90vh]">
@@ -38,8 +48,10 @@ const CommCategory = () => {
           {FLAVORS.map((flavor, i) => (
             <button
               key={i}
-              onClick={() => setSelected(flavor)}
-              className={`btn btn-soft px-5 transition-all duration-200 ${
+              onClick={() => handleFiter(flavor)}
+              className={`btn btn-sm btn-soft px-5 transition-all duration-200 ${
+                i % 2 !== 0 ? 'btn-success' : ''
+              } ${
                 selected.includes(flavor)
                   ? 'btn-secondary'
                   : 'btn-outline btn-info'

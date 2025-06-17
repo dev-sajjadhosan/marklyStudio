@@ -70,7 +70,7 @@ const Header = () => {
                   <Link to="/templates">Templates</Link>
                   <TbCategory size={17} />
                 </summary>
-                <ul className="w-full bg-base-200 p-3 flex flex-col gap-1.5">
+                <ul className="w-60 bg-base-200 p-3 flex flex-col gap-1.5">
                   <li>
                     <Link to={`/templates?c=all`} role="menuitem">
                       <TbWorld size={17} />

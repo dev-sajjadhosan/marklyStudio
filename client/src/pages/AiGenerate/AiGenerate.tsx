@@ -1,11 +1,11 @@
 import { Typewriter } from 'react-simple-typewriter'
 import { enqueueSnackbar } from 'notistack'
 import { useEffect, useRef, useState } from 'react'
-import { TbClick, TbCopy, TbCopyCheck } from 'react-icons/tb'
+import { TbClick, TbCopy, TbCopyCheck, TbTransitionLeft } from 'react-icons/tb'
 import useAxios from '../../hooks/useAxios'
 import useContexts from '../../hooks/useContexts'
 import { SiReasonstudios } from 'react-icons/si'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const AiGenerate = () => {
   const axios = useAxios()
@@ -136,6 +136,13 @@ const AiGenerate = () => {
                   </button>
                 </div>
               </form>
+              <Link
+                to="/"
+                className="btn btn-sm btn-soft btn-accent mt-5 float-left"
+              >
+                <TbTransitionLeft size={15} />
+                Home
+              </Link>
             </div>
           </div>
         </div>
