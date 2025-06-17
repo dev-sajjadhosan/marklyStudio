@@ -3,9 +3,8 @@ import Readme from '../models/Readme'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 const router = Router()
 
-
 const hello: RequestHandler = async (req, res) => {
-  res.json('The Readme ai is working')
+  res.json('The Readme is working')
 }
 
 
