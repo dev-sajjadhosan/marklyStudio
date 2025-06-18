@@ -21,9 +21,10 @@ const NewsletterAndOSS = () => {
               <input
                 type="email"
                 placeholder="your@email.com"
+                disabled
                 className="input input-bordered w-full max-w-xs"
               />
-              <button type="submit" className="btn btn-primary btn-soft">
+              <button disabled type="submit" className="btn btn-primary btn-soft">
                 <TbBellRinging size={17} />
                 Notify Me
               </button>
@@ -43,7 +44,7 @@ const NewsletterAndOSS = () => {
               — and we want your PRs 👨‍💻
             </p>
             <a
-              href="https://github.com/markly" // change this to your actual repo
+              href="https://github.com/dev-sajjadhosan/marklyStudio" // change this to your actual repo
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-soft btn-accent"

@@ -1,14 +1,10 @@
 import fake from '../../../assets/fake.png'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { SiReasonstudios } from 'react-icons/si'
-import {
-  TbFlame,
-  TbScreenShare,
-  TbSparkles,
-  TbTransitionBottom,
-  TbTrendingUp,
-} from 'react-icons/tb'
+import { TbScreenShare, TbTransitionBottom } from 'react-icons/tb'
+import { Link } from 'react-router-dom'
+import TemStatus from '../../Shared/TemStatus/TemStatus'
 type Template = {
   id: string
   author: string
@@ -173,41 +169,15 @@ const FeaturedTemplatesShowcase: React.FC<{
   title?: string
   data?: string[]
 }> = ({ title }) => {
-  const [temFeature, seTemFeature] = useState('hot')
   return (
     <section className="p-5 w-full flex flex-col my-15">
-      <div className="flex items-center justify-between w-full">
-        <h2 className="text-3xl">
+      <div className="flex flex-wrap items-center justify-center gap-2.5 lg:justify-between w-full">
+        <h2 className="text-xl md:text-3xl capitalize">
           {' '}
           {title}
-          <sup className="badge badge-sm badge-soft badge-info m-1">aaa</sup>
+          <sup className="badge badge-sm badge-soft badge-info m-1">000</sup>
         </h2>
-        <div className="join">
-          <button
-            className={`btn btn-sm join-item px-5 ${
-              temFeature === 'hot' ? 'btn-error' : 'btn-soft btn-error'
-            }`}
-            onClick={() => seTemFeature('hot')}
-          >
-            <TbFlame size={13} /> Hot
-          </button>
-          <button
-            className={`btn btn-sm join-item px-5 ${
-              temFeature === 'new' ? 'btn-success' : 'btn-soft btn-success'
-            }`}
-            onClick={() => seTemFeature('new')}
-          >
-            <TbSparkles size={13} /> New
-          </button>
-          <button
-            className={`btn btn-sm join-item px-5 ${
-              temFeature === 'popular' ? 'btn-primary' : 'btn-soft btn-primary'
-            }`}
-            onClick={() => seTemFeature('popular')}
-          >
-            <TbTrendingUp size={13} /> Popular
-          </button>
-        </div>
+        <TemStatus />
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-7">
         {dummyTemplates.map((tpl) => (
@@ -227,20 +197,31 @@ const FeaturedTemplatesShowcase: React.FC<{
               </div>
               <p className="text-xs text-gray-500">{tpl.description}</p>
               <div className="flex items-center gap-1.5 mt-3.5">
-                <a
-                  href={tpl.downloadUrl}
-                  target="_blank"
+                <button
+                disabled
+                  // href={tpl.downloadUrl}
+                  // target="_blank"
                   className="btn btn-sm btn-soft btn-info"
                   rel="noopener noreferrer"
                 >
                   <TbTransitionBottom size={13} />
                   Download
-                </a>
-                <button className="btn btn-sm btn-soft btn-accent">
+                </button>
+                <button
+                disabled
+                  className="btn btn-sm btn-soft btn-accent"
+                  onClick={() =>
+                    (
+                      document.getElementById(
+                        'preview_modal',
+                      ) as HTMLDialogElement
+                    )?.showModal()
+                  }
+                >
                   <TbScreenShare size={13} />
                   Preview
                 </button>
-                <button className="btn btn-sm btn-soft btn-warning">
+                <button disabled className="btn btn-sm btn-soft btn-warning">
                   <SiReasonstudios size={13} />
                   Open to Editor
                 </button>
@@ -249,9 +230,12 @@ const FeaturedTemplatesShowcase: React.FC<{
           </div>
         ))}
       </div>
-      <button className="btn btn-sm btn-soft btn-success px-5 mt-7 self-center">
+      <Link
+        to={`/template?f=${title}`}
+        className="btn btn-sm btn-soft btn-success px-5 mt-7 self-center"
+      >
         More Templates
-      </button>
+      </Link>
     </section>
   )
 }

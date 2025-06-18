@@ -34,7 +34,11 @@ export interface AuthContextType {
   setting: boolean
   setSetting: Dispatch<SetStateAction<boolean>>
   //
-  editorRef: React.RefObject<import('@uiw/react-codemirror').ReactCodeMirrorRef>
+  editorRef: React.RefObject<
+    import('monaco-editor').editor.IStandaloneCodeEditor
+  >
+  monacoRef: React.RefObject<typeof import('monaco-editor')>
+  insertAtCursor: (text: string) => void
 
   line?: number
   setLine?: Dispatch<SetStateAction<number>>

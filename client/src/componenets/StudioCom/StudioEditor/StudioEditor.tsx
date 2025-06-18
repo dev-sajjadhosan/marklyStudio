@@ -1,7 +1,5 @@
-import { markdown } from '@codemirror/lang-markdown'
-import { oneDark } from '@codemirror/theme-one-dark'
-import CodeMirror from '@uiw/react-codemirror'
-import { EditorView } from '@codemirror/view'
+import { useEffect } from 'react'
+import Editor, { type OnMount } from '@monaco-editor/react'
 import MarkdownPreview from '@uiw/react-markdown-preview'
 import { TbBoxAlignRight } from 'react-icons/tb'
 import Split from 'react-split'
@@ -16,7 +14,6 @@ import TagsBar from '../TagsBar/TagsBar'
 import TemplatesBar from '../TemplatesBar/TemplatesBar'
 import WordPanel from '../WordPanel/WordPanel'
 import StudioSetting from '../StudioSetting/StudioSetting'
-import { useCallback, useEffect, useMemo } from 'react'
 
 const StudioEditor = () => {
   const {
@@ -27,48 +24,31 @@ const StudioEditor = () => {
     split,
     markdownText,
     setMarkdownText,
-    setIsEditing,
     isEditing,
+    editorRef,
+    monacoRef,
   } = useContexts()
 
   useEffect(() => {
-    if (isEditing) {
-      localStorage.setItem('visit', JSON.stringify(true))
-    }
+    if (isEditing) localStorage.setItem('visit', JSON.stringify(true))
   }, [isEditing])
 
   useEffect(() => {
     const saved = localStorage.getItem(import.meta.env.VITE_CODE_SAVE_NAME)
-    const markly = saved ? saved : ''
-    setMarkdownText(markly)
+    setMarkdownText(saved ?? '')
   }, [setMarkdownText])
 
-  /* ① memoise things that otherwise change reference every render */
-  const editorExtensions = useMemo(
-    () => [markdown(), EditorView.lineWrapping],
-    [],
-  )
+  const handleEditorDidMount: OnMount = (editor, monaco) => {
+    editorRef.current = editor
+    monacoRef.current = monaco
+  }
 
-  /* ② stable basicSetup options (optional tweaks) */
-  const basicSetupOptions = useMemo(
-    () => ({
-      lineNumbers: true,
-      foldGutter: false,
-      highlightActiveLine: true,
-      highlightSelectionMatches: true,
-      searchKeymap: true, // this gets baked into keymap extension
-    }),
-    [],
-  )
-
-  /* ③ Use the wrapper’s onChange */
-  const handleChange = useCallback((val: string) => {
-    setMarkdownText(val)
-  }, [])
+  const handleEditorChange = (value = '') => {
+    setMarkdownText(value)
+  }
 
   return (
     <>
-      {/* fixed‑chrome stuff */}
       <StudioHeader />
       <StudioSideBar />
       <ActionDock />
@@ -78,7 +58,7 @@ const StudioEditor = () => {
       <AIChat />
       <StudioSetting />
 
-      {/* editor / preview workspace */}
+      {/* ─── workspace (editor + preview) ───────────────────────────────────────── */}
       <div className="relative flex justify-center items-center h-screen">
         {!right && (
           <button
@@ -96,32 +76,34 @@ const StudioEditor = () => {
           minSize={7}
           gutterSize={8}
         >
-          {/* 🔥 CodeMirror editor */}
+          {/* ─── CodeMirror editor ──────────────────────────────────────────────── */}
           <div
             className={`h-full overflow-x-scroll ${
               split ? 'w-1/2' : preview ? 'w-0 hidden' : 'w-full'
             } transition-all duration-200 ${header ? 'pt-9' : 'p-0'}`}
           >
-            <CodeMirror
-              value={markdownText}
-              // defaultValue={markdownText}
+            <Editor
               height="100%"
-              style={{ height: '100%', textWrap: 'wrap' }}
-              theme={oneDark}
-              autoFocus={false}
-              // extensions={[markdown(), EditorView.lineWrapping]}
-              extensions={editorExtensions}
-              basicSetup={basicSetupOptions}
-              onChange={handleChange}
-              onFocus={() => setIsEditing(true)}
-              onBlur={() => setIsEditing(false)}
-              // Prevent cursor jump by only updating value when not editing
+              className=""
+              defaultLanguage="markdown"
+              defaultValue={markdownText}
+              theme="vs-dark"
+              onMount={handleEditorDidMount}
+              onChange={handleEditorChange}
+              options={{
+                wordWrap: 'on', // ✅ Line wrap
+                minimap: { enabled: false }, // 🚫 Hide minimap
+                fontSize: 13,
+                lineNumbers: 'on',
+                scrollBeyondLastLine: false,
+                automaticLayout: true,
+              }}
             />
           </div>
 
-          {/* 🔍 GitHub‑style preview */}
+          {/* ─── Markdown preview ──────────────────────────────────────────────── */}
           <div
-            className={` h-full overflow-x-scroll ${
+            className={`h-full overflow-x-scroll ${
               split
                 ? 'w-1/2 overflow-y-auto bg-base-100 text-base-content'
                 : preview

@@ -43,7 +43,7 @@ const AIDemo = () => {
 
         {/* CTA */}
         <div className="mt-8">
-          <a href="/ai-studio" className="btn btn-accent btn-soft px-7">
+          <a href="/ai-generate" className="btn btn-accent btn-soft px-7">
                 <TbClick size={17} />
             Create with ai
           </a>

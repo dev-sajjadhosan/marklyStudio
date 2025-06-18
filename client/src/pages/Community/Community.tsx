@@ -10,9 +10,9 @@ const CommunityPage = () => {
       {/* <div className="flex justify-center items-center w-full"> */}
       <CommHeader />
       <CommCategory />
-      <FeaturedTemplatesShowcase title="Templates" />
-      <FeaturedTemplatesShowcase title="Github Profile" />
-      <FeaturedTemplatesShowcase title="Documentation" />
+      <FeaturedTemplatesShowcase title="templates" />
+      <FeaturedTemplatesShowcase title="github Profile" />
+      <FeaturedTemplatesShowcase title="documentation" />
       <TemplateRequests />
       <HowToTipsCorner />
     </>

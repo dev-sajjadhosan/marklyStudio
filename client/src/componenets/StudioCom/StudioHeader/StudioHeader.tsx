@@ -1,5 +1,4 @@
 import { LuRedo2, LuUndo2 } from 'react-icons/lu'
-import { undo, redo } from '@codemirror/commands'
 import { PiCoffeeDuotone } from 'react-icons/pi'
 import {
   TbBrandGithub,
@@ -14,7 +13,7 @@ import useContexts from '../../../hooks/useContexts'
 import useHeaderActions from '../../../hooks/useHeaderActions'
 
 const StudioHeader = () => {
-  const { header, editorRef, setSetting } = useContexts()
+  const { header, setSetting } = useContexts()
   const { handleOpen, handleExport, handleReset, handleSave } =
     useHeaderActions()
 
@@ -42,10 +41,11 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Undo"
-                onClick={() => {
-                  const view = editorRef.current?.view
-                  if (view) undo({ state: view.state, dispatch: view.dispatch })
-                }}
+                disabled
+                // onClick={() => {
+                //   const view = editorRef.current?.view
+                //   if (view) undo({ state: view.state, dispatch: view.dispatch })
+                // }}
               >
                 <LuUndo2 size={15} />
               </button>
@@ -54,10 +54,11 @@ const StudioHeader = () => {
               <button
                 className="btn btn-xs btn-ghost tooltip tooltip-bottom"
                 data-tip="Redo"
-                onClick={() => {
-                  const view = editorRef.current?.view
-                  if (view) redo({ state: view.state, dispatch: view.dispatch })
-                }}
+                disabled
+                // onClick={() => {
+                //   const view = editorRef.current?.view
+                //   if (view) redo({ state: view.state, dispatch: view.dispatch })
+                // }}
               >
                 <LuRedo2 size={15} />
               </button>

@@ -39,10 +39,13 @@ const Banner = () => {
                 <TbClick size={17} />
                 Create with ai
               </Link>
-              <button className="btn btn-sm btn-soft btn-primary px-5">
+              <Link
+                to="/community"
+                className="btn btn-sm btn-soft btn-primary px-5"
+              >
                 <TbUsersGroup size={17} />
                 Visit Community
-              </button>
+              </Link>
             </div>
           </div>
         </div>

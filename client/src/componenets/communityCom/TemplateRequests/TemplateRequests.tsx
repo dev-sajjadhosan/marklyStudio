@@ -87,7 +87,7 @@ export const RequestCard = ({ req }: { req: RequestTypes }) => {
             <TbCheck size={15} />
             Accept
           </button>
-          <button className="btn btn-sm btn-soft btn-info">
+          <button className="btn btn-sm btn-soft btn-info" disabled>
             <TbBookmarkPlus size={15} />
             Save
           </button>
@@ -130,8 +130,8 @@ const TemplateRequests: React.FC = () => {
 
   return (
     <section className="p-5 mt-15">
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl">
+      <div className="flex flex-wrap justify-center gap-2.5 lg:justify-between items-center">
+        <h2 className="text-xl md:text-3xl">
           Template Requests
           <sup className="badge badge-sm badge-soft badge-info m-1">aaa</sup>
         </h2>
@@ -166,7 +166,7 @@ const TemplateRequests: React.FC = () => {
           </Link>
         </div>
       </div>
-      <div className="items-center gap-5 grid grid-cols-2 w-full mt-5 px-5">
+      <div className="items-center gap-5 grid md:grid-cols-2 w-full mt-5 px-5">
         {dummyRequests.slice(0, 6).map((req) => (
           <RequestCard req={req} key={req.id} />
         ))}

@@ -1,91 +1,27 @@
-% 🧩 1. Features Section (Highlight the Power)
-% Show off what Markly can do:
+const insertAIAtCursor = async () => {
+  if (!editorRef.current || !monacoRef.current) return
+  const editor = editorRef.current
+  const monaco = monacoRef.current
 
-% ✅ Edit, preview, and generate markdown in real-time
+  const aiText = await getAIText()
 
-% 🧠 Built-in AI assistant (like ChatGPT but markdown-focused)
+  const selection = editor.getSelection()
+  if (!selection) return
 
-% 📁 GitHub repo import
+  const range = new monaco.Range(
+    selection.startLineNumber,
+    selection.startColumn,
+    selection.endLineNumber,
+    selection.endColumn,
+  )
 
-% 📄 Export options (PDF, .md, HTML)
+  editor.executeEdits('', [
+    {
+      range,
+      text: aiText,
+      forceMoveMarkers: true,
+    },
+  ])
 
-% 🎨 Theme switch (light/dark mode)
-
-% 🔖 Template marketplace (free & community-made)
-
-% Use icons + minimal text to keep it clean.
-
-% 🚀 2. How It Works Section
-% Break it down step-by-step:
-
-% Paste or upload your markdown / repo
-
-% Edit with live preview
-
-% Let AI help you write or polish
-
-% Download or publish
-
-% Add simple illustrations (can be Lottie animations or SVGs) — devs love visuals.
-
-% 🧠 3. AI Assistant Demo Section
-% A tiny live demo box showing:
-
-% "Suggest a better README intro"
-
-% "Generate a badge section"
-
-% "Fix grammar"
-
-% You could even fake this for now to tease the feature 😎
-
-% 🧪 4. Template Gallery Preview
-% Grid-style preview of some trending templates (open source vibes). Each card could show:
-
-% Template thumbnail
-
-% Author name or GitHub username
-
-% Tags (e.g. Startup, Library, Portfolio)
-
-% Button: "Use This"
-
-% 🫱🏼‍🫲🏽 5. Community Section
-% Introduce the social angle:
-
-% Invite users to upload or share their own templates
-
-% Testimonials / feedback carousel (even fake ones for now)
-
-% Call to join the Markly Discord, GitHub org, etc.
-
-📹 6. Short Video or GIF Section
-Just a quick screen-recorded GIF or embedded Loom video showing how fast & simple it is to use.
-
-🧾 7. Pricing or CTA Section
-Even if it's free:
-
-“Completely free for now (in-shaa-Allah). Forever for the community.”
-Button: Start Editing →
-
-If you plan a freemium model later, leave space for a pricing table.
-
-📬 8. Newsletter Signup or Waitlist
-“Get notified when new templates drop or features go live.”
-Super simple form — email input + button.
-
-🔧 9. Tech Stack Section (Optional)
-Devs love tech — show your stack:
-
-🧠 AI: OpenAI GPT / Langchain
-
-⚛️ Frontend: React + Tailwind
-
-⚡ Vite + Electron (if desktop)
-
-🌐 Hosting: Vercel / Netlify
-
-👨‍💻 10. Open Source Callout
-If you plan to open-source it:
-
-"Markly is built by devs, for devs. Contribute on GitHub →"
+  editor.focus()
+}

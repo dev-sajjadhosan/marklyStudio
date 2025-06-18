@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AuthContext } from './AuthContext'
-import type { ReactCodeMirrorRef } from '@uiw/react-codemirror'
+import type * as monacoEditor from 'monaco-editor'
 
 const AuthProvider = ({ children }: { children: ReactNode }) => {
   // localStorage.setItem('visit', JSON.stringify(false))
@@ -45,8 +45,11 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState(false) // false = dark, true = light
   const [setting, setSetting] = useState(false)
 
-  //
-  const editorRef = useRef<ReactCodeMirrorRef>(null!) // non-null assertion to match RefObject<ReactCodeMirrorRef>
+  const editorRef = useRef<monacoEditor.editor.IStandaloneCodeEditor | null>(
+    null,
+  )
+  const monacoRef = useRef<typeof monacoEditor | null>(null)
+
   const [line, setLine] = useState(0)
   const [col, setCol] = useState(0)
   const [example, setExample] = useState<string[]>([])
@@ -196,7 +199,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     template,
   ])
 
-  // ✅ Toggles all layout bars
   const handleAllBars = useCallback(() => {
     if (!all) {
       setAll(true)
@@ -216,6 +218,33 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       setPanel(false)
     }
   }, [all])
+
+  const insertAtCursor = useCallback((text: string) => {
+    const editor = editorRef.current
+    const monaco = monacoRef.current
+
+    if (editor && monaco) {
+      const selection = editor.getSelection()
+      if (!selection) return
+
+      const range = new monaco.Range(
+        selection.startLineNumber,
+        selection.startColumn,
+        selection.endLineNumber,
+        selection.endColumn,
+      )
+
+      editor.executeEdits('', [
+        {
+          range,
+          text,
+          forceMoveMarkers: true,
+        },
+      ])
+
+      editor.focus()
+    }
+  }, [editorRef, monacoRef])
 
   const contextValues = useMemo(
     () => ({
@@ -257,6 +286,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       setIsEditing,
       //
       editorRef,
+      monacoRef,
       line,
       setLine,
       col,
@@ -265,6 +295,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       setExample,
       selected,
       setSelected,
+      insertAtCursor,
     }),
     [
       all,
@@ -283,6 +314,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       markdownText,
       handleAllBars,
       editorRef,
+      monacoRef,
       setting,
       setSetting,
       line,
@@ -295,6 +327,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       setIsEditing,
       selected,
       setSelected,
+      insertAtCursor,
     ],
   )
 

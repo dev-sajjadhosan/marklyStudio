@@ -34,13 +34,13 @@ const CommCategory = () => {
   const handleFiter = (filter: string) => {
     setSelected(filter)
     nav(`/templates?f=${filter}`)
-    enqueueSnackbar(`Your Flavor is ${selected}`, { variant: 'warning' })
+    enqueueSnackbar(`Your Flavor is ${filter}`, { variant: 'warning' })
   }
 
   return (
     <div className="flex justify-center items-center flex-col h-[90vh]">
       <h2 className="text-6xl text-gray-500 font-light dancing">
-        Pack your Flavor?
+        Pick your Flavor?
       </h2>
 
       <div className="mt-6">
@@ -49,7 +49,7 @@ const CommCategory = () => {
             <button
               key={i}
               onClick={() => handleFiter(flavor)}
-              className={`btn btn-sm btn-soft px-5 transition-all duration-200 ${
+              className={`btn btn-xs md:btn-sm btn-soft px-5 transition-all duration-200 ${
                 i % 2 !== 0 ? 'btn-success' : ''
               } ${
                 selected.includes(flavor)

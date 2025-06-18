@@ -4,6 +4,7 @@ import {
   TbCategory,
   TbClick,
   TbMenu3,
+  TbMessagePlus,
   TbSquares,
   TbTags,
   TbUsersGroup,
@@ -105,14 +106,22 @@ const Header = () => {
             <SiReasonstudios size={17} />
             Try Studio
           </a>
-          <a
-            href="https://github.com/markly"
-            target="_blank"
-            className="btn btn-sm btn-soft btn-success"
-          >
+          <button disabled className="btn btn-sm btn-soft btn-success">
             <TbUsersPlus size={17} />
             Join with us
-          </a>
+          </button>
+          <button className="btn btn-sm btn-soft btn-info"
+          onClick={() =>
+                  (
+                    document.getElementById(
+                      'feedback_modal',
+                    ) as HTMLDialogElement
+                  )?.showModal()
+                }
+          >
+            <TbMessagePlus size={17} />
+            Feedback
+          </button>
         </div>
       </nav>
 

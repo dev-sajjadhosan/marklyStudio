@@ -1,6 +1,6 @@
 import { SiReasonstudios } from 'react-icons/si'
 import { TbArrowBearRight, TbBookmarkPlus, TbShare3 } from 'react-icons/tb'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const TemplateGallery = () => {
   const templates = [
@@ -77,18 +77,19 @@ const TemplateGallery = () => {
               </figure>
 
               <div className="flex flex-wrap items-center gap-1.5 mt-7">
-                <Link
-                  to="/studio"
+                <button
+                  // to="/studio"
+                  disabled
                   className="btn btn-xs btn-warning btn-soft px-1.5"
                 >
                   <SiReasonstudios size={15} />
                   Open on Studio
-                </Link>
-                <button className="btn btn-xs btn-success btn-soft px-1.5">
+                </button>
+                <button className="btn btn-xs btn-success btn-soft px-1.5" disabled>
                   <TbBookmarkPlus size={15} />
                   Save
                 </button>
-                <button className="btn btn-xs btn-info btn-soft px-1.5">
+                <button className="btn btn-xs btn-info btn-soft px-1.5" disabled>
                   <TbShare3 size={15} />
                   Share
                 </button>

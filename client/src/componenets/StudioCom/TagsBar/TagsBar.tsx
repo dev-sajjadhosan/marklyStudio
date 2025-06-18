@@ -5,7 +5,7 @@ import useReadmeSections from '../../../hooks/useReadmeSection'
 import type { TagItem } from '../../../../types/editor.types'
 
 const TagsBar = () => {
-  const { tag, setTag, setMarkdownText, example, setExample } = useContexts()
+  const { tag, setTag, example, setExample, insertAtCursor } = useContexts()
   const { sections, names } = useReadmeSections()
   const [tagTab, setTagTab] = useState('project')
 
@@ -61,9 +61,7 @@ const TagsBar = () => {
                         : 'hover:bg-base-300'
                     }`}
                     onClick={() => {
-                      setMarkdownText((prev) =>
-                        prev ? prev + '\n' + s.example : s.example,
-                      )
+                      insertAtCursor('\n' + s.example)
                       setExample((p) => [...p, s?.example])
                     }}
                   >

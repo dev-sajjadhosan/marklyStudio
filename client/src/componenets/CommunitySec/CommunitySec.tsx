@@ -140,24 +140,16 @@ const CommunitySection = () => {
             👥 Got a cool template? Wanna help other devs?
           </p>
           <div className="flex items-center justify-center gap-1.5">
-            <a
-              href="https://github.com/markly"
-              target="_blank"
-              className="btn btn-soft btn-primary btn-sm"
-            >
+            <button disabled className="btn btn-soft btn-primary btn-sm">
               <TbArrowBarToDown size={17} />
               Upload to community
-            </a>
-            <a
-              href="https://github.com/markly"
-              target="_blank"
-              className="btn btn-soft btn-success btn-sm"
-            >
+            </button>
+            <button disabled className="btn btn-soft btn-success btn-sm">
               <TbUsersPlus size={17} />
               Join with us
-            </a>
+            </button>
             <a
-              href="https://discord.gg/markly"
+              href="https://discord.gg/nb7SkwX57J"
               target="_blank"
               className="btn btn-secondary btn-soft btn-sm"
             >

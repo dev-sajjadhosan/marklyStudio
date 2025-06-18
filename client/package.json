@@ -10,14 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@codemirror/commands": "^6.8.1",
-    "@codemirror/lang-markdown": "^6.3.3",
-    "@codemirror/theme-one-dark": "^6.1.2",
-    "@codemirror/view": "^6.37.2",
+    "@emailjs/browser": "^4.4.1",
     "@google/genai": "^1.5.1",
+    "@monaco-editor/react": "^4.7.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
-    "@uiw/react-codemirror": "^4.23.13",
     "@uiw/react-markdown-preview": "^5.1.4",
     "axios": "^1.10.0",
     "file-saver": "^2.0.5",
