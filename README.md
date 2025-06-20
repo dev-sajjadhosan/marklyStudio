@@ -23,6 +23,23 @@
 * [ ] **More Tags**: more user friendly tags comming.
 * [ ] **More Templates**: more user friendly readt *Template* comming.
 
+
+## 🔥 Markly Studio Preview
+
+| Home Page | Studio Editor |
+|-------------|--------------|
+| ![Home](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/home.png?raw=true) | ![Editor](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/studio_editor.png?raw=true) |
+
+| Ai Generate | Split Mode |
+|---------------|------------|
+| ![Import](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/ai_generate.png?raw=true) | ![Split](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/split_mode.png?raw=true) |
+
+| Studio Preview |
+|----------------|
+| ![Preview](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/studio_preview.png?raw=true) |
+
+
+
 ## Tech Stack
 
 * *Frontend:*
@@ -47,21 +64,6 @@
 * *Hosting:*
    * Vercel - *Client*
    * Render - *Server*
-
-
-## 🔥 Markly Studio Preview
-
-| Home Page | Studio Editor |
-|-------------|--------------|
-| ![Home](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/home.png?raw=true) | ![Editor](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/studio_editor.png?raw=true) |
-
-| Ai Generate | Split Mode |
-|---------------|------------|
-| ![Import](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/ai_generate.png?raw=true) | ![Split](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/split_mode.png?raw=true) |
-
-| Studio Preview |
-|----------------|
-| ![Preview](https://github.com/dev-sajjadhosan/marklyStudio/blob/main/screenshort/studio_preview.png?raw=true) |
 
 
 
