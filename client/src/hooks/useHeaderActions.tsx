@@ -9,7 +9,7 @@ export default function useHeaderActions() {
     setMarkdownText,
     markdownText,
     pushHistory,
-
+    editorRef,
     setExample,
   } = useContexts()
 
@@ -41,7 +41,8 @@ export default function useHeaderActions() {
   const handleReset = useCallback(() => {
     setMarkdownText('')
     setExample([])
-  }, [setMarkdownText, setExample])
+    editorRef.current.setValue('')
+  }, [setMarkdownText, setExample, editorRef])
 
   const handleExport = useCallback(() => {
     const blob = new Blob([markdownText], {

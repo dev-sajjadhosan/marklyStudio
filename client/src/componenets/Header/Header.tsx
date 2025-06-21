@@ -3,6 +3,7 @@ import { SiReasonstudios } from 'react-icons/si'
 import {
   TbCategory,
   TbClick,
+  TbFileSpreadsheet,
   TbMenu3,
   TbMessagePlus,
   TbSquares,
@@ -32,7 +33,7 @@ const Header = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {/* icon */}
-            <TbMenu3 size={17} />
+            <TbMenu3 size={15} />
           </button>
 
           {/* Brand / home link */}
@@ -49,19 +50,19 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1" role="menubar">
             <li>
               <Link to="/studio/editor" role="menuitem">
-                <SiReasonstudios size={17} />
+                <SiReasonstudios size={15} />
                 Studio
               </Link>
             </li>
             <li onClick={() => localStorage.removeItem('ai-gen')}>
               <a href="/ai-generate" role="menuitem">
-                <TbClick size={17} />
+                <TbClick size={15} />
                 Ai Generate
               </a>
             </li>
             <li>
               <a href="/community" role="menuitem">
-                <TbUsersGroup size={17} />
+                <TbUsersGroup size={15} />
                 Community
               </a>
             </li>
@@ -69,24 +70,24 @@ const Header = () => {
               <details>
                 <summary role="menuitem" aria-haspopup="true">
                   <Link to="/templates">Templates</Link>
-                  <TbCategory size={17} />
+                  <TbCategory size={15} />
                 </summary>
                 <ul className="w-60 bg-base-200 p-3 flex flex-col gap-1.5">
                   <li>
                     <Link to={`/templates?c=all`} role="menuitem">
-                      <TbWorld size={17} />
+                      <TbWorld size={15} />
                       All Moderns
                     </Link>
                   </li>
                   <li>
                     <Link to={`/templates?c=profiles`} role="menuitem">
-                      <TbUserSquareRounded size={17} />
+                      <TbUserSquareRounded size={15} />
                       Github Profile
                     </Link>
                   </li>
                   <li>
                     <Link to={`/templates?c=projects`} role="menuitem">
-                      <TbSquares size={17} />
+                      <TbSquares size={15} />
                       Projects readme
                     </Link>
                   </li>
@@ -100,28 +101,33 @@ const Header = () => {
         <div className="navbar-end gap-1.5">
           <a
             href="/studio/editor"
-            className="btn btn-sm btn-soft btn-warning"
-            rel="noopener noreferrer"
+            className="btn btn-sm btn-soft btn-warning tooltip tooltip-bottom tooltip-warning"
+            data-tip="Try Studio"
           >
-            <SiReasonstudios size={17} />
-            Try Studio
+            <SiReasonstudios size={15} />
           </a>
           <button disabled className="btn btn-sm btn-soft btn-success">
-            <TbUsersPlus size={17} />
+            <TbUsersPlus size={15} />
             Join with us
           </button>
-          <button className="btn btn-sm btn-soft btn-info"
-          onClick={() =>
-                  (
-                    document.getElementById(
-                      'feedback_modal',
-                    ) as HTMLDialogElement
-                  )?.showModal()
-                }
+          <button
+            className="btn btn-sm btn-soft btn-info"
+            onClick={() =>
+              (
+                document.getElementById('feedback_modal') as HTMLDialogElement
+              )?.showModal()
+            }
           >
-            <TbMessagePlus size={17} />
+            <TbMessagePlus size={15} />
             Feedback
           </button>
+          <Link
+            to={'/markly-tutorial-page'}
+            className="btn btn-sm btn-soft btn-info tooltip tooltip-bottom tooltip-info"
+            data-tip="CheatSheet"
+          >
+            <TbFileSpreadsheet size={15} />
+          </Link>
         </div>
       </nav>
 
@@ -134,19 +140,19 @@ const Header = () => {
         >
           <li>
             <a href="/studio/home" role="menuitem">
-              <SiReasonstudios size={17} />
+              <SiReasonstudios size={15} />
               Studio
             </a>
           </li>
           <li>
             <a href="/ai-generate" role="menuitem">
-              <TbClick size={17} />
+              <TbClick size={15} />
               Ai Generate
             </a>
           </li>
           <li>
             <a href="/community" role="menuitem">
-              <TbTags size={17} />
+              <TbTags size={15} />
               Community
             </a>
           </li>
@@ -154,24 +160,24 @@ const Header = () => {
             <details>
               <summary role="menuitem" aria-haspopup="true">
                 <Link to="/templates">Templates</Link>
-                <TbCategory size={17} />
+                <TbCategory size={15} />
               </summary>
               <ul className="w-xs bg-base-100 p-11 flex flex-col gap-1.5">
                 <li>
                   <Link to={`/templates?c=all`} role="menuitem">
-                    <TbWorld size={17} />
+                    <TbWorld size={15} />
                     All Moderns
                   </Link>
                 </li>
                 <li>
                   <Link to={`/templates?c=profiles`} role="menuitem">
-                    <TbUserSquareRounded size={17} />
+                    <TbUserSquareRounded size={15} />
                     Github Profile
                   </Link>
                 </li>
                 <li>
                   <Link to={`/templates?c=projects`} role="menuitem">
-                    <TbSquares size={17} />
+                    <TbSquares size={15} />
                     Projects readme
                   </Link>
                 </li>

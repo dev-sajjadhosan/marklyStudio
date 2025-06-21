@@ -125,6 +125,7 @@ const CommunitySection = () => {
           <div className="self-center flex items-center gap-1.5 mt-5">
             {[...Array(10).keys()].map((i) => (
               <div
+                key={i}
                 onClick={() => setC(i)}
                 className={`w-2 h-3 p-1 rounded-full duration-150 cursor-pointer active:scale-95 ${
                   i === c ? 'bg-warning scale-110' : 'bg-neutral'

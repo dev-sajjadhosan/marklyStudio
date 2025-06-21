@@ -1,22 +1,8 @@
 import { TbClick } from 'react-icons/tb'
 import ai from '../../assets/ai.webp'
+import ChatSection from './ChatSection'
 
 const AIDemo = () => {
-  // const fakePrompts = [
-  //   { user: '🧑‍💻', text: '....' },
-  //   {
-  //     bot: '🤖',
-  //     text: '"Welcome to Markly. A blazing fast, modern solution for developers."',
-  //   },
-  //   {
-  //     bot: '🤖',
-  //     text: 'I am currently making this. So, wait untell it is coming!',
-  //   },
-  //   {
-  //     bot: '🤖',
-  //     text: 'I hope you will came again and give us some feedback.',
-  //   },
-  // ]
 
   return (
     <section id="ai-demo" className="py-20 text-base-content">
@@ -34,17 +20,15 @@ const AIDemo = () => {
             <img src={ai} alt="" className="w-full h-full" />
           </div>
           {/* Chat Box */}
-          <div className="w-xl bg-base-200 p-10">
-            <p className="text-error text-lg">
-              We are working on it. So, Please wait some times .
-            </p>
+          <div className="w-xl bg-base-200 p-5">
+            <ChatSection />
           </div>
         </div>
 
         {/* CTA */}
         <div className="mt-8">
           <a href="/ai-generate" className="btn btn-accent btn-soft px-7">
-                <TbClick size={17} />
+            <TbClick size={17} />
             Create with ai
           </a>
         </div>

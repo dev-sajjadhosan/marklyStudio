@@ -1,0 +1,183 @@
+[
+  {
+    "topic": "Ultimate Markdown Cheatbook",
+    "description": "A full A-to-Z reference of basic and advanced Markdown syntax — clean, modern, and dev-friendly.",
+    "sections": [
+      {
+        "title": "Headings",
+        "syntax": "# H1\n## H2\n### H3",
+        "description": "Headings organize content by importance and structure. Use 1 to 6 `#` characters at the start of a line to create headings, with `#` representing the largest heading (H1) and `######` the smallest (H6). Proper use improves readability and SEO.",
+        "example": "# Welcome to Markdown",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Paragraphs",
+        "syntax": "Just write normally. Use a blank line between paragraphs.",
+        "description": "Paragraphs are created by simply writing text separated by one or more blank lines. Markdown automatically wraps text into paragraphs, making content flow naturally without extra tags.",
+        "example": "First paragraph.\n\nSecond paragraph.",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Line Breaks",
+        "syntax": "End line with two spaces or use `<br>`.",
+        "description": "Insert a line break without starting a new paragraph by ending a line with two or more spaces or by using the HTML `<br>` tag. This is useful for poems, addresses, or controlling spacing.",
+        "example": "Line one.  \nLine two.",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Emphasis",
+        "syntax": "*italic* or _italic_, **bold** or __bold__, ~~strikethrough~~",
+        "description": "Use asterisks `*` or underscores `_` to italicize text, double them to bold, and tildes `~~` for strikethrough. Emphasis highlights important words or shows deleted text, improving content clarity.",
+        "example": "**Bold**, *Italic*, ~~Strike~~",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Blockquotes",
+        "syntax": "> Quote",
+        "description": "Blockquotes are used to indicate quoted text, notes, or citations. Start a line with `>` to create a blockquote. Nested blockquotes are possible by adding multiple `>`.",
+        "example": "> Stay focused and keep learning.",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Lists",
+        "syntax": "- Item\n* Item\n1. First\n2. Second",
+        "description": "Lists organize information in ordered (numbered) or unordered (bulleted) formats. Use `-`, `*`, or `+` for bullets, and numbers followed by periods for ordered lists. Lists improve scannability.",
+        "example": "- HTML\n- CSS\n\n1. Install\n2. Run",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Task Lists",
+        "syntax": "- [x] Completed\n- [ ] Not done",
+        "description": "Task lists add interactive checkboxes for to-dos or progress tracking, supported in GitHub Flavored Markdown. Use `[ ]` for unchecked and `[x]` for checked items.",
+        "example": "- [x] Learn React\n- [ ] Build project",
+        "tags": ["advanced", "github-supported"]
+      },
+      {
+        "title": "Code",
+        "syntax": "`inline`\n\n```js\nconst x = 10;\n```",
+        "description": "Inline code highlights small code snippets inside a sentence with backticks `` ` ``. For larger blocks, use triple backticks ``` to create fenced code blocks, optionally specifying a language for syntax highlighting.",
+        "example": "`npm install`\n\n```js\nconsole.log('Hello');\n```",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Links",
+        "syntax": "[title](url)",
+        "description": "Links connect to other web pages or resources. Wrap the link text in square brackets `[]` followed by the URL in parentheses `()`. Links improve navigation and references.",
+        "example": "[Visit YouTube](https://youtube.com)",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Reference-style Links",
+        "syntax": "[Google][1]\n\n[1]: https://google.com",
+        "description": "Reference-style links separate the URL from the text to keep Markdown cleaner and easier to read. The reference is defined elsewhere, useful for reusing links.",
+        "example": "[GitHub][gh]\n\n[gh]: https://github.com",
+        "tags": ["advanced", "github-supported"]
+      },
+      {
+        "title": "Images",
+        "syntax": "![alt text](url)",
+        "description": "Images are embedded similarly to links but start with an exclamation mark `!`. Always include alt text for accessibility and SEO benefits.",
+        "example": "![Logo](https://example.com/logo.png)",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Tables",
+        "syntax": "| Head | Head |\n|------|------|\n| Row  | Row  |",
+        "description": "Tables present structured data in rows and columns. Use pipes `|` to separate columns and dashes `-` to create headers. Alignment is customizable in some flavors.",
+        "example": "| Name | Role |\n|------|------|\n| Sajjad | Dev |",
+        "tags": ["basic", "github-supported"]
+      },
+      {
+        "title": "Horizontal Rule",
+        "syntax": "--- or ***",
+        "description": "Horizontal rules create thematic breaks or section dividers. Use three or more hyphens `-` or asterisks `*` on a line by themselves.",
+        "example": "---",
+        "tags": ["basic"]
+      },
+      {
+        "title": "Escaping Characters",
+        "syntax": "\\*\\*not bold\\*\\*",
+        "description": "To display Markdown special characters literally, escape them with a backslash `\\`. Useful for showing code or examples that use Markdown syntax.",
+        "example": "\\*Not italic\\*",
+        "tags": ["basic"]
+      },
+      {
+        "title": "HTML in Markdown",
+        "syntax": "<b>Bold</b>",
+        "description": "Raw HTML tags can be embedded in Markdown to achieve effects not natively supported. Useful for custom styling, layout, or elements.",
+        "example": "<span style='color:red'>Red text</span>",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "Abbreviations",
+        "syntax": "*[HTML]: HyperText Markup Language",
+        "description": "Some Markdown processors support abbreviations that show a tooltip when hovered. Define abbreviations with this syntax to clarify terms.",
+        "example": "Use HTML*",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "Footnotes",
+        "syntax": "Text with footnote[^1]\n\n[^1]: This is the note",
+        "description": "Footnotes let you add references or explanations without cluttering the main text. Supported in GitHub Flavored Markdown and other processors.",
+        "example": "Markdown is 🔥[^note]\n\n[^note]: Told you!",
+        "tags": ["advanced", "github-supported"]
+      },
+      {
+        "title": "Admonitions",
+        "syntax": ":::tip\nThis is a tip.\n:::",
+        "description": "Special callout blocks for notes, warnings, tips, or important info. Popular in docs frameworks like Docusaurus.",
+        "example": ":::warning\nDon't delete this file.\n:::",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "TOC (Table of Contents)",
+        "syntax": "[TOC]",
+        "description": "Auto-generates a table of contents based on headings. Only supported by some Markdown processors.",
+        "example": "[TOC]",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "Highlight",
+        "syntax": "==highlighted==",
+        "description": "Marks text with a highlight style. Support varies between Markdown flavors.",
+        "example": "This is ==important==",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "Custom ID for Headings",
+        "syntax": "### Title {#custom-id}",
+        "description": "Add custom IDs to headings for linking and navigation. Supported by some processors like Markdown-it and Docusaurus.",
+        "example": "## Projects {#projects}",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "Mermaid Diagrams",
+        "syntax": "```mermaid\ngraph TD; A-->B;\n```",
+        "description": "Create flowcharts, sequence diagrams, and more with Mermaid syntax inside fenced code blocks.",
+        "example": "```mermaid\ngraph TD;\nStart-->Code;\n```",
+        "tags": ["advanced", "github-supported"]
+      },
+      {
+        "title": "Math (LaTeX)",
+        "syntax": "$E = mc^2$ or $$...$$",
+        "description": "Write mathematical expressions using LaTeX syntax, rendered by KaTeX or MathJax.",
+        "example": "$$a^2 + b^2 = c^2$$",
+        "tags": ["advanced"]
+      },
+      {
+        "title": "Emoji",
+        "syntax": ":fire: :rocket: :100:",
+        "description": "Use colon syntax to insert emojis supported by platforms like GitHub, Discord, and Slack.",
+        "example": "This project is :rocket:",
+        "tags": ["basic", "github-supported"]
+      },
+      {
+        "title": "Includes / Imports",
+        "syntax": "!INCLUDE \"other-file.md\"",
+        "description": "Some Markdown processors allow including content from other files to modularize documentation.",
+        "example": "!INCLUDE \"readme-snippet.md\"",
+        "tags": ["advanced"]
+      }
+    ]
+  }
+]

@@ -84,7 +84,6 @@ const StudioEditor = () => {
           >
             <Editor
               height="100%"
-              className=""
               defaultLanguage="markdown"
               defaultValue={markdownText}
               theme="vs-dark"

@@ -14,6 +14,7 @@ import AcceptViewModal from '../../componenets/communityCom/TemplateRequests/Acc
 import PreviewModal from '../../componenets/communityCom/FeaturedTemplatesShowcase/PreviewModal'
 import TemplatesPage from '../../pages/Templates/Templates'
 import FeedbackModal from '../../componenets/Shared/Feedback/Feedback'
+import MarkdownTutorialPage from '../../pages/TutorialPage/TutorialPage'
 
 const Layout = () => {
   return (
@@ -35,6 +36,7 @@ const Layout = () => {
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/community/all-requests" element={<AllRequestPage />} />
           <Route path="/templates" element={<TemplatesPage />} />
+          <Route path="/markly-tutorial-page" element={<MarkdownTutorialPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

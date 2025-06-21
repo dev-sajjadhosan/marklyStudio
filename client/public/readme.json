@@ -1,187 +1,1365 @@
 {
+  "custom": [
+    {
+      "name": "Title",
+      "children": []
+    },
+    {
+      "name": "Badge",
+      "children": []
+    },
+    {
+      "name": "Social Icon",
+      "children": []
+    },
+    {
+      "name": "Skill Icon",
+      "children": []
+    },
+    {
+      "name": "Color Reference",
+      "children": []
+    },
+    {
+      "name": "Links",
+      "children": []
+    },
+    {
+      "name": "Animated Icon",
+      "children": []
+    },
+    {
+      "name": "Highlight",
+      "children": []
+    },
+    {
+      "name": "ScreenShot",
+      "children": []
+    },
+    {
+      "name": "Table",
+      "children": []
+    },
+    {
+      "name": "Folder Structure",
+      "children": []
+    },
+    {
+      "name": "Banners",
+      "children": []
+    },
+    {
+      "name": "Headers",
+      "children": []
+    }
+  ],
   "project": [
     {
-      "title": "Title And Description",
-      "description": "This section covers: Title And Description.",
-      "example": "## Project Title\nA brief description of your project goes here."
+      "name": "Title And Description Section",
+      "description": "This section cover Title & Descriptions.",
+      "children": [
+        {
+          "name": "Title And Description",
+          "example": "##Project Title \n\n A brief description of your project goes here."
+        },
+        {
+          "name": "Title And Description with bold",
+          "example": "##Project Title \n\n **A brief description of your project goes here.**"
+        },
+        {
+          "name": "Title And Description with italic",
+          "example": "##*Project Title* \n\n *A brief description of your project goes here.*"
+        }
+      ]
     },
     {
-      "title": "Acknowledgements",
-      "description": "This section covers: Acknowledgements.",
-      "example": "- Hat tip to anyone whose code was used\n- Inspiration\n- etc."
+      "name": "Acknowledgement Sections",
+      "children": [
+        {
+          "name": "React Docs",
+          "example": "- [React Documentation](https://reactjs.org/docs/getting-started.html) — A foundational resource that guided my understanding of component-driven architecture and modern frontend workflows."
+        },
+        {
+          "name": "Traversy Media",
+          "example": "- [Traversy Media](https://www.youtube.com/user/TechGuyWeb) — For consistently delivering high-quality, practical tutorials across the full-stack landscape."
+        },
+        {
+          "name": "ShadCN/UI",
+          "example": "- [ShadCN/UI](https://ui.shadcn.com/) — For providing beautiful, customizable UI components that significantly streamlined the design process."
+        },
+        {
+          "name": "@sami-dev",
+          "example": "- @sami-dev — Major props for helping troubleshoot complex bugs and providing valuable development insights throughout the project."
+        },
+        {
+          "name": "Heroicons",
+          "example": "- [Heroicons](https://heroicons.com/) — A sleek and modern icon set that enhanced the visual quality of the interface."
+        },
+        {
+          "name": "OpenAI",
+          "example": "- [OpenAI](https://openai.com/) — For providing powerful GPT-based tools that accelerated content generation, logic refinement, and development productivity."
+        }
+      ]
     },
     {
-      "title": "Authors",
+      "name": "Authors Section",
       "description": "This section covers: Authors.",
-      "example": "- [@yourgithubusername](https://github.com/yourgithubusername)"
+      "children": [
+        {
+          "name": "Author with Role Tag",
+          "example": "## Author \n\n\n ### Project maintained by: \n\n\n - [@devexample](https://github.com/@demodevaccount) — Full-stack Developer  "
+        },
+        {
+          "name": "Author with table grid",
+          "example": "##Author \n\n\n| Name | GitHub | Role |\n|------|--------|------|\n| Mohammad Sajjad Hosan | [@devsajjadhosan](https://github.com/devsajjadhosan) | Lead Developer |\n| Sami Rahman | [@sami-dev](https://github.com/sami-dev) | Bug Fixer Extraordinaire 🐛 |"
+        },
+        {
+          "name": "Author with table with avatar",
+          "example": "## Author \n\n\n <table>\n  <tr>\n    <td align=\"center\">\n      <a href=\"https://github.com/devsajjadhosan\">\n        <img src=\"https://github.com/iiiii.png\" width=\"100px;\" alt=\"\"/>\n        <br />\n        <sub><b>Mohammad Sajjad Hosan</b></sub>\n      </a>\n      <br />\n      <small>MERN Stack Dev</small>\n    </td>\n  </tr>\n</table>"
+        },
+        {
+          "name": "Multiple Author",
+          "example": "## Authors\n\n<table>\n  <tr>\n    <td align=\"center\">\n      <a href=\"https://github.com/devsajjadhosan\">\n        <img src=\"https://github.com/iiiiii.png\" width=\"100px;\" alt=\"Mohammad Sajjad Hosan\"/>\n        <br />\n        <sub><b>Jonny Deo</b></sub>\n      </a>\n      <br />\n      <small>MERN Stack Developer</small>\n    </td>\n    <td align=\"center\">\n      <a href=\"https://github.com/sami-dev\">\n        <img src=\"https://github.com/iiiii.png\" width=\"100px;\" alt=\"Sami Rahman\"/>\n        <br />\n        <sub><b>Jhon Deo</b></sub>\n      </a>\n      <br />\n      <small>Frontend Magician ✨</small>\n    </td>\n  </tr>\n</table>"
+        }
+      ]
     },
     {
-      "title": "Badges",
+      "name": "Badges Sections",
       "description": "This section covers: Badges.",
-      "example": "![Build Status](https://img.shields.io/badge/build-passing-brightgreen)"
+      "children": [
+        {
+          "name": "Build Badge",
+          "example": "## Build Badge\n\n![Build Status](https://img.shields.io/badge/build-passing-brightgreen)\n\n![Build Status](https://img.shields.io/badge/build-failing-red)"
+        },
+        {
+          "name": "Test Coverage Badge",
+          "example": "## Test Coverage Badge\n\n![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen)\n\n![Coverage](https://img.shields.io/badge/coverage-70%25-yellow)"
+        },
+        {
+          "name": "npm Version Badge",
+          "example": "## npm Version Badge\n\n![npm version](https://img.shields.io/npm/v/your-package)"
+        },
+        {
+          "name": "npm Downloads Badge",
+          "example": "## npm Downloads Badge\n\n![npm downloads](https://img.shields.io/npm/dm/your-package)"
+        },
+        {
+          "name": "License Badge",
+          "example": "## License Badge\n\n![License](https://img.shields.io/badge/license-MIT-blue)\n\n![License](https://img.shields.io/badge/license-Apache_2.0-blue)"
+        },
+        {
+          "name": "Code Quality Badge",
+          "example": "## Code Quality Badge\n\n![Code Quality](https://img.shields.io/lgtm/grade/javascript/g/devsajjadhosan/your-repo)"
+        },
+        {
+          "name": "Lint Badge",
+          "example": "## Lint Badge\n\n![Lint](https://img.shields.io/badge/lint-passing-brightgreen)"
+        },
+        {
+          "name": "Last Commit Badge",
+          "example": "## Last Commit Badge\n\n![Last Commit](https://img.shields.io/github/last-commit/devsajjadhosan/your-repo)"
+        },
+        {
+          "name": "Open Issues Badge",
+          "example": "## Open Issues Badge\n\n![Open Issues](https://img.shields.io/github/issues/devsajjadhosan/your-repo)"
+        },
+        {
+          "name": "Closed Issues Badge",
+          "example": "## Closed Issues Badge\n\n![Closed Issues](https://img.shields.io/github/issues-closed/devsajjadhosan/your-repo)"
+        },
+        {
+          "name": "Open Pull Requests Badge",
+          "example": "## Open Pull Requests Badge\n\n![Open PRs](https://img.shields.io/github/issues-pr/devsajjadhosan/your-repo)"
+        },
+        {
+          "name": "Downloads Badge",
+          "example": "## Downloads Badge\n\n![Downloads](https://img.shields.io/github/downloads/devsajjadhosan/your-repo/total)"
+        },
+        {
+          "name": "GitHub Stars Badge",
+          "example": "## GitHub Stars Badge\n\n![GitHub stars](https://img.shields.io/github/stars/devsajjadhosan/your-repo?style=social)"
+        },
+        {
+          "name": "GitHub Forks Badge",
+          "example": "## GitHub Forks Badge\n\n![GitHub forks](https://img.shields.io/github/forks/devsajjadhosan/your-repo?style=social)"
+        },
+        {
+          "name": "Vulnerabilities Badge",
+          "example": "## Vulnerabilities Badge\n\n![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/your-package)"
+        },
+        {
+          "name": "Security Badge",
+          "example": "## Security Badge\n\n![Security](https://img.shields.io/github/workflow/status/devsajjadhosan/your-repo/Security)"
+        },
+        {
+          "name": "Release Badge",
+          "example": "## Release Badge\n\n![Release](https://img.shields.io/github/release/devsajjadhosan/your-repo)"
+        },
+        {
+          "name": "Platform Support Badge",
+          "example": "## Platform Support Badge\n\n![Platform](https://img.shields.io/badge/platform-Windows-blue)\n\n![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)\n\n![Platform](https://img.shields.io/badge/platform-Linux-orange)"
+        },
+        {
+          "name": "Twitter Follow Badge",
+          "example": "## Twitter Follow Badge\n\n![Twitter Follow](https://img.shields.io/twitter/follow/devsajjadhosan?style=social)"
+        }
+      ]
     },
     {
-      "title": "Color Reference",
+      "name": "File Structure Section",
+      "children": [
+        {
+          "name": "React Project Structure",
+          "example": "## ⚛️ React Project Structure\n\n```\nmy-react-app/\n├── public/\n├── src/\n│   ├── assets/\n│   ├── components/\n│   ├── hooks/\n│   ├── pages/\n│   ├── services/\n│   ├── styles/\n│   ├── utils/\n│   ├── App.js\n│   └── index.js\n├── .env\n├── package.json\n└── README.md\n```"
+        },
+        {
+          "name": "Angular Project Structure",
+          "example": "## 🅰️ Angular Project Structure\n\n```\nmy-angular-app/\n├── e2e/\n├── src/\n│   ├── app/\n│   │   ├── components/\n│   │   ├── services/\n│   │   ├── models/\n│   │   ├── app.module.ts\n│   │   └── app.component.ts\n│   ├── assets/\n│   ├── environments/\n│   ├── styles.scss\n│   └── main.ts\n├── angular.json\n├── package.json\n└── README.md\n```"
+        },
+        {
+          "name": "Vue Project Structure",
+          "example": "## 🖖 Vue Project Structure\n\n```\nmy-vue-app/\n├── public/\n├── src/\n│   ├── assets/\n│   ├── components/\n│   ├── router/\n│   ├── store/\n│   ├── views/\n│   ├── App.vue\n│   └── main.js\n├── .env\n├── package.json\n└── README.md\n```"
+        },
+        {
+          "name": "Electron Project Structure",
+          "example": "## ⚡ Electron Project Structure\n\n```\nmy-electron-app/\n├── public/\n├── src/\n│   ├── main.js\n│   ├── preload.js\n│   ├── renderer.js\n│   ├── components/\n│   └── assets/\n├── package.json\n├── electron-builder.json\n└── README.md\n```"
+        },
+        {
+          "name": "React Native Project Structure",
+          "example": "## 📱 React Native Project Structure\n\n```\nmy-react-native-app/\n├── android/\n├── ios/\n├── src/\n│   ├── components/\n│   ├── screens/\n│   ├── assets/\n│   ├── navigation/\n│   ├── utils/\n│   ├── App.js\n│   └── index.js\n├── package.json\n└── README.md\n```"
+        },
+        {
+          "name": "Next.js Project Structure",
+          "example": "## ⬅️ Next.js Project Structure\n\n```\nmy-nextjs-app/\n├── public/\n├── src/\n│   ├── components/\n│   ├── pages/\n│   ├── styles/\n│   ├── lib/\n│   ├── hooks/\n│   ├── context/\n│   ├── utils/\n│   └── api/\n├── .env.local\n├── next.config.js\n├── package.json\n└── README.md\n```"
+        },
+        {
+          "name": "Other / Generic JS Project Structure",
+          "example": "## 🧩 Generic JS Project Structure\n\n```\nmy-js-project/\n├── src/\n│   ├── lib/\n│   ├── utils/\n│   ├── index.js\n├── tests/\n├── .env\n├── package.json\n└── README.md\n```"
+        }
+      ]
+    },
+    {
+      "name": "Color Reference",
       "description": "This section covers: Color Reference.",
-      "example": "| Color | Hex |\n|-------|-----|\n| Primary | #3498db |"
+      "example": "### Color Reference \n\n\n| Color     | Hex       | RGB              | HSL               |\n|-----------|-----------|------------------|-------------------|\n| Primary   | #3498db   | rgb(52, 152, 219) | hsl(204, 70%, 53%) |\n| Secondary | #2ecc71   | rgb(46, 204, 113) | hsl(145, 63%, 49%) |\n| Success   | #28a745   | rgb(40, 167, 69)  | hsl(134, 61%, 41%) |\n| Danger    | #dc3545   | rgb(220, 53, 69)  | hsl(350, 70%, 53%) |\n| Warning   | #ffc107   | rgb(255, 193, 7)  | hsl(45, 100%, 51%) |\n| Info      | #17a2b8   | rgb(23, 162, 184) | hsl(187, 78%, 41%) |\n| Light     | #f8f9fa   | rgb(248, 249, 250)| hsl(210, 20%, 97%) |\n| Dark      | #343a40   | rgb(52, 58, 64)   | hsl(210, 8%, 22%)  |\n| Black     | #000000   | rgb(0, 0, 0)      | hsl(0, 0%, 0%)     |\n| White     | #ffffff   | rgb(255, 255, 255)| hsl(0, 0%, 100%)   |\n| Gray      | #6c757d   | rgb(108, 117, 125)| hsl(210, 6%, 45%)  |\n| Orange    | #fd7e14   | rgb(253, 126, 20) | hsl(29, 98%, 53%)  |\n| Pink      | #e83e8c   | rgb(232, 62, 140) | hsl(330, 70%, 57%) |\n| Purple    | #6f42c1   | rgb(111, 66, 193) | hsl(265, 51%, 51%) |\n| Teal      | #20c997   | rgb(32, 201, 151) | hsl(163, 72%, 46%) |"
     },
     {
-      "title": "Contributing",
+      "name": "Contributing Section",
       "description": "This section covers: Contributing.",
-      "example": "Contributions are always welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines."
+      "children": [
+        {
+          "name": "Contributing",
+          "example": "## 🤝 Contributing\n\nContributions are always welcome!\n\nIf you have suggestions for improvement, feel free to fork the repo and open a pull request.  \nFor major changes, please open an issue first to discuss what you’d like to change.\n\nCheck out [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide."
+        },
+        {
+          "name": "Beginner-Friendly Contributions",
+          "example": "## 🌱 Beginner-Friendly Contributions\n\nNew to open source? No worries! You’re more than welcome to contribute.\n\nHere’s how to start:\n- Fork this repo\n- Clone it locally\n- Create a new branch (`git checkout -b feature-name`)\n- Make your changes and commit\n- Push to your fork and open a Pull Request\n\nNeed help? Just drop an issue or contact me!  \nSee [CONTRIBUTING.md](CONTRIBUTING.md) for more info."
+        },
+        {
+          "name": "Strict/Professional Contributing",
+          "example": "## 🛠️ Contributing\n\nWe take code quality seriously, and we appreciate your help in making this project better.\n\nTo contribute:\n1. Fork the repository\n2. Create a new branch from `main`\n3. Make sure your code follows our [Code Style Guide](STYLEGUIDE.md)\n4. Run tests and ensure everything passes\n5. Open a Pull Request with a clear title & description\n\n**Important**: All contributions must follow our [CONTRIBUTING.md](CONTRIBUTING.md) and include proper commit messages."
+        },
+        {
+          "name": "Internal Collaboration",
+          "example": "## 🤝 Internal Contributions\n\nIf you're part of the team or a collaborator, follow the contribution workflow:\n\n- Create a new feature branch from `dev`\n- Use meaningful commit messages (conventional commits preferred)\n- Test thoroughly before pushing\n- Create a PR and assign reviewers\n\nAll contributors are expected to follow the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines."
+        },
+        {
+          "name": "Creative/Fun Style",
+          "example": "## 🧃 Contribute Like a Boss\n\nFound a bug? Got a cool feature idea? Wanna make this project even better?\n\nYou’re welcome here!\n\n💡 Ideas → Open an Issue  \n🛠 Code Fixes → Fork, Commit, PR  \n🧼 Polish → Improve docs, examples, or UI  \n🚀 Wanna Join? → [CONTRIBUTING.md](CONTRIBUTING.md)\n\nLet’s build something epic together 💥"
+        }
+      ]
     },
     {
-      "title": "Demo",
-      "description": "This section covers: Demo.",
-      "example": "![Demo](https://link-to-your-demo.gif)"
+      "name": "Demo Sections",
+      "children": [
+        {
+          "name": "GIF",
+          "example": "![Demo](https://user-images.githubusercontent.com/123456/markly-demo.gif)"
+        },
+        {
+          "name": "Video",
+          "example": "## 📺 Video Demo\n\n\n[![Watch the video](https://img.youtube.com/vi/YOUTUBE_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUTUBE_ID)"
+        },
+        {
+          "name": "YouTube Link",
+          "example": "[![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)"
+        },
+        {
+          "name": "Live Button",
+          "example": "[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://your-app.vercel.app)"
+        },
+        {
+          "name": "Demo Table",
+          "example": "## 📊 Demo Previews\n\n| Type         | Preview                                   |\n|--------------|-------------------------------------------|\n| Light Mode   | ![Light](https://yourcdn.com/light.gif)   |\n| Dark Mode    | ![Dark](https://yourcdn.com/dark.gif)     |\n| Mobile View  | ![Mobile](https://yourcdn.com/mobile.gif) |\n| Dashboard UI | ![UI](https://yourcdn.com/dashboard.gif)  |"
+        },
+        {
+          "name": "Collapsible Demo Sections",
+          "example": "<details>\\n  <summary>📱 Mobile Preview</summary>\\n  <img src=\\\"https://yourcdn.com/mobile.gif\\\" alt=\\\"Mobile View\\\" />\\n</details>\\n\\n<details>\\n  <summary>🌙 Dark Mode</summary>\\n  <img src=\\\"https://yourcdn.com/dark.gif\\\" alt=\\\"Dark Mode\\\" />\\n</details>"
+        },
+        {
+          "name": "Demo Html Grid",
+          "example": "<h2 align=\\\"center\\\">✨ App Showcase</h2>\\n\\n<p align=\\\"center\\\">\\n  <img src=\\\"https://yourcdn.com/demo1.gif\\\" width=\\\"45%\\\" />\\n  <img src=\\\"https://yourcdn.com/demo2.gif\\\" width=\\\"45%\\\" />\\n</p>\\n<p align=\\\"center\\\">\\n  <img src=\\\"https://yourcdn.com/demo3.gif\\\" width=\\\"45%\\\" />\\n  <img src=\\\"https://yourcdn.com/demo4.gif\\\" width=\\\"45%\\\" />\\n</p>"
+        }
+      ]
     },
     {
-      "title": "Features",
-      "description": "This section covers: Features.",
+      "name": "Features Section",
+      "children": [
+        {
+          "name": "Simple Features",
+          "example": "- Feature 1\n- Feature 2\n- Feature 3"
+        },
+        {
+          "name": "Realistic Dev Features",
+          "example": "- 🛠️ Built with MERN Stack\n- 🔐 JWT Authentication\n- 🌙 Dark/Light Mode Toggle\n- 🖼️ Drag-and-drop File Uploads\n- 🔍 Instant Search with Debounce"
+        },
+        {
+          "name": "Features Table",
+          "example": "| Feature | Description |\n|---------|-------------|\n| Auth    | Secure login with JWT & refresh tokens |\n| API     | RESTful endpoints with rate limiting |\n| UI      | Fully responsive with TailwindCSS |\n| Theme   | Toggle between Light and Dark modes |\n| Uploads | Cloudinary integration for images |"
+        },
+        {
+          "name": "Features Checklist",
+          "example": "- [x] User Registration\n- [x] Login with JWT\n- [ ] Admin Panel\n- [ ] Comment System\n- [x] Responsive Layout"
+        },
+        {
+          "name": "Grouped Features",
+          "example": "### Frontend\n- 🚀 React + TypeScript\n- 🎨 TailwindCSS Components\n\n### Backend\n- ⚙️ Express API with MongoDB\n- 🛡️ JWT Auth + Role Permissions\n\n### Misc\n- ☁️ Deployed on Vercel + Render\n- 📦 CI/CD via GitHub Actions"
+        },
+        {
+          "name": "Fun Emoji Style",
+          "example": "- 🧠 AI-powered README Generator\n- ✍️ Markdown Live Preview\n- 🌐 Shareable Template URLs\n- 🔥 Dark Mode UI\n- 🚀 Super fast build with Vite"
+        },
+        {
+          "name": "Collapsible Features",
+          "example": "<details>\n  <summary>Click to expand features list</summary>\n\n- Feature 1\n- Feature 2\n- Feature 3\n\n</details>"
+        },
+        {
+          "name": "Numbered Features",
+          "example": "1. Easy setup\n2. User authentication\n3. Real-time notifications\n4. Responsive design\n5. Offline mode support"
+        },
+        {
+          "name": "Features with Emojis & Descriptions",
+          "example": "- 🔒 **Secure Login:** JWT-based authentication with refresh tokens\n- ⚡ **Fast:** Optimized for performance and scalability\n- 🎨 **Customizable UI:** Theme support and layout options\n- 📱 **Mobile Friendly:** Fully responsive design\n- 📊 **Analytics:** Real-time usage tracking and reports"
+        }
+      ],
       "example": "- Feature 1\n- Feature 2\n- Feature 3"
     },
     {
-      "title": "Feedback",
-      "description": "This section covers: Feedback.",
-      "example": "If you have any feedback, please reach out at example@example.com"
+      "name": "Feedback Section",
+      "children": [
+        {
+          "name": "Simple Feedback",
+          "example": "If you have any feedback, please reach out at example@example.com"
+        },
+        {
+          "name": "GitHub Issues Feedback",
+          "example": "Got feedback or found a bug? Please open an issue here: [Issues](https://github.com/yourusername/yourrepo/issues)"
+        },
+        {
+          "name": "Multiple Contact Options",
+          "example": "Feel free to send feedback via:\n- Email: example@example.com\n- Twitter: [@yourhandle](https://twitter.com/yourhandle)\n- GitHub Issues: [Issues](https://github.com/yourusername/yourrepo/issues)"
+        },
+        {
+          "name": "Friendly & Inviting",
+          "example": "Hey! 👋 Your feedback matters. Whether it’s bugs, feature ideas, or just to say hi, hit me up at example@example.com or open an issue. Let’s make this project awesome together!"
+        },
+        {
+          "name": "Professional & Clear",
+          "example": "For feedback, please contact us at example@example.com or submit issues via the GitHub repository issue tracker: [Link](https://github.com/yourusername/yourrepo/issues)"
+        },
+        {
+          "name": "Feedback with Badges",
+          "example": "[![GitHub issues](https://img.shields.io/github/issues/yourusername/yourrepo.svg?style=flat-square)](https://github.com/yourusername/yourrepo/issues)  \n[![Twitter Follow](https://img.shields.io/twitter/follow/yourhandle?style=social)](https://twitter.com/yourhandle)\n\nFeel free to open an issue or DM me on Twitter!"
+        },
+        {
+          "name": "Feedback via Discord",
+          "example": "Join our community on Discord to give feedback and chat: [![Discord](https://img.shields.io/discord/your-discord-id?label=Discord&style=flat-square)](https://discord.gg/your-discord-invite)"
+        },
+        {
+          "name": "Embed Google Form",
+          "example": "We’d love to hear from you! Please fill out this feedback form: [Google Form](https://forms.gle/yourformlink)"
+        },
+        {
+          "name": "Warm & Modern",
+          "example": "💬 **Got feedback?** Your voice helps us improve! Reach out anytime via email at [example@example.com](mailto:example@example.com), open an issue, or tweet us @[yourhandle](https://twitter.com/yourhandle). We read every message!"
+        },
+        {
+          "name": "Call to Action",
+          "example": "🚀 Help us get better! Share your thoughts via [GitHub Issues](https://github.com/yourusername/yourrepo/issues) or send me a quick message on Twitter @[yourhandle](https://twitter.com/yourhandle). Thanks for being awesome!"
+        }
+      ]
     },
     {
-      "title": "Installation",
-      "description": "This section covers: Installation.",
-      "example": "Install my-project with npm:\n```bash\nnpm install my-project\n```"
+      "name": "Installation Section",
+      "children": [
+        {
+          "name": "Basic npm Install",
+          "example": "Install my-project with npm:\n```bash\nnpm install my-project\n```"
+        },
+        {
+          "name": "Yarn Install",
+          "example": "If you use Yarn, run:\n```bash\nyarn add my-project\n```"
+        },
+        {
+          "name": "Global Install",
+          "example": "Install the CLI globally:\n```bash\nnpm install -g my-project\n```"
+        },
+        {
+          "name": "Clone & Run Locally",
+          "example": "Clone the repo and start the dev server:\n```bash\ngit clone https://github.com/yourusername/my-project.git\ncd my-project\nnpm install\nnpm start\n```"
+        },
+        {
+          "name": "Docker Installation",
+          "example": "Run the project using Docker:\n```bash\ndocker pull yourusername/my-project\ndocker run -p 3000:3000 yourusername/my-project\n```"
+        },
+        {
+          "name": "Prerequisites",
+          "example": "Make sure you have these installed before:\n- Node.js v16+\n- npm v8+\n- MongoDB running locally or in the cloud\n\nCheck your versions with:\n```bash\nnode -v\nnpm -v\n```"
+        },
+        {
+          "name": "Windows Specific",
+          "example": "For Windows users, open PowerShell as administrator and run:\n```powershell\nnpm install -g my-project\n```"
+        },
+        {
+          "name": "Pro Tips",
+          "example": "- Always use fenced code blocks with language tags for clarity, e.g., `bash`, `powershell`.\n- Mention all prerequisites clearly to avoid setup errors.\n- Include multiple install options like npm, yarn, global install.\n- Keep instructions updated whenever your setup changes — stale guides = 😵‍💫"
+        }
+      ]
     },
     {
-      "title": "License",
-      "description": "This section covers: License.",
-      "example": "Distributed under the MIT License. See LICENSE for more information."
+      "name": "License Section",
+      "children": [
+        {
+          "name": "Basic MIT License",
+          "example": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \nDistributed under the MIT License. See [LICENSE](LICENSE) for more information."
+        },
+        {
+          "name": "Apache 2.0 License",
+          "example": "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)  \nThis project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details."
+        },
+        {
+          "name": "GPLv3 License",
+          "example": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  \nThis project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details."
+        },
+        {
+          "name": "Creative Commons License",
+          "example": "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)  \nThis work is licensed under a Creative Commons Attribution 4.0 International License. See [LICENSE](LICENSE) for details."
+        },
+        {
+          "name": "License Badge + Statement",
+          "example": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \nDistributed under the MIT License. See [LICENSE](LICENSE) for more information."
+        },
+        {
+          "name": "Custom License Text",
+          "example": "© 2025 Mohammad Sajjad Hosan. All rights reserved.  \n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \nLicensed under MIT License. See [LICENSE](LICENSE)."
+        }
+      ]
     },
     {
-      "title": "Logo",
-      "description": "This section covers: Logo.",
-      "example": "![Logo](https://example.com/logo.png)"
+      "name": "Logo Section",
+      "children": [
+        {
+          "name": "Basic Logo",
+          "example": "![Logo](https://example.com/logo.png)"
+        },
+        {
+          "name": "Centered Logo",
+          "example": "<p align=\"center\">\n  <img src=\"https://example.com/logo.png\" alt=\"Project Logo\" width=\"150\" />\n</p>"
+        },
+        {
+          "name": "Clickable Logo",
+          "example": "[![Logo](https://example.com/logo.png)](https://example.com)"
+        },
+        {
+          "name": "Logo with Link and Caption",
+          "example": "<p align=\"center\">\n  <a href=\"https://example.com\">\n    <img src=\"https://example.com/logo.png\" alt=\"Project Logo\" width=\"150\" />\n  </a>\n  <br />\n  <sub><b>My Project</b> - The best tool for your workflow</sub>\n</p>"
+        },
+        {
+          "name": "Logo Table",
+          "example": "| Logo | Name |\n| :---: | :---: |\n| ![Logo1](https://example.com/logo1.png) | Project Logo |\n| ![Logo2](https://example.com/logo2.png) | Sponsor Logo |"
+        }
+      ]
     },
     {
-      "title": "Related",
-      "description": "This section covers: Related.",
-      "example": "- [Another Awesome Project](https://github.com/user/repo)"
+      "name": "Related",
+      "children": [
+        {
+          "name": "Basic Related Link",
+          "example": "- [Another Awesome Project](https://github.com/user/repo)"
+        },
+        {
+          "name": "Multiple Related Projects",
+          "example": "- [Awesome Project One](https://github.com/user/awesome-one)\n- [Cool Library](https://github.com/user/cool-lib)\n- [Useful Tool](https://github.com/user/useful-tool)"
+        },
+        {
+          "name": "Related Projects with Descriptions",
+          "example": "- [Awesome Project One](https://github.com/user/awesome-one) - A library for making life easier.\n- [Cool Library](https://github.com/user/cool-lib) - Utilities for fast development.\n- [Useful Tool](https://github.com/user/useful-tool) - Command-line tools for automation."
+        },
+        {
+          "name": "Related Projects Table",
+          "example": "| Project | Description |\n| ------- | ----------- |\n| [Awesome Project One](https://github.com/user/awesome-one) | A library for making life easier. |\n| [Cool Library](https://github.com/user/cool-lib) | Utilities for fast development. |\n| [Useful Tool](https://github.com/user/useful-tool) | Command-line tools for automation. |"
+        }
+      ]
     },
     {
-      "title": "Roadmap",
-      "description": "This section covers: Roadmap.",
-      "example": "- [ ] Feature 1\n- [x] Feature 2"
+      "name": "Roadmap Section",
+      "children": [
+        {
+          "name": "Simple Roadmap",
+          "example": "- [ ] Add user authentication\n- [x] Set up database schema\n- [ ] Implement REST API"
+        },
+        {
+          "name": "Detailed Roadmap with Deadlines",
+          "example": "- [ ] Add dark mode (Q3 2025)\n- [x] Refactor UI components (Q2 2025)\n- [ ] Integrate payment gateway (Q4 2025)"
+        },
+        {
+          "name": "Roadmap with Priorities",
+          "example": "- [ ] **High Priority:** Real-time notifications 🚨\n- [x] **Medium Priority:** UI enhancements 🎨\n- [ ] **Low Priority:** Documentation improvements 📝"
+        },
+        {
+          "name": "Roadmap Table",
+          "example": "| Task | Status | Deadline |\n|------|--------|----------|\n| User authentication | ☐ Pending | Q3 2025 |\n| Database schema | ☑ Completed | Q1 2025 |\n| Payment gateway | ☐ Pending | Q4 2025 |"
+        },
+        {
+          "name": "Modern Roadmap with Progress Bars",
+          "example": "- Add user authentication `[▓▓▓░░░░░░░░] 30%`\n- Setup database schema `[▓▓▓▓▓▓▓▓▓▓] 100%` ✅\n- Implement REST API `[▓▓▓▓░░░░░░░] 50%`"
+        },
+        {
+          "name": "Emoji-Heavy Modern Roadmap",
+          "example": "🚀 **Upcoming:**\n  - Add dark mode 🌙\n  - Integrate payment gateway 💳\n\n✅ **Completed:**\n  - Refactor UI components 🎨\n  - Setup database schema 🗄️"
+        }
+      ]
     },
     {
-      "title": "Used By",
-      "description": "This section covers: Used By.",
-      "example": "- Company 1\n- Project 2"
+      "name": "Used By Section",
+      "children": [
+        {
+          "name": "Simple List",
+          "example": "- Company Alpha\n- Project Beta\n- Startup Gamma"
+        },
+        {
+          "name": "With Logos (Markdown Table)",
+          "example": "| Company | Logo |\n|---------|------|\n| Company Alpha | ![Alpha Logo](https://example.com/alpha.png) |\n| Project Beta | ![Beta Logo](https://example.com/beta.png) |"
+        },
+        {
+          "name": "Clickable Logos",
+          "example": "| Company | Logo |\n|---------|------|\n| [Company Alpha](https://companyalpha.com) | [![Alpha Logo](https://example.com/alpha.png)](https://companyalpha.com) |\n| [Project Beta](https://projectbeta.io) | [![Beta Logo](https://example.com/beta.png)](https://projectbeta.io) |"
+        },
+        {
+          "name": "Used By with Descriptions",
+          "example": "- **Company Alpha:** Leading provider of cloud services.\n- **Project Beta:** Open-source analytics tool."
+        },
+        {
+          "name": "Modern Grid Style",
+          "example": "<p align=\"center\">\n  <a href=\"https://companyalpha.com\" target=\"_blank\">\n    <img src=\"https://example.com/alpha.png\" alt=\"Company Alpha\" width=\"100\" style=\"margin: 10px;\" />\n  </a>\n  <a href=\"https://projectbeta.io\" target=\"_blank\">\n    <img src=\"https://example.com/beta.png\" alt=\"Project Beta\" width=\"100\" style=\"margin: 10px;\" />\n  </a>\n  <a href=\"https://startupgamma.com\" target=\"_blank\">\n    <img src=\"https://example.com/gamma.png\" alt=\"Startup Gamma\" width=\"100\" style=\"margin: 10px;\" />\n  </a>\n</p>"
+        }
+      ]
     },
     {
-      "title": "Usage/Examples",
-      "description": "This section covers: Usage/Examples.",
-      "example": "```js\nimport Component from 'my-library';\n<Component />\n```"
+      "name": "Usage/Examples Sections",
+      "children": [
+        {
+          "name": "Basic Usage",
+          "example": "```js\nimport Component from 'my-library';\n\nfunction App() {\n  return <Component />;\n}\n```"
+        },
+        {
+          "name": "Advanced Usage",
+          "example": "```js\nimport { featureA, featureB } from 'my-library';\n\n// Call features with parameters\nfeatureA();\nfeatureB('parameter');\n```"
+        },
+        {
+          "name": "Command Line Usage",
+          "example": "```bash\n# Show help menu\nmy-library --help\n\n# Initialize project\nmy-library init\n```"
+        },
+        {
+          "name": "Usage with Explanation",
+          "example": "```js\n// Import main component\nimport Component from 'my-library';\n\n// Use component with props\n<Component someProp={true} />\n```"
+        },
+        {
+          "name": "Live Demo Link",
+          "example": "[Check out the live demo here](https://your-demo-link.com)"
+        },
+        {
+          "name": "Usage with Async/Await",
+          "example": "```js\nimport { fetchData } from 'my-library';\n\nasync function getData() {\n  const result = await fetchData();\n  console.log(result);\n}\n\ngetData();\n```"
+        },
+        {
+          "name": "Usage with Event Handling",
+          "example": "```js\nfunction handleClick() {\n  alert('Button clicked!');\n}\n\n<button onClick={handleClick}>Click me</button>\n```"
+        },
+        {
+          "name": "Embedding GIF Demo",
+          "example": "![Usage Demo](https://media.giphy.com/media/3o7aD4vjsr7cxtB4ko/giphy.gif)"
+        },
+        {
+          "name": "Multiple Language Examples",
+          "example": "```js\n// JavaScript example\nconsole.log('Hello World');\n```\n\n```python\n# Python example\nprint('Hello World')\n```"
+        }
+      ]
     },
     {
-      "title": "Tech",
-      "description": "This section covers: Tech.",
-      "example": "- React\n- Node.js\n- MongoDB"
+      "title": "Tech Section",
+      "children": [
+        {
+          "name": "Basic Tech List",
+          "example": "- React\n- Node.js\n- MongoDB"
+        },
+        {
+          "name": "Tech with Versions",
+          "example": "- React v18.2.0\n- Node.js v20.0.0\n- MongoDB v6.0"
+        },
+        {
+          "name": "Tech with Icons (Markdown)",
+          "example": "- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\n- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)\n- ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)"
+        },
+        {
+          "name": "Tech Table with Logos",
+          "example": "| Technology | Version | Logo |\n|------------|---------|------|\n| React      | 18.2.0  | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) |\n| Node.js    | 20.0.0  | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) |\n| MongoDB    | 6.0     | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) |"
+        },
+        {
+          "name": "Animated Badge Style",
+          "example": "- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&animation=spin)\n- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white&animation=spin)"
+        },
+        {
+          "name": "Centered Badge Row",
+          "example": "<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB\" alt=\"React\" />\n  <img src=\"https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white\" alt=\"Node.js\" />\n  <img src=\"https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white\" alt=\"MongoDB\" />\n</p>"
+        }
+      ]
     },
     {
-      "title": "Changelog",
-      "description": "This section covers: Changelog.",
-      "example": "### Changelog\n- v1.0.0: Initial release."
+      "name": "Changelog",
+      "children": [
+        {
+          "name": "Simple Changelog",
+          "example": "### Changelog\n- v1.0.0: Initial release."
+        },
+        {
+          "name": "Detailed Changelog",
+          "example": "### Changelog\n\n#### v1.1.0 - 2025-06-20\n- Added new authentication module\n- Fixed bug in UI rendering\n\n#### v1.0.0 - 2025-05-15\n- Initial release"
+        },
+        {
+          "name": "Changelog with Sections",
+          "example": "### Changelog\n\n#### v1.2.0 - 2025-07-01\n**Added:**\n- Dark mode feature\n- User profile page\n\n**Fixed:**\n- Resolved login issue\n\n#### v1.1.0 - 2025-06-20\n- Added new authentication module\n- Fixed bug in UI rendering"
+        },
+        {
+          "name": "Changelog Table",
+          "example": "| Version | Date       | Changes                   |\n|---------|------------|---------------------------|\n| 1.2.0   | 2025-07-01 | Added dark mode, user profile\n| 1.1.0   | 2025-06-20 | Added auth, fixed UI bug   |\n| 1.0.0   | 2025-05-15 | Initial release            |"
+        },
+        {
+          "name": "Emoji-Packed Changelog",
+          "example": "### 📦 Changelog\n\n#### 🚀 v1.2.0 - 2025-07-01\n- ✨ Added dark mode feature\n- 🧑‍💻 New user profile page\n\n#### 🐞 v1.1.0 - 2025-06-20\n- 🔐 Added authentication module\n- 🐛 Fixed UI rendering bug\n\n#### 🎉 v1.0.0 - 2025-05-15\n- Initial release"
+        },
+        {
+          "name": "Collapsible Sections Changelog (GitHub details tag)",
+          "example": "### Changelog\n\n<details>\n  <summary>v1.2.0 - 2025-07-01</summary>\n\n- Added dark mode feature\n- New user profile page\n\n</details>\n\n<details>\n  <summary>v1.1.0 - 2025-06-20</summary>\n\n- Added authentication module\n- Fixed UI rendering bug\n\n</details>"
+        },
+        {
+          "name": "Changelog with Highlights",
+          "example": "### Changelog\n\n#### v1.2.0 - 2025-07-01\n- **New:** Dark mode feature 🌓\n- **New:** User profile page 👤\n\n#### v1.1.0 - 2025-06-20\n- **Fix:** Authentication bug 🔒\n- **Fix:** UI rendering issue 🐞"
+        },
+        {
+          "name": "Modern Changelog Table with Status",
+          "example": "| Version | Date       | Status   | Changes                       |\n|---------|------------|----------|------------------------------|\n| 1.2.0   | 2025-07-01 | ✅ Done  | Added dark mode, user profile |\n| 1.1.0   | 2025-06-20 | ✅ Done  | Added auth, fixed UI bug      |\n| 1.0.0   | 2025-05-15 | 🚧 WIP   | Initial release               |"
+        }
+      ]
     },
     {
-      "title": "Screenshots",
-      "description": "This section covers: Screenshots.",
-      "example": "## Screenshots\n![Screenshot](https://example.com/screenshot.png)"
+      "name": "Screenshots Section",
+      "children": [
+        {
+          "name": "Single Screenshot",
+          "example": "## Screenshots\n![Screenshot](https://example.com/screenshot.png)"
+        },
+        {
+          "name": "Multiple Screenshots",
+          "example": "## Screenshots\n\n![Home Page](https://example.com/home.png)\n![Dashboard](https://example.com/dashboard.png)"
+        },
+        {
+          "name": "Screenshots with Captions",
+          "example": "## Screenshots\n\n![Home Page](https://example.com/home.png)\n*Home Page*\n\n![Dashboard](https://example.com/dashboard.png)\n*Dashboard View*"
+        },
+        {
+          "name": "Screenshots Table",
+          "example": "| Feature | Screenshot |\n|---------|------------|\n| Home    | ![Home](https://example.com/home.png) |\n| Dashboard | ![Dashboard](https://example.com/dashboard.png) |"
+        },
+        {
+          "name": "Centered Screenshots",
+          "example": "<p align=\"center\">\n  <img src=\"https://example.com/home.png\" alt=\"Home Page\" width=\"300\" style=\"margin: 10px;\" />\n  <img src=\"https://example.com/dashboard.png\" alt=\"Dashboard\" width=\"300\" style=\"margin: 10px;\" />\n</p>"
+        },
+        {
+          "name": "GIF Demo Embed",
+          "example": "## Screenshots\n\n![Live Demo](https://media.giphy.com/media/3o7aD4vjsr7cxtB4ko/giphy.gif)"
+        },
+        {
+          "name": "Screenshot Carousel (Link to External Demo)",
+          "example": "## Screenshots\n\nCheck out the full screenshot carousel here: [View Demo Carousel](https://your-carousel-link.com)"
+        },
+        {
+          "name": "Grid Layout with Hover Effect (HTML inside Markdown)",
+          "example": "<p align=\"center\">\n  <a href=\"https://example.com/home.png\" target=\"_blank\">\n    <img src=\"https://example.com/home-thumb.png\" alt=\"Home Page\" width=\"200\" style=\"margin:10px; filter: grayscale(50%); transition: filter 0.3s;\" onmouseover=\"this.style.filter='none'\" onmouseout=\"this.style.filter='grayscale(50%)'\" />\n  </a>\n  <a href=\"https://example.com/dashboard.png\" target=\"_blank\">\n    <img src=\"https://example.com/dashboard-thumb.png\" alt=\"Dashboard\" width=\"200\" style=\"margin:10px; filter: grayscale(50%); transition: filter 0.3s;\" onmouseover=\"this.style.filter='none'\" onmouseout=\"this.style.filter='grayscale(50%)'\" />\n  </a>\n</p>"
+        },
+        {
+          "name": "Screenshot Table with Descriptions & Links",
+          "example": "| Feature | Screenshot | Description |\n|---------|------------|-------------|\n| Home    | ![Home](https://example.com/home.png) | Clean landing page |\n| Dashboard | ![Dashboard](https://example.com/dashboard.png) | User analytics dashboard |"
+        },
+        {
+          "name": "Centered Responsive Grid",
+          "example": "<div style=\"display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;\">\n  <img src=\"https://example.com/home.png\" alt=\"Home Page\" width=\"250\" />\n  <img src=\"https://example.com/dashboard.png\" alt=\"Dashboard\" width=\"250\" />\n  <img src=\"https://example.com/settings.png\" alt=\"Settings\" width=\"250\" />\n</div>"
+        }
+      ]
     }
   ],
   "documentation": [
     {
-      "title": "Api Reference",
-      "description": "This section covers: Api Reference.",
-      "example": "### API Reference\n```http\nGET /api/items\n```\nReturns a list of items."
+      "name": "Api Reference Section",
+      "children": [
+        {
+          "name": "Simple GET Endpoint",
+          "example": "### API Reference\n```http\nGET /api/items\n```\nReturns a list of items."
+        },
+        {
+          "name": "POST Endpoint with Body Example",
+          "example": "### API Reference\n```http\nPOST /api/items\nContent-Type: application/json\n\n{\n  \"name\": \"Item Name\",\n  \"price\": 100\n}\n```\nCreates a new item."
+        },
+        {
+          "name": "Full Request & Response Example",
+          "example": "### API Reference\n```http\nGET /api/items/123\n```\nResponse:\n```json\n{\n  \"id\": 123,\n  \"name\": \"Item Name\",\n  \"price\": 100\n}\n```"
+        },
+        {
+          "name": "Multiple Endpoints List",
+          "example": "### API Reference\n- `GET /api/items` - List all items\n- `GET /api/items/{id}` - Get item by ID\n- `POST /api/items` - Create new item\n- `PUT /api/items/{id}` - Update item\n- `DELETE /api/items/{id}` - Delete item"
+        },
+        {
+          "name": "GET Endpoint with curl & Response",
+          "example": "### API Reference\n\n#### Get Items\n```bash\ncurl -X GET https://api.yoursite.com/items\n```\n\nResponse:\n```json\n[\n  { \"id\": 1, \"name\": \"Item One\", \"price\": 100 },\n  { \"id\": 2, \"name\": \"Item Two\", \"price\": 200 }\n]\n```"
+        },
+        {
+          "name": "POST Endpoint with JSON Body",
+          "example": "### API Reference\n\n#### Create Item\n```bash\ncurl -X POST https://api.yoursite.com/items \\\n-H \"Content-Type: application/json\" \\\n-d '{\"name\": \"New Item\", \"price\": 150}'\n```\n\nResponse:\n```json\n{\n  \"id\": 3,\n  \"name\": \"New Item\",\n  \"price\": 150\n}\n```"
+        },
+        {
+          "name": "Endpoint with Collapsible Details",
+          "example": "### API Reference\n\n<details>\n  <summary>GET /api/items/{id}</summary>\n\n```http\nGET /api/items/{id}\n```\n\n- **Path parameter:** `id` - Item's unique identifier\n\nResponse:\n```json\n{\n  \"id\": 1,\n  \"name\": \"Item One\",\n  \"price\": 100\n}\n```\n</details>"
+        },
+        {
+          "name": "Endpoint with Schema Definition",
+          "example": "### API Reference\n\n#### Item Object Schema\n```json\n{\n  \"id\": \"integer\",\n  \"name\": \"string\",\n  \"price\": \"number\"\n}\n```\n\nUse this schema for requests and responses involving items."
+        },
+        {
+          "name": "Multi-Method Endpoint List",
+          "example": "### API Reference\n\n| Method | Endpoint          | Description           |\n|--------|-------------------|-----------------------|\n| GET    | `/api/items`      | List all items        |\n| GET    | `/api/items/{id}` | Get item by ID        |\n| POST   | `/api/items`      | Create new item       |\n| PUT    | `/api/items/{id}` | Update existing item  |\n| DELETE | `/api/items/{id}` | Delete item by ID     |"
+        }
+      ]
     },
     {
-      "title": "Appendix",
-      "description": "This section covers: Appendix.",
-      "example": "## Appendix\nAdditional information like data tables, charts, etc."
+      "name": "Appendix Section",
+      "children": [
+        {
+          "name": "Simple Appendix",
+          "example": "## Appendix\nAdditional information like data tables, charts, etc."
+        },
+        {
+          "name": "Data Table Appendix",
+          "example": "## Appendix\n\n| Parameter | Value  |\n|-----------|--------|\n| Max Load  | 1000kg |\n| Voltage   | 12V    |"
+        },
+        {
+          "name": "Chart Embed (Image)",
+          "example": "## Appendix\n\n![Performance Chart](https://example.com/performance-chart.png)"
+        },
+        {
+          "name": "Technical Notes",
+          "example": "## Appendix\n\n### Technical Notes\n- This project uses XYZ algorithm for faster processing.\n- Ensure to configure environment variables before deployment."
+        },
+        {
+          "name": "Collapsible Appendix Section",
+          "example": "## Appendix\n\n<details>\n  <summary>More Data</summary>\n\nDetailed data and charts go here.\n\n</details>"
+        },
+        {
+          "name": "Collapsible Appendix Section",
+          "example": "## Appendix\n\n<details>\n  <summary>📊 Detailed Data Tables</summary>\n\n| Parameter | Value  | Notes                  |\n|-----------|--------|------------------------|\n| Max Load  | 1000kg | Tested under ISO 9001  |\n| Voltage   | 12V    | Stable power supply    |\n\n</details>"
+        },
+        {
+          "name": "Tabbed Content Simulation (Using Headings)",
+          "example": "## Appendix\n\n### Data Table\n\n| Parameter | Value |\n|-----------|-------|\n| Speed     | 200km/h |\n\n---\n\n### Code Snippet\n\n```js\nconsole.log('Appendix code example');\n```"
+        },
+        {
+          "name": "Callout Boxes (Using Emojis & Bold Text)",
+          "example": "## Appendix\n\n🚨 **Note:** This section contains advanced configurations.\n\n🛠️ **Tip:** Adjust these parameters based on your environment.\n\n| Config  | Default | Description          |\n|---------|---------|----------------------|\n| timeout | 5000ms  | Request timeout value |\n"
+        },
+        {
+          "name": "Colored Table with HTML (GitHub Compatible)",
+          "example": "## Appendix\n\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n      <th>Value</th>\n      <th>Status</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Max Load</td>\n      <td>1000kg</td>\n      <td style=\"color:green;\">✅ Tested</td>\n    </tr>\n    <tr>\n      <td>Voltage</td>\n      <td>12V</td>\n      <td style=\"color:orange;\">⚠️ Review</td>\n    </tr>\n  </tbody>\n</table>"
+        },
+        {
+          "name": "Embedded Code with Syntax Highlighting",
+          "example": "## Appendix\n\n```python\n# Example advanced config\nCONFIG = {\n  'max_load': 1000,\n  'voltage': 12,\n  'debug': True\n}\n```"
+        }
+      ]
     },
     {
-      "title": "Documentation",
-      "description": "This section covers: Documentation.",
-      "example": "Full documentation is available at [docs.example.com](https://docs.example.com)"
+      "name": "Documentation Section",
+      "children": [
+        {
+          "name": "Simple Link to Docs",
+          "example": "## Documentation\n\nFull documentation is available at [docs.example.com](https://docs.example.com)"
+        },
+        {
+          "name": "Docs with Badge",
+          "example": "## Documentation\n\n[![Docs](https://img.shields.io/badge/docs-online-brightgreen)](https://docs.example.com)\n\nFull documentation available online."
+        },
+        {
+          "name": "Docs with Description & Link",
+          "example": "## Documentation\n\nFor detailed usage, API info, and more, visit our docs site: [docs.example.com](https://docs.example.com)"
+        },
+        {
+          "name": "Multi-Link Docs Section",
+          "example": "## Documentation\n\n- [User Guide](https://docs.example.com/user-guide)\n- [API Reference](https://docs.example.com/api)\n- [FAQ](https://docs.example.com/faq)"
+        },
+        {
+          "name": "Docs with Badge & Callout",
+          "example": "## 📘 Documentation\n\n> 📖 **Need help?** Check out the full documentation for setup, API reference, and FAQs.\n\n[![Read the Docs](https://img.shields.io/badge/docs-available-blue.svg)](https://docs.example.com)"
+        },
+        {
+          "name": "Multi-Platform Docs with Icons",
+          "example": "## 📚 Documentation\n\n- 🌐 [Web Docs](https://docs.example.com)\n- 📄 [PDF Guide](https://docs.example.com/guide.pdf)\n- 💬 [Community Help](https://github.com/yourproject/discussions)"
+        },
+        {
+          "name": "Docs with Section Breakdown",
+          "example": "## 🔍 Documentation\n\nExplore the docs by section:\n\n- 🧰 [Getting Started](https://docs.example.com/start)\n- 🛠 [Configuration](https://docs.example.com/config)\n- 🧪 [API Reference](https://docs.example.com/api)\n- 🧠 [Best Practices](https://docs.example.com/best-practices)"
+        },
+        {
+          "name": "Docs in a Table Layout",
+          "example": "## 📖 Documentation\n\n| Section          | Link                                         |\n|------------------|----------------------------------------------|\n| 🟢 Getting Started | [Start Guide](https://docs.example.com/start) |\n| 🔧 API Reference   | [API Docs](https://docs.example.com/api)      |\n| 💬 FAQ            | [FAQ](https://docs.example.com/faq)           |"
+        },
+        {
+          "name": "Embedded Docs Preview (Image Link)",
+          "example": "## 🧭 Documentation\n\n[![Preview Docs](https://docs.example.com/preview.png)](https://docs.example.com)\n\n_Click the image to explore full documentation_"
+        }
+      ]
     },
     {
-      "title": "Faq",
-      "description": "This section covers: Faq.",
-      "example": "### FAQ\n**Q:** Question?\n**A:** Answer."
+      "name": "Faq Section",
+      "children": [
+        {
+          "name": "Simple Q&A",
+          "example": "### FAQ\n\n**Q:** How do I install it?\n**A:** Run `npm install your-package`."
+        },
+        {
+          "name": "Collapsible FAQ (GitHub Details Tag)",
+          "example": "### ❓ FAQ\n\n<details>\n<summary><strong>How do I install it?</strong></summary>\n<br/>\nRun `npm install your-package` to install it.\n</details>\n\n<details>\n<summary><strong>Does it support dark mode?</strong></summary>\n<br/>\nYes! It auto-detects based on system preferences.\n</details>"
+        },
+        {
+          "name": "Emoji Q&A Style",
+          "example": "### 💬 FAQ\n\n❓ **Q: Is this open source?**  \n✅ **A:** Yes, it’s licensed under MIT.\n\n❓ **Q: Can I contribute?**  \n🛠 **A:** Of course! Fork, commit, and PR it."
+        },
+        {
+          "name": "Markdown Table FAQ",
+          "example": "### 📖 FAQ\n\n| Question                        | Answer                                      |\n|--------------------------------|---------------------------------------------|\n| How to install?                | Run `npm install your-package`             |\n| Does it support dark mode?     | Yes, auto-detects system theme              |\n| Where to report bugs?          | [GitHub Issues](https://github.com/user/repo/issues) |"
+        },
+        {
+          "name": "Community-Driven FAQ Link",
+          "example": "### FAQ\n\nLooking for more answers? Visit the [Community FAQ Discussions](https://github.com/user/repo/discussions) to ask or read what others have shared!"
+        }
+      ]
+    },
+    {
+      "name": "Lessons Sections",
+      "children": [
+        {
+          "name": "Basic Lessons List",
+          "example": "### 📚 What I Learned\n- Lesson 1\n- Lesson 2\n- Lesson 3"
+        },
+        {
+          "name": "Detailed Lessons with Emojis",
+          "example": "### 🎓 Key Takeaways\n- ⚙️ Learned how to set up a MERN stack app\n- 🛠️ Implemented JWT authentication\n- 🚀 Deployed app on Vercel and AWS"
+        },
+        {
+          "name": "Lessons with Code Snippet Example",
+          "example": "### 📝 Lessons Learned\n- How to handle async code properly\n- Improved React state management\n\nExample:\n```js\nconst fetchData = async () => {\n  try {\n    const res = await fetch('/api/data');\n    const data = await res.json();\n    console.log(data);\n  } catch (err) {\n    console.error(err);\n  }\n};\n```"
+        },
+        {
+          "name": "Lessons in Collapsible Section",
+          "example": "### 🔍 Lessons\n<details>\n<summary>Click to expand</summary>\n\n- Learned REST API design principles\n- Improved error handling\n- Understood deployment pipelines\n\n</details>"
+        },
+        {
+          "name": "Lessons with Reflective Questions",
+          "example": "### 🤔 Lessons & Reflection\n- What challenges did I face and how did I solve them?\n- How can I optimize performance further?\n- What new tools or libraries did I discover?"
+        },
+        {
+          "name": "Bullet List with Categories",
+          "example": "### 📚 Lessons Learned\n\n**Backend:**\n- Built secure REST APIs\n- Optimized database queries\n\n**Frontend:**\n- Improved UI/UX with React hooks\n- Used context API for state management"
+        },
+        {
+          "name": "Timeline Style Lessons",
+          "example": "### ⏳ Project Lessons Timeline\n\n- **Week 1:** Set up project architecture\n- **Week 2:** Implemented core features\n- **Week 3:** Added testing and CI/CD\n- **Week 4:** Deployed and optimized"
+        },
+        {
+          "name": "Lessons with Quotes",
+          "example": "### 💡 Lessons & Quotes\n\n> \"The best way to learn is by doing.\"\n\n- Hands-on coding improved my debugging skills\n- Reading docs thoroughly saves hours\n- Collaboration speeds up problem-solving"
+        },
+        {
+          "name": "Checklist Style Lessons",
+          "example": "### ✅ Lessons Checklist\n\n- [x] Learned React lifecycle methods\n- [x] Understood async/await\n- [ ] Explore GraphQL integration\n- [ ] Improve app performance"
+        },
+        {
+          "name": "Visual & Emoji Rich Lessons",
+          "example": "### 🚀 What I Learned\n\n🔥 Building scalable backend APIs\n🎨 Creating reusable React components\n⚙️ Automating deployment with GitHub Actions\n🧪 Writing robust unit tests"
+        }
+      ]
+    },
+    {
+      "name": "Support Section",
+      "children": [
+        {
+          "name": "Basic Support Info",
+          "example": "## 🆘 Support\n\nFor support, open an issue or contact me at [email@example.com](mailto:email@example.com)."
+        },
+        {
+          "name": "Support with Issue Link",
+          "example": "## 🆘 Need Help?\n\nIf you run into any problems, please [open an issue](https://github.com/yourusername/yourrepo/issues) or send me an email at [email@example.com](mailto:email@example.com)."
+        },
+        {
+          "name": "Support with FAQ Link",
+          "example": "## 💬 Support\n\nCheck out our [FAQ](./FAQ.md) for common questions.\nIf you still need help, open an issue or email me at [email@example.com](mailto:email@example.com)."
+        },
+        {
+          "name": "Support with Chat/Discord",
+          "example": "## 🤝 Support\n\nJoin our [Discord community](https://discord.gg/yourserver) for quick help.\n\n[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yourserver)\n\nOr open an issue or email me at [email@example.com](mailto:email@example.com)."
+        },
+        {
+          "name": "Support with Social Media",
+          "example": "## 📞 Support\n\nReach out on social media or open an issue:\n\n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)\n[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)\n\nEmail: [email@example.com](mailto:email@example.com)"
+        }
+      ]
     }
   ],
   "app": [
     {
-      "title": "Deployment",
-      "description": "This section covers: Deployment.",
-      "example": "To deploy this project run:\n```bash\nnpm run deploy\n```"
+      "name": "Deployment Section",
+      "children": [
+        {
+          "name": "Simple Deploy Command",
+          "example": "### 🚀 Deployment\nTo deploy this project, run:\n```bash\nnpm run deploy\n```"
+        },
+        {
+          "name": "Netlify Deploy Example",
+          "example": "### 🚀 Deployment (Netlify)\n1. Push your code to GitHub\n2. Go to [Netlify](https://netlify.com)\n3. Connect your repo\n4. Set build command: `npm run build`\n5. Set publish directory: `dist` or `build`\n6. Click **Deploy Site** ✅"
+        },
+        {
+          "name": "Vercel Deploy with Badge",
+          "example": "### 🌍 Deploy on Vercel\n[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project)\n\nMake sure your `vercel.json` is configured!"
+        },
+        {
+          "name": "GitHub Actions + Deploy Script",
+          "example": "### 📦 GitHub Actions Deploy\nAutomatically deploy on push using GitHub Actions.\n\nWorkflow:\n```yml\nname: Deploy\non:\n  push:\n    branches:\n      - main\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - run: npm install && npm run build\n      - run: npm run deploy\n```"
+        },
+        {
+          "name": "Custom VPS Deployment",
+          "example": "### 🖥 Manual Deployment (VPS/Linux)\n```bash\n# SSH into your server\nssh user@your-server\n\n# Clone the repo\ngit clone https://github.com/user/project.git\ncd project\n\n# Install and start\nnpm install\nnpm run build\npm start\n```"
+        },
+        {
+          "name": "Firebase Hosting",
+          "example": "### 🔥 Firebase Hosting\n```bash\nnpm install -g firebase-tools\nfirebase login\nfirebase init\nfirebase deploy\n```"
+        },
+        {
+          "name": "Classic Bash Deploy",
+          "example": "### 🚀 Deployment\n\nTo deploy this project, run:\n```bash\nnpm run deploy\n```"
+        },
+        {
+          "name": "Vercel Magic Button",
+          "example": "### 🌐 Deploy with Vercel\n\n[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project)\n\nThis will clone the project and start the deployment wizard instantly."
+        },
+        {
+          "name": "Netlify Step-by-Step",
+          "example": "### 🌍 Deployment (Netlify)\n\n1. Push your code to GitHub\n2. Go to [Netlify](https://netlify.com)\n3. Click **New Site from Git**\n4. Choose repo → Set build: `npm run build` → Publish dir: `dist`\n5. Hit **Deploy** 🚀"
+        },
+        {
+          "name": "Firebase Hosting w/ Setup",
+          "example": "### 🔥 Firebase Deployment\n\n```bash\nnpm install -g firebase-tools\nfirebase login\nfirebase init\nfirebase deploy\n```\n\nMake sure to select `Hosting` and set your `dist/` or `build/` folder during init!"
+        },
+        {
+          "name": "GitHub Actions Auto-Deploy",
+          "example": "### 🤖 GitHub Actions CI/CD\n\n```yaml\nname: Deploy\non:\n  push:\n    branches: [main]\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - run: npm install && npm run build && npm run deploy\n```\n\nAutomatically deploy on every push to `main`."
+        },
+        {
+          "name": "Multi-Host Deploy Options",
+          "example": "### ⚙️ Deployment Options\n\n| Host     | Steps                                                                 |\n|----------|-----------------------------------------------------------------------|\n| Vercel   | Click the button → Configure → Deploy                                |\n| Netlify  | Connect repo → Set build + output dir → Deploy                      |\n| Firebase | Init hosting → Set public folder → Deploy                           |\n| VPS      | SSH → Git clone → npm install → build + start                       |"
+        },
+        {
+          "name": "Advanced VPS Deploy (with PM2)",
+          "example": "### 🧠 VPS Deployment (PM2 + Nginx)\n\n```bash\n# SSH\nssh user@your-vps\n\n# Setup\nsudo apt update && sudo apt install nodejs npm git -y\n\n# Clone + Deploy\ngit clone https://github.com/user/project.git\ncd project\nnpm install\nnpm run build\n\n# Start w/ PM2\nnpm install -g pm2\npm2 start npm --name \"your-app\" -- run start\npm2 save\n```"
+        },
+        {
+          "name": "Deployment With .env Setup",
+          "example": "### 🧪 Deployment (w/ Environment Variables)\n\nBefore deploying, create a `.env` file with the following:\n\n```bash\nNODE_ENV=production\nAPI_URL=https://api.yoursite.com\nJWT_SECRET=supersecretkey\n```\n\nThen run:\n```bash\nnpm run build && npm run deploy\n```"
+        },
+        {
+          "name": "Deploy Visual Grid",
+          "example": "### 🔧 Deployment Matrix\n\n<div align=\"center\">\n  <img src=\"https://img.shields.io/badge/Deploy-Vercel-blue?logo=vercel\" />\n  <img src=\"https://img.shields.io/badge/Deploy-Netlify-green?logo=netlify\" />\n  <img src=\"https://img.shields.io/badge/Deploy-Firebase-orange?logo=firebase\" />\n</div>\n\nPick your platform, follow its steps, and you’re golden 🚀"
+        }
+      ]
     },
     {
-      "title": "Environment",
-      "description": "This section covers: Environment.",
-      "example": "To run this project, you will need to add the following environment variables to your .env file."
+      "name": "Environment Section",
+      "children": [
+        {
+          "name": "Simple Environment Example",
+          "example": "### 🌱 Environment Variables\n\nTo run this project, add the following to your `.env` file:\n\n```env\nPORT=3000\nDATABASE_URL=mongodb://localhost:27017/mydb\nJWT_SECRET=your-secret-key\n```"
+        },
+        {
+          "name": "Env with Descriptions",
+          "example": "### 🌍 Environment Configuration\n\nCreate a `.env` file and define the following:\n\n```env\n# Port your app will run on\nPORT=3000\n\n# MongoDB connection string\nDATABASE_URL=mongodb://localhost:27017/mydb\n\n# Secret for JWT token\nJWT_SECRET=myultrasecret\n```"
+        },
+        {
+          "name": "Collapsible Advanced Setup",
+          "example": "### 🔐 Environment Setup\n\n<details>\n<summary>Click to view required environment variables</summary>\n\n```env\nREACT_APP_API_URL=https://api.example.com\nREACT_APP_FIREBASE_KEY=your-firebase-key\n```\n\n> 💡 Pro Tip: Never commit your `.env` file to GitHub.\n</details>"
+        },
+        {
+          "name": "Multi-Environment Example",
+          "example": "### ⚙️ Environment Variables\n\nCreate these files based on the environment:\n\n#### 🔧 `.env.development`\n```env\nNODE_ENV=development\nAPI_URL=http://localhost:5000\n```\n\n#### 🚀 `.env.production`\n```env\nNODE_ENV=production\nAPI_URL=https://api.example.com\n```"
+        },
+        {
+          "name": "Environment Badge Style",
+          "example": "### 🌐 Environment Info\n\n[![env](https://img.shields.io/badge/.env-required-blue)](#)\n\n```env\n# Required variables for app to run\nNEXT_PUBLIC_BASE_URL=https://yourapp.com\nSECRET_TOKEN=shhh-dont-share\n```"
+        }
+      ]
     },
     {
-      "title": "Optimizations",
-      "description": "This section covers: Optimizations.",
-      "example": "## Optimizations\n- Lazy loading\n- Memoization\n- Code splitting"
+      "name": "Optimizations Section",
+      "children": [
+        {
+          "name": "Basic Optimizations List",
+          "example": "### ⚡ Optimizations\n\n- ✅ Lazy loading of images and components\n- ✅ Memoization with `React.memo`, `useMemo`\n- ✅ Code splitting via dynamic imports\n- ✅ Debounced input handling\n- ✅ Minified assets for production"
+        },
+        {
+          "name": "Optimization with Tooling Mentions",
+          "example": "### 🔧 Optimization Techniques Used\n\n- **Webpack Tree Shaking** to eliminate dead code\n- **ESLint + Prettier** for consistent, optimized code\n- **React Profiler** used to analyze re-renders\n- **Lighthouse Audit** score: 96/100"
+        },
+        {
+          "name": "Grouped By Category",
+          "example": "### 🧠 Optimizations\n\n#### 🎯 Performance\n- Lazy loading images/components\n- Code splitting with `React.lazy`\n\n#### 💡 UX Improvements\n- Smooth scroll & animations with `framer-motion`\n- Preload critical resources\n\n#### 🧪 Dev Efficiency\n- Auto-imports via `vite-plugin-auto-import`\n- ESLint, Prettier & Husky for clean commits"
+        },
+        {
+          "name": "Collapsible Optimization Details",
+          "example": "### 🧬 Optimization Details\n\n<details>\n<summary>View All Optimizations</summary>\n\n- 🚀 **Lazy Load**: Reduces initial bundle size\n- 🧠 **Memoization**: Avoids unnecessary re-renders\n- 📦 **Tree Shaking**: Eliminates unused exports\n- 🧵 **Bundle Analyzer**: Used to review build size\n\n</details>"
+        },
+        {
+          "name": "Table View of Optimizations",
+          "example": "### 📈 Optimization Matrix\n\n| Technique       | Purpose                        | Tool/Method        |\n|----------------|---------------------------------|--------------------|\n| Lazy Loading    | Speed up initial load          | React.lazy         |\n| Memoization     | Prevents re-renders            | useMemo, React.memo|\n| Code Splitting  | Smaller JS bundles             | dynamic imports    |\n| Minification    | Reduce bundle size             | Terser, Webpack    |"
+        }
+      ]
     },
     {
-      "title": "Running Tests",
-      "description": "This section covers: Running Tests.",
-      "example": "To run tests, run the following command:\n```bash\nnpm run test\n```"
-    }
-  ],
-  "other": [
-    {
-      "title": "Lessons",
-      "description": "This section covers: Lessons.",
-      "example": "### What I Learned\n- Lesson 1\n- Lesson 2"
-    },
-    {
-      "title": "Support",
-      "description": "This section covers: Support.",
-      "example": "## Support\nFor support, open an issue or contact me at email@example.com"
+      "name": "Running Tests Section",
+      "children": [
+        {
+          "name": "Basic NPM Test Command",
+          "example": "### 🧪 Running Tests\n\nRun the following command:\n```bash\nnpm run test\n```"
+        },
+        {
+          "name": "Tests with Framework Mention",
+          "example": "### 🧪 Running Tests\n\nThis project uses **Jest** for unit tests.\nTo run tests:\n```bash\nnpm run test\n```\nOr with watch mode:\n```bash\nnpm run test:watch\n```"
+        },
+        {
+          "name": "Testing With Coverage Report",
+          "example": "### ✅ Test & Coverage\n\nRun all tests and see coverage:\n```bash\nnpm run test:coverage\n```\nGenerates a report in `/coverage/index.html`"
+        },
+        {
+          "name": "Tests in Collapsible Format",
+          "example": "### 🧪 Test Instructions\n\n<details>\n<summary>How to run tests</summary>\n\n```bash\n# Run unit tests\nnpm run test\n\n# Run E2E tests\nnpm run test:e2e\n\n# Run with coverage\nnpm run test:coverage\n```\n\n</details>"
+        },
+        {
+          "name": "Toolchain Based Tests Table",
+          "example": "### 🔬 Testing Tools\n\n| Type        | Tool    | Command               |\n|-------------|---------|------------------------|\n| Unit Tests  | Jest    | `npm run test`         |\n| Lint Check  | ESLint  | `npm run lint`         |\n| Coverage    | Jest    | `npm run test:coverage`|\n| E2E         | Playwright | `npm run test:e2e`   |"
+        },
+        {
+          "name": "Custom Test Scripts",
+          "example": "### 🔧 Running Custom Tests\n\nRun specific test suites:\n```bash\nnpm run test:unit       # Unit tests\nnpm run test:integration # Integration tests\nnpm run test:e2e        # End-to-End tests\n```"
+        },
+        {
+          "name": "Test Badge Summary",
+          "example": "### ✅ Test Status\n\n![Build Status](https://img.shields.io/badge/build-passing-brightgreen)\n![Coverage](https://img.shields.io/badge/coverage-95%25-green)"
+        },
+        {
+          "name": "Pre-commit Testing Hook",
+          "example": "### 🛠 Pre-Commit Test Hook\n\nThis project uses **Husky** to run tests before every commit:\n```bash\nnpx husky install\n```\n\nMake sure your `.husky/pre-commit` script includes:\n```bash\nnpm run test\n```"
+        },
+        {
+          "name": "Test Config Reference",
+          "example": "### ⚙️ Test Configuration\n\nTest settings are managed in:\n- [`jest.config.js`](./jest.config.js)\n- [`vitest.config.ts`](./vitest.config.ts)\n\nEdit these files to tweak timeouts, mocks, reporters, etc."
+        }
+      ]
     }
   ],
   "profile": [
     {
-      "title": "Github Profile- About Me",
-      "description": "This section covers: Github Profile- About Me.",
-      "example": "Hi, I'm Sajjad \ud83d\udc4b\nI'm a MERN Stack Developer passionate about building cool stuff."
+      "name": "About Me Section",
+      "children": [
+        {
+          "name": "Simple Intro",
+          "example": "Hi, I'm Sajjad 👋\nI'm a MERN Stack Developer passionate about building cool stuff."
+        },
+        {
+          "name": "Emoji-Packed Intro",
+          "example": "👋 Hey there! I'm Sajjad — a MERN Stack Dev who loves coding, coffee ☕, and cool projects 🚀.\n\nLet's build something awesome together!"
+        },
+        {
+          "name": "Badge-Style Intro",
+          "example": "Hi, I'm Sajjad 👋\n\n[![MERN Stack](https://img.shields.io/badge/MERN-Stack-blue)](https://mern.io) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)](https://reactjs.org)\n\nPassionate about building scalable web apps and learning new tech."
+        },
+        {
+          "name": "Skill Timeline Intro",
+          "example": "Hi, I'm Sajjad 👋\n\nHere's a quick timeline of my skills:\n\n- 2019: Started with JavaScript basics\n- 2020: Dived into React and Node.js\n- 2021: Mastered MongoDB and Express\n- 2022: Built full MERN stack apps\n- 2023: Exploring cloud deployments and CI/CD ☁️🚀"
+        },
+        {
+          "name": "Detailed & Friendly",
+          "example": "👋 Hi, I'm Mohammad Sajjad Hosan!\n\nI'm a MERN Stack Developer who enjoys crafting clean, efficient code and creating seamless user experiences. When I'm not coding, I’m probably learning new frameworks, contributing to open source, or geeking out over tech trends.\n\nLet’s connect and build amazing things! 🚀\n\n[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/devsajjadhosan) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devsajjadhosan)"
+        },
+        {
+          "name": "Professional & Minimalist",
+          "example": "Hi, I'm Mohammad Sajjad Hosan — MERN Stack Developer.\n\nFocused on writing maintainable, scalable code. Experienced in full-stack web development and passionate about continuous learning.\n\n🚀 Always learning | 💻 Coding enthusiast"
+        },
+        {
+          "name": "Fun & Interactive",
+          "example": "### Hey there! 👋 I'm Sajjad\n\n![Visitor Count](https://profile-counter.glitch.me/devsajjadhosan/count.svg)\n\nPassionate MERN dev building cool web apps and always chasing that next tech challenge.\n\n> \"Code is like humor. When you have to explain it, it’s bad.\" — Cory House"
+        },
+        {
+          "name": "Animated GIF Intro",
+          "example": "Hi, I'm Sajjad 👋\n\n![Coding Animation](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)\n\nA passionate MERN Stack Developer building cool stuff and leveling up daily."
+        },
+        {
+          "name": "Custom Tech Icons",
+          "example": "### Tech Stack\n\n![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)"
+        },
+        {
+          "name": "GitHub Stats Card",
+          "example": "### GitHub Stats\n\n![Sajjad's GitHub Stats](https://github-readme-stats.vercel.app/api?username=devsajjadhosan&show_icons=true&theme=radical)"
+        },
+        {
+          "name": "Combined Flashy Profile",
+          "example": "## Hi, I'm Sajjad 👋\n\n![Coding GIF](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)\n\nA passionate MERN Stack Developer 🚀\n\n### Tech Stack\n\n![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\n\n### GitHub Stats\n\n![GitHub Stats](https://github-readme-stats.vercel.app/api?username=devsajjadhosan&show_icons=true&theme=radical)"
+        }
+      ]
     },
     {
-      "title": "Github Profile - Introduction",
-      "description": "This section covers: Github Profile - Introduction.",
-      "example": "## Introduction\nThis is my GitHub profile where I showcase my projects and skills."
+      "name": "Introduction Sections",
+      "children": [
+        {
+          "name": "Basic Introduction",
+          "example": "## Introduction\nThis is my GitHub profile where I showcase my projects and skills."
+        },
+        {
+          "name": "Friendly Intro with Emoji",
+          "example": "## 👋 Introduction\nWelcome to my GitHub! Here, I share my coding journey, cool projects, and passion for building web apps."
+        },
+        {
+          "name": "Professional & Clean",
+          "example": "## Introduction\nI’m Mohammad Sajjad Hosan, a MERN Stack Developer focused on building scalable and maintainable web applications."
+        },
+        {
+          "name": "Intro with Tech Focus",
+          "example": "## Introduction\nFull-stack developer specializing in the MERN stack. Passionate about JavaScript, Node.js, React, and clean code."
+        },
+        {
+          "name": "Interactive Intro with Links",
+          "example": "## Introduction\nHey! I’m Sajjad 👋. Explore my projects, read my blogs, and connect with me!\n\n- 🌐 [Portfolio](https://yourportfolio.com)\n- 💬 [Blog](https://yourblog.com)\n- 📫 [Contact Me](mailto:email@example.com)"
+        },
+        {
+          "name": "Flashy Intro with Badges",
+          "example": "## Introduction\nHi, I’m Sajjad! \n\n[![MERN Stack](https://img.shields.io/badge/MERN-Stack-blue)](https://mern.io) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)\n\nWelcome to my coding playground where I build scalable and efficient web apps."
+        },
+        {
+          "name": "Animated GIF Intro",
+          "example": "## Introduction\n\nWelcome to my GitHub! 👋\n\n![Coding GIF](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)\n\nHere I share projects and passion for web development."
+        },
+        {
+          "name": "Custom Tech Icons Intro",
+          "example": "## Introduction\n\nFull-stack MERN developer passionate about building performant web apps.\n\n![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)"
+        },
+        {
+          "name": "GitHub Stats Card Intro",
+          "example": "## Introduction\n\nHi, I’m Sajjad! Check out my GitHub stats below:\n\n![GitHub Stats](https://github-readme-stats.vercel.app/api?username=devsajjadhosan&show_icons=true&theme=radical)"
+        },
+        {
+          "name": "Flashy Combined Intro",
+          "example": "## Introduction\n\nHey! I’m Sajjad 👋\n\n![GIF](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)\n\nA MERN stack dev building awesome apps.\n\n### Tech Stack\n\n![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\n\n### GitHub Stats\n\n![GitHub Stats](https://github-readme-stats.vercel.app/api?username=devsajjadhosan&show_icons=true&theme=radical)"
+        }
+      ]
     },
     {
-      "title": "Github Profile - Links",
-      "description": "This section covers: Github Profile - Links.",
-      "example": "[![Portfolio](https://img.shields.io/badge/portfolio-visit-brightgreen)](https://example.com)"
+      "name": "Links Section",
+      "children": [
+        {
+          "name": "Basic Portfolio Link",
+          "example": "[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-brightgreen)](https://example.com)"
+        },
+        {
+          "name": "Multiple Social Links with Badges",
+          "example": "[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-brightgreen)](https://example.com)  \n[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=twitter&logoColor=white)](https://twitter.com/yourhandle)"
+        },
+        {
+          "name": "GitHub & Dev.to Links",
+          "example": "[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github&logoColor=white)](https://github.com/yourusername)  \n[![Dev.to](https://img.shields.io/badge/Dev.to-Articles-0A0A0A?logo=devdotto&logoColor=white)](https://dev.to/yourusername)"
+        },
+        {
+          "name": "Contact & Blog Links",
+          "example": "[![Email](https://img.shields.io/badge/Email-Contact-D14836?logo=gmail&logoColor=white)](mailto:email@example.com)  \n[![Blog](https://img.shields.io/badge/Blog-Read-blueviolet?logo=wordpress&logoColor=white)](https://blog.example.com)"
+        },
+        {
+          "name": "All-in-One Links Row",
+          "example": "[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-brightgreen)](https://example.com)  \n[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=twitter&logoColor=white)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github&logoColor=white)](https://github.com/yourusername)  \n[![Email](https://img.shields.io/badge/Email-Contact-D14836?logo=gmail&logoColor=white)](mailto:email@example.com)"
+        },
+        {
+          "name": "Social Links with Logos",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yourusername)"
+        },
+        {
+          "name": "Social Links with Badge Buttons",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)"
+        },
+        {
+          "name": "Social Links with Rounded Buttons",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=%230077B5&color=white&logoWidth=20&rounded=1)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white&labelColor=%231DA1F2&color=white&logoWidth=20&rounded=1)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white&labelColor=%23181717&color=white&logoWidth=20&rounded=1)](https://github.com/yourusername)"
+        },
+        {
+          "name": "All-in-One Social Links Row",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)  \n[![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/yourhandle)"
+        },
+        {
+          "name": "Gradient Badges",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=plastic&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=plastic&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=plastic&logo=github&logoColor=white)](https://github.com/yourusername)"
+        },
+        {
+          "name": "Outline Style Badges",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=0077B5&color=white&labelColor=transparent&logoWidth=20&border=2)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=1DA1F2&color=white&labelColor=transparent&logoWidth=20&border=2)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=181717&color=white&labelColor=transparent&logoWidth=20&border=2)](https://github.com/yourusername)"
+        },
+        {
+          "name": "Shadow & Rounded Badges",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&color=0077B5&logoWidth=20&rounded=10&shadow=true)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&color=1DA1F2&logoWidth=20&rounded=10&shadow=true)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&color=181717&logoWidth=20&rounded=10&shadow=true)](https://github.com/yourusername)"
+        },
+        {
+          "name": "Minimalist Monochrome",
+          "example": "[![LinkedIn](https://img.shields.io/badge/LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)  \n[![Twitter](https://img.shields.io/badge/Twitter-000000?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)  \n[![GitHub](https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white)](https://github.com/yourusername)"
+        }
+      ]
     },
     {
-      "title": "Github Profile - Others",
-      "description": "This section covers: Github Profile - Others.",
-      "example": "## Fun Facts\n- I love anime\n- I build in public"
+      "title": "Others Section",
+      "children": [
+        {
+          "name": "Basic Fun Facts",
+          "example": "## Fun Facts\n- I love anime\n- I build in public"
+        },
+        {
+          "name": "Emoji-Packed Fun Facts",
+          "example": "## 🎉 Fun Facts\n- Anime enthusiast 🎥🍿\n- Building in public 🚀\n- Coffee addict ☕\n- Always learning new tech 💻"
+        },
+        {
+          "name": "Quirky Personality",
+          "example": "## 👾 About Me\n- Pro coder by day, gamer by night 🎮\n- Fluent in JavaScript & sarcasm 😎\n- Meme curator for the squad 🤣"
+        },
+        {
+          "name": "Daily Dev Rituals",
+          "example": "## 🔥 Daily Dev Rituals\n- Morning coffee & code ☕💻\n- Reading docs 📚\n- Sharing knowledge on Twitter 🐦\n- Jamming to lofi beats 🎧"
+        },
+        {
+          "name": "Hobbies & Passions",
+          "example": "## 🌟 Hobbies\n- Anime binge watcher\n- Open source contributor\n- Tech blogger\n- Traveling whenever possible"
+        },
+        {
+          "name": "Animated Fun Facts",
+          "example": "## 🎉 Fun Facts\n\n![Anime Vibes](https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif)\n\n- I love anime 📺✨\n- I build in public 🚀👨‍💻"
+        },
+        {
+          "name": "Badge-Loaded Fun Facts",
+          "example": "## 🔥 Fun Facts\n\n[![Anime Lover](https://img.shields.io/badge/Anime-Lover-ff69b4?style=for-the-badge&logo=anime&logoColor=white)](https://myanimelist.net)\n\n[![Open Source](https://img.shields.io/badge/Open%20Source-Contributor-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)\n\n- Always coding & learning 💻📚\n- Coffee fueled ☕"
+        },
+        {
+          "name": "Emoji + Animated Icons",
+          "example": "## 👾 About Me\n\n- Pro coder by day, gamer by night 🎮  \n- Fluent in JavaScript & sarcasm 😎  \n- Meme curator for the squad 🤣  \n\n![Coding Animation](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)"
+        },
+        {
+          "name": "Detailed Modern Fun Section",
+          "example": "## 🌟 Hobbies & Passions\n\n- 🎥 Anime binge watcher with over 500 hours logged\n- 🛠 Open source contributor with 20+ repos\n- ✍️ Tech blogger on [Medium](https://medium.com/@yourusername)\n- ✈️ Traveling and exploring cultures\n\n[![Coffee Lover](https://img.shields.io/badge/Coffee-Lover-6f4e37?style=for-the-badge&logo=coffee&logoColor=white)](https://www.starbucks.com)"
+        },
+        {
+          "name": "All-In-One Animated & Badge Style",
+          "example": "## 🚀 Let's Connect & Chill\n\n![Rocket Animation](https://media.giphy.com/media/3o6ZtpxSZbQRRnwCKQ/giphy.gif)\n\n- 🌸 Anime lover [![Anime](https://img.shields.io/badge/Anime-Passion-ff69b4?style=for-the-badge&logo=anime&logoColor=white)](https://myanimelist.net)\n- 💻 Building public projects [![Open Source](https://img.shields.io/badge/Open%20Source-Contributor-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)\n- ☕ Powered by coffee [![Coffee](https://img.shields.io/badge/Coffee-Addict-6f4e37?style=for-the-badge&logo=coffee&logoColor=white)](https://www.starbucks.com)"
+        }
+      ]
     },
     {
-      "title": "Github Profile - Skills",
-      "description": "This section covers: Github Profile - Skills.",
-      "example": "![Skills](https://skillicons.dev/icons?i=js,react,nodejs,mongodb)"
+      "name": "Skills Section",
+      "children": [
+        {
+          "name": "Basic Skill Icons",
+          "example": "![Skills](https://skillicons.dev/icons?i=js,react,nodejs,mongodb)"
+        },
+        {
+          "name": "Skill Icons with Labels",
+          "example": "### Skills\n\n- ![JavaScript](https://skillicons.dev/icons?i=js) JavaScript\n- ![React](https://skillicons.dev/icons?i=react) React\n- ![Node.js](https://skillicons.dev/icons?i=nodejs) Node.js\n- ![MongoDB](https://skillicons.dev/icons?i=mongodb) MongoDB"
+        },
+        {
+          "name": "Grouped Skills with Emojis",
+          "example": "### 🛠️ Tech Stack\n\n**Frontend:** ![React](https://skillicons.dev/icons?i=react) React, ![Redux](https://skillicons.dev/icons?i=redux) Redux\n\n**Backend:** ![Node.js](https://skillicons.dev/icons?i=nodejs) Node.js, ![Express](https://skillicons.dev/icons?i=express) Express\n\n**Database:** ![MongoDB](https://skillicons.dev/icons?i=mongodb) MongoDB\n\n**Tools:** ![Git](https://skillicons.dev/icons?i=git) Git, ![Docker](https://skillicons.dev/icons?i=docker) Docker"
+        },
+        {
+          "name": "Skill Badges with Links",
+          "example": "[![JavaScript](https://skillicons.dev/icons?i=js)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  \n[![React](https://skillicons.dev/icons?i=react)](https://reactjs.org/)  \n[![Node.js](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org/)  \n[![MongoDB](https://skillicons.dev/icons?i=mongodb)](https://mongodb.com/)"
+        },
+        {
+          "name": "Gradient Skill Badges",
+          "example": "[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  \n[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)  \n[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  \n[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com/)"
+        },
+        {
+          "name": "Grouped Skills with Emojis & Descriptions",
+          "example": "### 🧰 Tech Stack Breakdown\n\n**Frontend:**\n- React ⚛️ (SPA, Hooks, Context API)\n- Redux 🗃️ (State management)\n\n**Backend:**\n- Node.js 🟢 (Express server, REST APIs)\n- MongoDB 🍃 (NoSQL database)\n\n**Tools:**\n- Git 🔧 (Version control)\n- Docker 🐳 (Containerization)"
+        },
+        {
+          "name": "Skills with Progress Bars",
+          "example": "### Skill Proficiency\n\n- JavaScript: \n  ```\n  [██████████] 90%\n  ```\n- React:\n  ```\n  [████████  ] 80%\n  ```\n- Node.js:\n  ```\n  [█████████ ] 85%\n  ```\n- MongoDB:\n  ```\n  [███████   ] 70%\n  ```"
+        },
+        {
+          "name": "Skill Badges with Custom Colors",
+          "example": "[![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  \n[![React](https://img.shields.io/badge/React-blue?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)  \n[![Node.js](https://img.shields.io/badge/Node.js-green?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)  \n[![MongoDB](https://img.shields.io/badge/MongoDB-brightgreen?style=flat-square&logo=mongodb&logoColor=white)](https://mongodb.com/)"
+        }
+      ]
     },
     {
-      "title": "Contact",
-      "description": "This section covers: Contact.",
-      "example": "## Contact Me\n\ud83d\udce7 email@example.com\n\ud83d\udcbc [LinkedIn](https://linkedin.com/in/devsajjadhosan)"
+      "name": "Contact Section",
+      "children": [
+        {
+          "name": "Basic Contact",
+          "example": "## Contact Me\n\n📧 email@example.com\n\n📇 [LinkedIn](https://linkedin.com/in/devsajjadhosan)\n\n🐦 [Twitter](https://twitter.com/yourhandle)"
+        },
+        {
+          "name": "Contact with Badges",
+          "example": "## 📬 Get in Touch\n\n[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:email@example.com)  \n[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/devsajjadhosan)  \n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)"
+        },
+        {
+          "name": "Contact with Icons + Links",
+          "example": "## Let's Connect\n\n- ✉️ Email: [email@example.com](mailto:email@example.com)\n- 💼 LinkedIn: [devsajjadhosan](https://linkedin.com/in/devsajjadhosan)\n- 🐦 Twitter: [@yourhandle](https://twitter.com/yourhandle)\n- 🌐 Website: [yourwebsite.com](https://yourwebsite.com)"
+        },
+        {
+          "name": "Contact Table Style",
+          "example": "## Contact Info\n\n| Method   | Details                                   |\n|----------|-------------------------------------------|\n| 📧 Email | [email@example.com](mailto:email@example.com) |\n| 💼 LinkedIn | [devsajjadhosan](https://linkedin.com/in/devsajjadhosan) |\n| 🐦 Twitter  | [@yourhandle](https://twitter.com/yourhandle)         |"
+        },
+        {
+          "name": "Floating Icon Links",
+          "example": "## 📬 Reach Me\n\n<p align=\"center\">\n  <a href=\"mailto:email@example.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"https://img.icons8.com/color/48/000000/email.png\" alt=\"Email\" style=\"margin: 0 10px;\"/>\n  </a>\n  <a href=\"https://linkedin.com/in/devsajjadhosan\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"https://img.icons8.com/color/48/000000/linkedin.png\" alt=\"LinkedIn\" style=\"margin: 0 10px;\"/>\n  </a>\n  <a href=\"https://twitter.com/yourhandle\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"https://img.icons8.com/color/48/000000/twitter.png\" alt=\"Twitter\" style=\"margin: 0 10px;\"/>\n  </a>\n</p>"
+        },
+        {
+          "name": "Gradient Badge Links",
+          "example": "## Let's Connect\n\n[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&colorA=FF6F61)](mailto:email@example.com)  \n[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&colorA=0077B5)](https://linkedin.com/in/devsajjadhosan)  \n[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&colorA=1DA1F2)](https://twitter.com/yourhandle)"
+        },
+        {
+          "name": "Contact Info Cards with Emojis",
+          "example": "## Contact Info\n\n| 📧 Email | [email@example.com](mailto:email@example.com) |\n|---------|--------------------------|\n| 💼 LinkedIn | [devsajjadhosan](https://linkedin.com/in/devsajjadhosan) |\n| 🐦 Twitter | [@yourhandle](https://twitter.com/yourhandle) |"
+        },
+        {
+          "name": "Minimalist Button Style",
+          "example": "## Let's Chat!\n\n[Email Me](mailto:email@example.com) | [LinkedIn](https://linkedin.com/in/devsajjadhosan) | [Twitter](https://twitter.com/yourhandle)"
+        }
+      ]
     }
   ]
 }

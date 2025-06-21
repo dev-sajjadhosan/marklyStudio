@@ -70,9 +70,12 @@ export interface HeaderContextType {
 // Define or import SectionType above this usage
 export type SectionType = {
   id?: string
-  title: string
-  content: string
-  example: string
+  name?: string
+  title?: string
+  children: {
+    name: string
+    example: string
+  }[]
 }
 
 export interface ReadmeProps {
@@ -84,7 +87,7 @@ export interface ReadmeProps {
 }
 
 export interface TagItem {
-  title: string
-  content: string
+  name?: string
+  title?: string
   example: string
 }

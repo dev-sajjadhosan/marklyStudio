@@ -3,10 +3,6 @@ import Readme from '../models/Readme'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 const router = Router()
 
-const hello: RequestHandler = async (req, res) => {
-  res.json('The Readme is working')
-}
-
 const createReadme: RequestHandler = async (req, res, next) => {
   const { description, style } = req.body
 
@@ -30,14 +26,14 @@ const createReadme: RequestHandler = async (req, res, next) => {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
     /** Build the full prompt */
     const prompt = `
-Generate a professional GitHub README.md file.
+Generate a GitHub README.md file.
 
 Project Description:
 "${description}"
 
 Guidelines:
 ${stylePromptMap[style] ?? stylePromptMap.auto}
-Use clean markdown syntax.
+Use clean modern and unique markdown syntax.
 `.trim()
 
     /** Call Gemini 2 (flash model is fast; swap if you prefer pro) */
@@ -58,12 +54,11 @@ Use clean markdown syntax.
     res.status(201).json({ id: saved._id, content: cleanedText })
     return
   } catch (err) {
-    console.error(err)
+    console.error('Readme GEnerate Error: ',err)
     next(err) // bubble to your global error handler
   }
 }
 
-router.get('/', hello)
 router.post('/create', createReadme)
 
 export default router

@@ -1,9 +1,13 @@
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import BackBtn from '../../componenets/Shared/BackBtn/BackBtn'
 // import icon from '../../../public/icon.png'
 import fake from '../../assets/fake.png'
 
-import { TbScreenShare, TbTransitionBottom } from 'react-icons/tb'
+import {
+  TbFileSpreadsheet,
+  TbScreenShare,
+  TbTransitionBottom,
+} from 'react-icons/tb'
 import { SiReasonstudios } from 'react-icons/si'
 import SearchBar from '../../componenets/Shared/SearchBar/SearchBar'
 import TemStatus from '../../componenets/Shared/TemStatus/TemStatus'
@@ -242,7 +246,7 @@ import { Button } from 'react-component-library';
 ]
 
 const TemplatesPage = () => {
-  const filter = new URLSearchParams(useLocation().search).get('f')
+  // const filter = new URLSearchParams(useLocation().search).get('f')
 
   return (
     <>
@@ -251,9 +255,13 @@ const TemplatesPage = () => {
           <BackBtn />
           <h1 className="text-3xl font-light hidden">Templates</h1>
           <div className="flex items-center gap-1.5">
-            <button className="btn btn-sm btn-soft btn-accent">
-              Filter by
-            </button>
+            <Link
+              to={'/markly-tutorial-page'}
+              className="btn btn-sm btn-soft btn-info"
+            >
+              <TbFileSpreadsheet size={15} />
+              CheatSheet
+            </Link>
             <button className="btn btn-sm btn-soft btn-accent">
               Filter by
             </button>
