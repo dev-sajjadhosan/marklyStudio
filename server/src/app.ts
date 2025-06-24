@@ -10,7 +10,6 @@ import readmeRoutes from './routes/readme.routes'
 import templateRoutes from './routes/template.routes'
 import chatRoutes from './routes/chats.routes'
 
-
 const app = express()
 const PORT = process.env.PORT || 5000
 
@@ -29,10 +28,11 @@ app.get('/', (_, res) => {
   res.send('🚀 Server up & running!')
 })
 ;(async () => {
-  await connectDB(
-    (process.env.MONGO_URI as string) ||
-      'mongodb://localhost:27017/marklyStudio',
-  )
+  if (process.env.NODE_ENV) {
+    await connectDB(process.env.MONGO_URI as string)
+  } else {
+    await connectDB('mongodb://localhost:27017/marklyStudio')
+  }
   app.listen(PORT, () => {
     console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`)
   })

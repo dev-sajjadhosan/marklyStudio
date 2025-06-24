@@ -14,6 +14,7 @@ const FeaturesSection = () => {
       icon: '📁',
       title: 'GitHub Repo Import',
       desc: 'Paste your GitHub URL and fetch README.md files instantly.',
+      pro: true,
     },
     {
       icon: '📄',
@@ -24,6 +25,7 @@ const FeaturesSection = () => {
       icon: '🎨',
       title: 'Theme Switcher',
       desc: 'Toggle between light and dark mode for optimal reading comfort.',
+      pro: true,
     },
     {
       icon: '🔖',
@@ -45,12 +47,19 @@ const FeaturesSection = () => {
           {features.map((feature, i) => (
             <div
               key={i}
-              className="card bg-base-200 shadow-md transition hover:shadow-lg hover:scale-[1.02] duration-200"
+              className={`card ${
+                feature.pro ? 'bg-base-300' : 'bg-base-200 '
+              } shadow-md transition hover:shadow-lg hover:scale-[1.02] duration-200 cursor-pointer`}
             >
               <div className="card-body items-center text-center">
                 <div className="text-4xl mb-2">{feature.icon}</div>
                 <h3 className="card-title text-xl">{feature.title}</h3>
                 <p className="text-sm text-gray-400">{feature.desc}</p>
+                {feature.pro && (
+                  <p className="badge badge-warning text-sm badge-soft">
+                    Working
+                  </p>
+                )}
               </div>
             </div>
           ))}

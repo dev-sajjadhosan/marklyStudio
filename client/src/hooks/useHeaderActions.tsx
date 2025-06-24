@@ -34,14 +34,16 @@ export default function useHeaderActions() {
     localStorage.setItem(import.meta.env.VITE_CODE_SAVE_NAME, markdownText)
     enqueueSnackbar('File Saved! ✔️', {
       variant: 'success',
-      anchorOrigin: { horizontal: 'right', vertical: 'bottom' },
+      anchorOrigin: { horizontal: 'right', vertical: 'top' },
     })
   }, [markdownText])
 
   const handleReset = useCallback(() => {
     setMarkdownText('')
     setExample([])
-    editorRef.current.setValue('')
+    if (editorRef.current) {
+      editorRef.current.setValue('')
+    }
   }, [setMarkdownText, setExample, editorRef])
 
   const handleExport = useCallback(() => {

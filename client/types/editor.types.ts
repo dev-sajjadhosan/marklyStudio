@@ -1,4 +1,6 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import type { RefObject } from 'react'
+import type * as monacoEditor from 'monaco-editor'
 
 export interface AuthContextType {
   all: boolean | string
@@ -34,10 +36,8 @@ export interface AuthContextType {
   setting: boolean
   setSetting: Dispatch<SetStateAction<boolean>>
   //
-  editorRef: React.RefObject<
-    import('monaco-editor').editor.IStandaloneCodeEditor
-  >
-  monacoRef: React.RefObject<typeof import('monaco-editor')>
+  editorRef: RefObject<monacoEditor.editor.IStandaloneCodeEditor | null>
+  monacoRef: RefObject<typeof monacoEditor | null>
   insertAtCursor: (text: string) => void
 
   line?: number

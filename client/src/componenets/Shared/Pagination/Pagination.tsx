@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, type SetStateAction } from 'react'
 
 type MODE = 'block' | 'number' | 'sLetter' | 'bLetter' | 'roman'
 
 interface PaginationProps {
   mode?: MODE | undefined
+  total?: number[]
+  setPage?: React.Dispatch<SetStateAction<number>> | undefined
+  page: number
 }
 
-const Pagination: React.FC<PaginationProps> = ({ mode }) => {
+const Pagination: React.FC<PaginationProps> = ({ mode, setPage, page }) => {
   const letter = Array.from('abcdefghijklmnopqrstuvwxyz')
   const toRoman = (num: number): string => {
     const romanMap = [
@@ -35,18 +38,20 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
     return result
   }
 
-  const [current, setCurrent] = useState(0)
+  const total = Array.from(
+    Array(Math.ceil(Number(localStorage.getItem('totalPage')) / 12)),
+  )
 
   switch (mode) {
     case 'block':
       return (
         <div className="flex items-center justify-center gap-1.5 mt-9">
-          {[...Array(10).keys()].map((i) => (
+          {total?.map((_, i) => (
             <div
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => setPage && setPage(i)}
               className={` p-1 bg-primary rounded transition-all duration-200 cursor-pointer ${
-                current == i ? 'w-3 h-4.5 -translate-y-2.5' : 'w-7 h-3.5'
+                page == i ? 'w-3 h-4.5 -translate-y-2.5' : 'w-7 h-3.5'
               }`}
             />
           ))}
@@ -55,10 +60,10 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
     case 'number':
       return (
         <div className="mt-9 flex justify-center items-center">
-          {[...Array(10).keys()].map((_, i, arr) => (
+          {total?.map((_, i, arr) => (
             <div
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => setPage && setPage(i)}
               className={`btn btn-sm transition-all duration-150 ${
                 0 === i
                   ? 'rounded-l-xl'
@@ -66,7 +71,7 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
                   ? 'rounded-r-xl'
                   : ''
               } ${
-                current === i
+                page === i
                   ? '!rounded-full btn-primary mx-1.5 -translate-y-2.5'
                   : 'rounded-none btn-soft btn-primary'
               }`}
@@ -79,10 +84,10 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
     case 'sLetter':
       return (
         <div className="mt-9 flex justify-center items-center">
-          {[...Array(10).keys()].map((_, i, arr) => (
+          {total?.map((_, i, arr) => (
             <div
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => setPage && setPage(i)}
               className={`btn btn-sm transition-all duration-150 ${
                 0 === i
                   ? 'rounded-l-xl'
@@ -90,7 +95,7 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
                   ? 'rounded-r-xl'
                   : ''
               } ${
-                current === i
+                page === i
                   ? '!rounded-full btn-primary mx-1.5 -translate-y-2.5'
                   : 'rounded-none btn-soft btn-primary'
               }`}
@@ -103,10 +108,10 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
     case 'bLetter':
       return (
         <div className="mt-9 flex justify-center items-center">
-          {[...Array(10).keys()].map((_, i, arr) => (
+          {total?.map((_, i, arr) => (
             <div
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => setPage && setPage(i)}
               className={`btn btn-sm transition-all duration-150 ${
                 0 === i
                   ? 'rounded-l-xl'
@@ -114,7 +119,7 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
                   ? 'rounded-r-xl'
                   : ''
               } ${
-                current === i
+                page === i
                   ? '!rounded-full btn-primary mx-1.5 -translate-y-2.5'
                   : 'rounded-none btn-soft btn-primary'
               }`}
@@ -127,10 +132,10 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
     case 'roman':
       return (
         <div className="mt-9 flex justify-center items-center">
-          {[...Array(10).keys()].map((_, i, arr) => (
+          {total?.map((_, i, arr) => (
             <div
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => setPage && setPage(i)}
               className={`btn btn-sm transition-all duration-150 ${
                 0 === i
                   ? 'rounded-l-xl'
@@ -138,7 +143,7 @@ const Pagination: React.FC<PaginationProps> = ({ mode }) => {
                   ? 'rounded-r-xl'
                   : ''
               } ${
-                current === i
+                page === i
                   ? '!rounded-full btn-primary mx-1.5 -translate-y-2.5'
                   : 'rounded-none btn-soft btn-primary'
               }`}

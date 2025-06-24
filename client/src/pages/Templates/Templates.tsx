@@ -1,17 +1,21 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BackBtn from '../../componenets/Shared/BackBtn/BackBtn'
 // import icon from '../../../public/icon.png'
 import fake from '../../assets/fake.png'
 
 import {
+  TbClick,
   TbFileSpreadsheet,
   TbScreenShare,
+  TbTemplateOff,
   TbTransitionBottom,
+  TbWorldShare,
 } from 'react-icons/tb'
 import { SiReasonstudios } from 'react-icons/si'
 import SearchBar from '../../componenets/Shared/SearchBar/SearchBar'
 import TemStatus from '../../componenets/Shared/TemStatus/TemStatus'
 import Pagination from '../../componenets/Shared/Pagination/Pagination'
+import useTemplates, { type TemplateP } from '../../hooks/useTemplates'
 
 type Template = {
   id: string
@@ -23,230 +27,13 @@ type Template = {
   exampleCode: string
 }
 
-const dummyTemplates: Template[] = [
-  {
-    id: '1',
-    title: 'Clean README Template',
-    description: 'A minimal, clean README template for any project.',
-    author: 'devSajjad',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1018/600/400', // placeholder
-    exampleCode: `
-# Project Title
-
-A brief description of what this project does and who it’s for.
-
-## Installation
-
-\`\`\`bash
-npm install my-project
-\`\`\`
-
-## Usage
-
-\`\`\`js
-import { doCoolStuff } from 'my-project';
-
-doCoolStuff();
-\`\`\`
-    `,
-  },
-  {
-    id: '2',
-    title: 'Open Source Project Template',
-    description: 'Designed for open source repos with contribution guidelines.',
-    author: 'codeQueen',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1025/600/400',
-    exampleCode: `
-# Open Source Project
-
-Welcome! Thanks for considering contributing to this project.
-
-## Contributing
-
-Please read \`CONTRIBUTING.md\` for guidelines.
-
-## License
-
-MIT License © 2025
-    `,
-  },
-  {
-    id: '3',
-    title: 'API Documentation Template',
-    description: 'Perfect for REST APIs, includes endpoints and auth details.',
-    author: 'apiMaster',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1043/600/400',
-    exampleCode: `
-# API Documentation
-
-## Authentication
-
-Use an API key in the \`Authorization\` header.
-
-## Endpoints
-
-### GET /users
-
-Returns a list of users.
-
-\`\`\`bash
-curl -H "Authorization: Bearer YOUR_API_KEY" https://api.example.com/users
-\`\`\`
-    `,
-  },
-  {
-    id: '4',
-    title: 'CLI Tool README',
-    description: 'Great for command-line interface tools with usage examples.',
-    author: 'cliNinja',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1038/600/400',
-    exampleCode: `
-# CLI Tool
-
-## Installation
-
-\`\`\`bash
-npm install -g cli-tool
-\`\`\`
-
-## Commands
-
-\`\`\`bash
-cli-tool init
-cli-tool build --prod
-\`\`\`
-    `,
-  },
-  {
-    id: '4',
-    title: 'CLI Tool README',
-    description: 'Great for command-line interface tools with usage examples.',
-    author: 'cliNinja',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1038/600/400',
-    exampleCode: `
-# CLI Tool
-
-## Installation
-
-\`\`\`bash
-npm install -g cli-tool
-\`\`\`
-
-## Commands
-
-\`\`\`bash
-cli-tool init
-cli-tool build --prod
-\`\`\`
-    `,
-  },
-  {
-    id: '4',
-    title: 'CLI Tool README',
-    description: 'Great for command-line interface tools with usage examples.',
-    author: 'cliNinja',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1038/600/400',
-    exampleCode: `
-# CLI Tool
-
-## Installation
-
-\`\`\`bash
-npm install -g cli-tool
-\`\`\`
-
-## Commands
-
-\`\`\`bash
-cli-tool init
-cli-tool build --prod
-\`\`\`
-    `,
-  },
-  {
-    id: '4',
-    title: 'CLI Tool README',
-    description: 'Great for command-line interface tools with usage examples.',
-    author: 'cliNinja',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1038/600/400',
-    exampleCode: `
-# CLI Tool
-
-## Installation
-
-\`\`\`bash
-npm install -g cli-tool
-\`\`\`
-
-## Commands
-
-\`\`\`bash
-cli-tool init
-cli-tool build --prod
-\`\`\`
-    `,
-  },
-  {
-    id: '5',
-    title: 'Python Package README',
-    description: 'README template for Python packages with setup instructions.',
-    author: 'pyCoder',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1057/600/400',
-    exampleCode: `
-# Python Package
-
-## Installation
-
-\`\`\`bash
-pip install my-python-package
-\`\`\`
-
-## Usage
-
-\`\`\`python
-import mypackage
-
-mypackage.run()
-\`\`\`
-    `,
-  },
-  {
-    id: '6',
-    title: 'React Component Library README',
-    description: 'Focused on React components with examples and props.',
-    author: 'reactFan',
-    downloadUrl: '#',
-    image: 'https://picsum.photos/id/1062/600/400',
-    exampleCode: `
-# React Component Library
-
-## Installation
-
-\`\`\`bash
-npm install react-component-library
-\`\`\`
-
-## Example
-
-\`\`\`jsx
-import { Button } from 'react-component-library';
-
-<Button variant="primary">Click me</Button>
-\`\`\`
-    `,
-  },
-]
-
 const TemplatesPage = () => {
   // const filter = new URLSearchParams(useLocation().search).get('f')
+  const { data, isLoading, isFetched, page, totalPage, setPage } =
+    useTemplates()
+
+  // const data = []
+  console.log('data', data)
 
   return (
     <>
@@ -263,7 +50,7 @@ const TemplatesPage = () => {
               CheatSheet
             </Link>
             <button className="btn btn-sm btn-soft btn-accent">
-              Filter by
+              Create Template
             </button>
             <button className="btn btn-sm btn-soft btn-accent">
               Filter by
@@ -309,56 +96,146 @@ const TemplatesPage = () => {
               <TemStatus />
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-7">
-            {dummyTemplates.map((tpl) => (
-              <div
-                key={tpl.id}
-                className="card justify-between bg-base-200 p-7 rounded-xl gap-1.5"
-              >
-                <figure className="h-60 mb-2.5">
-                  <img src={fake} alt="" className="rounded-lg" />
-                </figure>
-                <div className="">
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-md">{tpl.title}</h3>
-                    <small className="text-xs link link-error no-underline">
-                      @{tpl.author}
-                    </small>
-                  </div>
-                  <p className="text-xs text-gray-500">{tpl.description}</p>
-                  <div className="flex items-center gap-1.5 mt-3.5">
-                    <a
-                      href={tpl.downloadUrl}
-                      target="_blank"
-                      className="btn btn-sm btn-soft btn-info"
-                      rel="noopener noreferrer"
-                    >
-                      <TbTransitionBottom size={13} />
-                      Download
-                    </a>
-                    <button
-                      className="btn btn-sm btn-soft btn-accent"
-                      onClick={() =>
-                        (
-                          document.getElementById(
-                            'preview_modal',
-                          ) as HTMLDialogElement
-                        )?.showModal()
-                      }
-                    >
-                      <TbScreenShare size={13} />
-                      Preview
-                    </button>
-                    <button className="btn btn-sm btn-soft btn-warning">
-                      <SiReasonstudios size={13} />
-                      Open to Editor
-                    </button>
-                  </div>
+          <div className="mt-7">
+            {data.length <= 0 ? (
+              <div className="card p-21 justify-center items-center gap-1 bg-base-200 w-2xl mx-auto my-9">
+                <TbTemplateOff size={45} className="text-gray-500" />
+                <h1 className="text-2xl">No Template is here!</h1>
+                <p className="text-sm tracking-wide">
+                  Please use this buttons to create or publish
+                </p>
+                <div className="join gap-1.5 mt-2.5">
+                  <Link
+                    to="/studio/editor"
+                    className="btn btn-sm btn-warning btn-soft px-5"
+                  >
+                    <SiReasonstudios size={15} />
+                    Studio
+                  </Link>
+                  <Link
+                    to="/ai-generate"
+                    className="btn btn-sm btn-accent btn-soft px-5"
+                  >
+                    <TbClick size={15} />
+                    Ai Generate
+                  </Link>
+                  <button
+                    onClick={() =>
+                      (
+                        document.getElementById(
+                          'publish_modal',
+                        ) as HTMLDialogElement
+                      )?.showModal()
+                    }
+                    className="btn btn-sm btn-info btn-soft px-5"
+                  >
+                    <TbWorldShare size={15} />
+                    Publish
+                  </button>
                 </div>
               </div>
-            ))}
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {data.map((tpl: TemplateP) => {
+                  const pictureStr =
+                    typeof tpl.picture === 'string' ? tpl.picture : ''
+                  let imageUrl = pictureStr
+
+                  // ✅ Base64 detection
+                  const isBase64 = (str: string) => {
+                    try {
+                      return btoa(atob(str)) === str
+                    } catch {
+                      return false
+                    }
+                  }
+
+                  // ✅ Handle raw base64
+                  if (isBase64(pictureStr)) {
+                    const blob = new Blob(
+                      [
+                        Uint8Array.from(atob(pictureStr), (c) =>
+                          c.charCodeAt(0),
+                        ),
+                      ],
+                      { type: 'image/png' },
+                    )
+                    imageUrl = URL.createObjectURL(blob)
+                  }
+
+                  return (
+                    <div
+                      key={tpl._id}
+                      className="card justify-between bg-base-200 p-7 rounded-xl gap-1.5"
+                    >
+                      {isLoading ? (
+                        <span className="loading loading-ring loading-xl" />
+                      ) : (
+                        <>
+                          {' '}
+                          <figure className="h-60 mb-2.5">
+                            <img
+                              src={imageUrl}
+                              alt="Preview"
+                              className="rounded-lg object-cover w-full h-full"
+                              onError={(e) =>
+                                (e.currentTarget.src = '/fallback.png')
+                              }
+                            />
+                          </figure>
+                          <div className="">
+                            <div className="flex justify-between items-center">
+                              <h3 className="text-md">{tpl.title}</h3>
+                              <small className="text-xs link link-error no-underline">
+                                @{tpl.username}
+                              </small>
+                            </div>
+                            <p className="text-xs text-gray-500 text-ellipsis">
+                              {tpl?.description?.slice(0, 40)}...
+                            </p>
+                            <div className="flex items-center gap-1.5 mt-3.5">
+                              <a
+                                // href={tpl.file?.downloadUrl ?? '#'}
+                                target="_blank"
+                                className="btn btn-sm btn-soft btn-info"
+                                rel="noopener noreferrer"
+                              >
+                                <TbTransitionBottom size={13} />
+                                Download
+                              </a>
+                              <button
+                                className="btn btn-sm btn-soft btn-accent"
+                                onClick={() =>
+                                  (
+                                    document.getElementById(
+                                      'preview_modal',
+                                    ) as HTMLDialogElement
+                                  )?.showModal()
+                                }
+                              >
+                                <TbScreenShare size={13} />
+                                Preview
+                              </button>
+                              <button className="btn btn-sm btn-soft btn-warning">
+                                <SiReasonstudios size={13} />
+                                Open to Editor
+                              </button>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
-          <Pagination mode="roman" />
+
+          {data.length <= 0 ? (
+            ''
+          ) : (
+            <Pagination mode="roman" setPage={setPage} page={page} />
+          )}
         </div>
       </section>
     </>

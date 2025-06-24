@@ -25,6 +25,7 @@ const StudioEditor = () => {
     markdownText,
     setMarkdownText,
     isEditing,
+    setIsEditing,
     editorRef,
     monacoRef,
   } = useContexts()
@@ -35,6 +36,7 @@ const StudioEditor = () => {
 
   useEffect(() => {
     const saved = localStorage.getItem(import.meta.env.VITE_CODE_SAVE_NAME)
+    console.log('saved: ', saved)
     setMarkdownText(saved ?? '')
   }, [setMarkdownText])
 
@@ -45,6 +47,7 @@ const StudioEditor = () => {
 
   const handleEditorChange = (value = '') => {
     setMarkdownText(value)
+    setIsEditing(true)
   }
 
   return (
@@ -71,7 +74,7 @@ const StudioEditor = () => {
         )}
 
         <Split
-          className="flex h-full w-full pb-5"
+          className="flex h-full w-full"
           sizes={split ? [55, 45] : preview ? [0, 100] : [100, 0]}
           minSize={7}
           gutterSize={8}
