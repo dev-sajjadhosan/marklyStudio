@@ -1,46 +1,10 @@
 import { SiReasonstudios } from 'react-icons/si'
 import { TbArrowBearRight, TbBookmarkPlus, TbShare3 } from 'react-icons/tb'
+import useTemplates from '../../hooks/useTemplates'
 // import { Link } from 'react-router-dom'
 
 const TemplateGallery = () => {
-  const templates = [
-    {
-      thumbnail: '/templates/startup.png', // or use placeholder like https://via.placeholder.com/300
-      title: 'Clean Startup README',
-      author: 'devsabbir',
-      tags: ['Startup', 'Clean', 'Modern'],
-    },
-    {
-      thumbnail: '/templates/library.png',
-      title: 'Library Module Doc',
-      author: 'codebyrakib',
-      tags: ['Library', 'Module', 'Reusable'],
-    },
-    {
-      thumbnail: '/templates/portfolio.png',
-      title: 'Personal Portfolio README',
-      author: 'ayan-codes',
-      tags: ['Portfolio', 'Creative', 'Minimal'],
-    },
-    {
-      thumbnail: '/templates/api.png',
-      title: 'REST API Boilerplate',
-      author: 'arifdev',
-      tags: ['API', 'Backend', 'Express'],
-    },
-    {
-      thumbnail: '/templates/portfolio.png',
-      title: 'Gaming Portfolio README',
-      author: 'gamer-code',
-      tags: ['Portfolio', 'Creative', 'Minimal'],
-    },
-    {
-      thumbnail: '/templates/api.png',
-      title: 'NestJS Boilerplate',
-      author: 'nest.js.dev',
-      tags: ['API', 'Backend', 'Express'],
-    },
-  ]
+  const { data } = useTemplates()
 
   return (
     <section id="template-gallery" className="py-15 text-base-content">
@@ -52,7 +16,7 @@ const TemplateGallery = () => {
         </p>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {templates.map((template, index) => (
+          {data?.slice(0, 6)?.map((template, index) => (
             <div
               key={index}
               className="card p-7 bg-base-300 transition duration-200 cursor-pointer"
@@ -63,13 +27,13 @@ const TemplateGallery = () => {
                 </h3>
                 <a className="text-sm link text-secondary no-underline">
                   {' '}
-                  @{template.author}
+                  @{template.username}
                 </a>
               </div>
               <figure>
                 <img
-                  //   src={template.thumbnail}
-                  src="/icon.png"
+                  src={template.picture}
+                  // src="/icon.png"
                   alt={template.title}
                   width={200}
                   className="hover:scale-105 duration-100 "
@@ -85,11 +49,17 @@ const TemplateGallery = () => {
                   <SiReasonstudios size={15} />
                   Open on Studio
                 </button>
-                <button className="btn btn-xs btn-success btn-soft px-1.5" disabled>
+                <button
+                  className="btn btn-xs btn-success btn-soft px-1.5"
+                  disabled
+                >
                   <TbBookmarkPlus size={15} />
                   Save
                 </button>
-                <button className="btn btn-xs btn-info btn-soft px-1.5" disabled>
+                <button
+                  className="btn btn-xs btn-info btn-soft px-1.5"
+                  disabled
+                >
                   <TbShare3 size={15} />
                   Share
                 </button>

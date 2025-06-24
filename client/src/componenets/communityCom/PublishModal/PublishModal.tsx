@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { SiReasonstudios } from 'react-icons/si'
 import {
   TbClick,
@@ -12,9 +12,11 @@ import { useLocation } from 'react-router-dom'
 import useContexts from '../../../hooks/useContexts'
 import { enqueueSnackbar } from 'notistack'
 import useAxios from '../../../hooks/useAxios'
+import useImageApi from '../../../hooks/useImageApi'
 
 const PublishModal = () => {
   const axios = useAxios()
+  const { handleImageApi, url, setUrl, setImage } = useImageApi()
   const { pathname } = useLocation()
   const { markdownText } = useContexts()
   const [file, setFile] = useState<File | null>(null)
@@ -36,6 +38,7 @@ const PublishModal = () => {
 
   const handlePublish = async () => {
     if (!formRef.current) return
+    await handleImageApi(formRef.current.preview.files?.[0])
 
     const formData = new FormData()
 
@@ -47,10 +50,12 @@ const PublishModal = () => {
     const shortDes = (formRef.current.shortDes as HTMLTextAreaElement).value
 
     const fileCode = file ? file : formRef.current.file_code.files?.[0]
-    const previewImage = formRef.current.preview.files?.[0]
-
-    if (fileCode) formData.append('file_code', fileCode)
-    if (previewImage) formData.append('preview', previewImage)
+    if (fileCode) {
+      formData.append('file_code', fileCode)
+    }
+    if (url) {
+      formData.append('preview', url)
+    }
 
     formData.append('title', title)
     formData.append('name', name)
@@ -70,6 +75,8 @@ const PublishModal = () => {
       })
       if (res.data?.success) {
         enqueueSnackbar(res.data?.message, { variant: res.data?.type })
+        setUrl(null)
+        setImage([])
         formRef.current.reset()
       }
     } catch (err) {

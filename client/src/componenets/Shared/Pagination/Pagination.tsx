@@ -1,12 +1,11 @@
-import React, { useState, type SetStateAction } from 'react'
+import React, { type SetStateAction } from 'react'
 
 type MODE = 'block' | 'number' | 'sLetter' | 'bLetter' | 'roman'
 
 interface PaginationProps {
   mode?: MODE | undefined
-  total?: number[]
   setPage?: React.Dispatch<SetStateAction<number>> | undefined
-  page: number
+  page?: number
 }
 
 const Pagination: React.FC<PaginationProps> = ({ mode, setPage, page }) => {

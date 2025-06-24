@@ -13,7 +13,7 @@ import {
 
 export interface TemplateP {
   _id?: string
-  picture: object
+  picture: string
   title: string
   name: string
   username: string

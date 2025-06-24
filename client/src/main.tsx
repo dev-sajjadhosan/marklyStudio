@@ -5,11 +5,7 @@ import { SnackbarProvider } from 'notistack'
 import { HeaderProvider } from './context/HeaderProvider'
 import './index.css'
 import Layout from './layouts/Layout/Layout'
-import {
-  QueryClient,
-  QueryClientProvider,
-  useInfiniteQuery,
-} from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const queryClient = new QueryClient()
 

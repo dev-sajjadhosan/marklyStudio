@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import BackBtn from '../../componenets/Shared/BackBtn/BackBtn'
 // import icon from '../../../public/icon.png'
-import fake from '../../assets/fake.png'
+// import fake from '../../assets/fake.png'
 
 import {
   TbClick,
@@ -17,20 +17,9 @@ import TemStatus from '../../componenets/Shared/TemStatus/TemStatus'
 import Pagination from '../../componenets/Shared/Pagination/Pagination'
 import useTemplates, { type TemplateP } from '../../hooks/useTemplates'
 
-type Template = {
-  id: string
-  author: string
-  image: string
-  title: string
-  description: string
-  downloadUrl: string
-  exampleCode: string
-}
-
 const TemplatesPage = () => {
   // const filter = new URLSearchParams(useLocation().search).get('f')
-  const { data, isLoading, isFetched, page, totalPage, setPage } =
-    useTemplates()
+  const { data, isLoading, page, setPage } = useTemplates()
 
   // const data = []
   console.log('data', data)
@@ -137,32 +126,6 @@ const TemplatesPage = () => {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {data.map((tpl: TemplateP) => {
-                  const pictureStr =
-                    typeof tpl.picture === 'string' ? tpl.picture : ''
-                  let imageUrl = pictureStr
-
-                  // ✅ Base64 detection
-                  const isBase64 = (str: string) => {
-                    try {
-                      return btoa(atob(str)) === str
-                    } catch {
-                      return false
-                    }
-                  }
-
-                  // ✅ Handle raw base64
-                  if (isBase64(pictureStr)) {
-                    const blob = new Blob(
-                      [
-                        Uint8Array.from(atob(pictureStr), (c) =>
-                          c.charCodeAt(0),
-                        ),
-                      ],
-                      { type: 'image/png' },
-                    )
-                    imageUrl = URL.createObjectURL(blob)
-                  }
-
                   return (
                     <div
                       key={tpl._id}
@@ -175,7 +138,7 @@ const TemplatesPage = () => {
                           {' '}
                           <figure className="h-60 mb-2.5">
                             <img
-                              src={imageUrl}
+                              src={tpl?.picture}
                               alt="Preview"
                               className="rounded-lg object-cover w-full h-full"
                               onError={(e) =>
